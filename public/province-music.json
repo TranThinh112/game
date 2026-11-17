@@ -7,7 +7,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=uIVW6wXh2xo",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/an_giang.webm"
+    "localAudioUrl": "/music/an_giang.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 2,
@@ -17,7 +21,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=ftKyO8HntZY",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/ba_ria_vung_tau.webm"
+    "localAudioUrl": "/music/ba_ria_vung_tau.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 3,
@@ -28,7 +36,10 @@
     "localAudioUrl": "/music/bac_giang.webm",
     "youtubeVideoId": "IsUBqJPibhA",
     "youtubeUrl": "https://www.youtube.com/watch?v=IsUBqJPibhA",
-    "targetBaseVolume": 18
+    "targetBaseVolume": 78,
+    "initialVolume": 0.1,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 4,
@@ -38,7 +49,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=LIK-8V3vt6s",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/bac_kan.webm"
+    "localAudioUrl": "/music/bac_kan.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 5,
@@ -48,7 +63,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=NCQR2MaCb6U",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/bac_lieu.webm"
+    "localAudioUrl": "/music/bac_lieu.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 6,
@@ -58,7 +77,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=CL13X-8o4h0",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/bac_ninh.webm"
+    "localAudioUrl": "/music/bac_ninh.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 7,
@@ -69,7 +92,10 @@
     "startTimeSeconds": 0,
     "durationSeconds": 35,
     "localAudioUrl": "/music/ben_tre.webm",
-    "fadeInMs": 500
+    "fadeInMs": 5000,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 8,
@@ -79,7 +105,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=gv7QDOsEYqc",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/binh_dinh.webm"
+    "localAudioUrl": "/music/binh_dinh.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 9,
@@ -89,7 +119,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=0YRNMcDsNpA",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/binh_duong.webm"
+    "localAudioUrl": "/music/binh_duong.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 10,
@@ -99,7 +133,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=i21dEqhKFjM",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/binh_phuoc.webm"
+    "localAudioUrl": "/music/binh_phuoc.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 11,
@@ -109,7 +147,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=0ExLOyrxHTs",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/binh_thuan.webm"
+    "localAudioUrl": "/music/binh_thuan.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 12,
@@ -120,7 +162,11 @@
     "startTimeSeconds": 0,
     "durationSeconds": 35,
     "localAudioUrl": "/music/ca_mau.webm",
-    "tiktokUrl": "https://www.tiktok.com/@vlyrics.vn/video/7493897852758822160"
+    "tiktokUrl": "https://www.tiktok.com/@vlyrics.vn/video/7493897852758822160",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 13,
@@ -130,7 +176,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=_aaL7U0Oykw",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/cao_bang.webm"
+    "localAudioUrl": "/music/cao_bang.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 14,
@@ -141,7 +191,11 @@
     "startTimeSeconds": 0,
     "durationSeconds": 35,
     "localAudioUrl": "/music/dak_lak.webm",
-    "tiktokUrl": "https://www.tiktok.com/@tungdreamer/video/7694660934014438677"
+    "tiktokUrl": "https://www.tiktok.com/@tungdreamer/video/7694660934014438677",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 15,
@@ -151,7 +205,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=nAnxhf4jtl0",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/dak_nong.webm"
+    "localAudioUrl": "/music/dak_nong.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 16,
@@ -161,7 +219,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=X_XomMaduw0",
     "localAudioUrl": "/music/dien_bien.webm",
     "startTimeSeconds": 0,
-    "durationSeconds": 36
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 17,
@@ -171,7 +233,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=C8MYPHfVNmY",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/dong_nai.webm"
+    "localAudioUrl": "/music/dong_nai.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 18,
@@ -181,7 +247,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=VSzOPFgvCAU",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/dong_thap.webm"
+    "localAudioUrl": "/music/dong_thap.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 12
   },
   {
     "no": 19,
@@ -191,7 +261,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=DTRMgvt26Fg",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/gia_lai.webm"
+    "localAudioUrl": "/music/gia_lai.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 20,
@@ -200,8 +274,12 @@
     "youtubeVideoId": "rez7I579Czg",
     "youtubeUrl": "https://www.youtube.com/watch?v=rez7I579Czg",
     "startTimeSeconds": 0,
-    "durationSeconds": 32,
-    "localAudioUrl": "/music/ha_giang.webm"
+    "durationSeconds": 35,
+    "localAudioUrl": "/music/ha_giang.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 21,
@@ -213,7 +291,10 @@
     "durationSeconds": 35,
     "localAudioUrl": "/music/ha_nam.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpse3qYW/",
-    "targetBaseVolume": 20
+    "targetBaseVolume": 78,
+    "initialVolume": 0.1,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 22,
@@ -224,7 +305,11 @@
     "startTimeSeconds": 0,
     "durationSeconds": 35,
     "localAudioUrl": "/music/ha_tinh.webm",
-    "tiktokUrl": "https://vt.tiktok.com/ZSpseDffA/"
+    "tiktokUrl": "https://vt.tiktok.com/ZSpseDffA/",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 23,
@@ -237,7 +322,11 @@
     "localAudioUrl": "/music/hai_duong.tiktok.m4a",
     "volumeFactor": 0.85,
     "sourceType": "tiktok",
-    "sourceUrl": "https://www.tiktok.com/@ntmusic2k5/video/7409146518797618450"
+    "sourceUrl": "https://www.tiktok.com/@ntmusic2k5/video/7409146518797618450",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 24,
@@ -246,9 +335,13 @@
     "youtubeVideoId": "BCVyyHGVTw8",
     "youtubeUrl": "https://www.youtube.com/watch?v=BCVyyHGVTw8",
     "startTimeSeconds": 0,
-    "durationSeconds": 27,
+    "durationSeconds": 35,
     "localAudioUrl": "/music/hai_phong.webm",
-    "tiktokUrl": "https://vt.tiktok.com/ZSps8HhLX/"
+    "tiktokUrl": "https://vt.tiktok.com/ZSps8HhLX/",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 25,
@@ -259,7 +352,10 @@
     "startTimeSeconds": 0,
     "durationSeconds": 35,
     "localAudioUrl": "/music/hau_giang.webm",
-    "fadeInMs": 4000
+    "fadeInMs": 5000,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 26,
@@ -269,7 +365,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=_5tF1gh33Rw",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/hoa_binh.webm"
+    "localAudioUrl": "/music/hoa_binh.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 27,
@@ -279,7 +379,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=9gTm4j-SMxY",
     "startTimeSeconds": 30,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/hung_yen.youtube.webm"
+    "localAudioUrl": "/music/hung_yen.youtube.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 28,
@@ -290,7 +394,11 @@
     "startTimeSeconds": 0,
     "durationSeconds": 35,
     "aliasProvinceId": "nha_trang",
-    "localAudioUrl": "/music/khanh_hoa.webm"
+    "localAudioUrl": "/music/khanh_hoa.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 29,
@@ -300,7 +408,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=eRjYe3Of1TA",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/kien_giang.webm"
+    "localAudioUrl": "/music/kien_giang.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 30,
@@ -310,7 +422,11 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=XwCK0Sqtkko",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/kon_tum.webm"
+    "localAudioUrl": "/music/kon_tum.webm",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 31,
@@ -320,7 +436,11 @@
     "tiktokUrl": "https://www.tiktok.com/@ng_bao_loi/photo/7465998849576930568",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "volumeFactor": 1.35
+    "volumeFactor": 1.35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 32,
@@ -330,9 +450,10 @@
     "tiktokUrl": "https://www.tiktok.com/@mientay_remix/video/7585148826588138760",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "fadeInMs": 4500,
-    "initialVolume": 0.05,
-    "targetBaseVolume": 35
+    "fadeInMs": 5000,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 33,
@@ -341,7 +462,11 @@
     "localAudioUrl": "/music/vinh_long.webm",
     "tiktokUrl": "https://www.tiktok.com/@goodboy2k4/photo/7682324646946950420",
     "startTimeSeconds": 0,
-    "durationSeconds": 30
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 34,
@@ -350,7 +475,11 @@
     "localAudioUrl": "/music/soc_trang.webm",
     "tiktokUrl": "https://www.tiktok.com/@nhacnaynghelanghien.real/video/7683578998223359250",
     "startTimeSeconds": 0,
-    "durationSeconds": 34
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 35,
@@ -360,9 +489,10 @@
     "tiktokUrl": "https://www.tiktok.com/@vpt.212_/video/7696074558440246580",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "fadeInMs": 1500,
-    "initialVolume": 0.05,
-    "targetBaseVolume": 30
+    "fadeInMs": 5000,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 36,
@@ -371,7 +501,11 @@
     "localAudioUrl": "/music/long_an.webm",
     "tiktokUrl": "https://www.tiktok.com/@_duyanhmussuc/video/7630401905222552853",
     "startTimeSeconds": 0,
-    "durationSeconds": 35
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 37,
@@ -380,7 +514,11 @@
     "localAudioUrl": "/music/nghe_an.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpsJKVkj/",
     "startTimeSeconds": 0,
-    "durationSeconds": 31
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 38,
@@ -389,7 +527,11 @@
     "localAudioUrl": "/music/quang_binh.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpse9guo/",
     "startTimeSeconds": 0,
-    "durationSeconds": 35
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 39,
@@ -398,7 +540,11 @@
     "localAudioUrl": "/music/thanh_hoa.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpsenwH4/",
     "startTimeSeconds": 0,
-    "durationSeconds": 35
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 40,
@@ -407,7 +553,11 @@
     "localAudioUrl": "/music/phu_tho.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpseVQRR/",
     "startTimeSeconds": 0,
-    "durationSeconds": 35
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 41,
@@ -416,7 +566,11 @@
     "localAudioUrl": "/music/thai_binh.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpsdJuJY/",
     "startTimeSeconds": 0,
-    "durationSeconds": 33
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 42,
@@ -425,7 +579,11 @@
     "localAudioUrl": "/music/ha_noi.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpsdguPT/",
     "startTimeSeconds": 0,
-    "durationSeconds": 35
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 43,
@@ -434,7 +592,11 @@
     "localAudioUrl": "/music/tp_hcm.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpsRRXuf/",
     "startTimeSeconds": 0,
-    "durationSeconds": 35
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 44,
@@ -443,7 +605,11 @@
     "localAudioUrl": "/music/thua_thien_hue.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpsdEBTP/",
     "startTimeSeconds": 0,
-    "durationSeconds": 35
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 45,
@@ -452,8 +618,12 @@
     "localAudioUrl": "/music/yen_bai.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpsR1u85/",
     "startTimeSeconds": 0,
-    "durationSeconds": 33,
-    "volumeFactor": 0.55
+    "durationSeconds": 35,
+    "volumeFactor": 0.55,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 46,
@@ -462,7 +632,11 @@
     "localAudioUrl": "/music/da_nang.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpsRjR7f/",
     "startTimeSeconds": 0,
-    "durationSeconds": 35
+    "durationSeconds": 35,
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   },
   {
     "no": 47,
@@ -472,6 +646,12 @@
     "sourceUrl": "https://www.tiktok.com/@ntmusic2k5/video/7625988888917544199",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/lai_chau.tiktok.m4a"
+    "localAudioUrl": "/music/lai_chau.tiktok.m4a",
+    "initialVolume": 0.1,
+    "targetBaseVolume": 78,
+    "fadeInMs": 5000,
+    "fadeInDelaySeconds": 13
   }
 ]
+
+

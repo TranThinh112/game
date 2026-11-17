@@ -1177,6 +1177,9 @@ function handleRoute() {
 
   if (!hash.startsWith("#/battle")) {
 
+    const victoryModal = document.getElementById("victory-modal");
+    if (victoryModal) victoryModal.classList.remove("active");
+
     if (typeof window.stopAllSpeech === 'function') window.stopAllSpeech();
 
     if (window.speechSynthesis) {
@@ -1202,6 +1205,9 @@ function handleRoute() {
 
 
   if (hash.startsWith("#/battle")) {
+
+    const battleMapId = hash.replace("#/battle/", "").trim() || "vietnam_63";
+    window.currentSelectedMapId = battleMapId;
 
     document.body.classList.remove("dashboard-mode");
 
@@ -1239,7 +1245,7 @@ function handleRoute() {
 
   if (hash.startsWith("#/map/")) {
 
-    const mapId = hash.replace("#/map/", "").trim();
+    const mapId = hash.replace("#/map/", "").trim() || "vietnam_63";
 
     window.currentSelectedMapId = mapId;
 

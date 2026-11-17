@@ -720,10 +720,170 @@
                text-shadow:0 0 10px rgba(56,189,248,.6);}
 .log-navystrike{color:#2dd4bf;font-weight:800;
                 text-shadow:0 0 10px rgba(45,212,191,.6);}
+    .match-finish-overlay { position:absolute; inset:0; z-index:120; display:flex; align-items:center; justify-content:center; padding:20px; background:rgba(2,6,23,.78); backdrop-filter:blur(12px); opacity:0; pointer-events:none; transition:opacity .3s ease; }
+    .match-finish-overlay.active { opacity:1; pointer-events:auto; }
+    .match-finish-box { position:relative; width:min(470px,92vw); padding:30px 32px 26px; overflow:hidden; border:1px solid rgba(56,189,248,.55); border-radius:22px; background:linear-gradient(150deg,rgba(23,37,64,.98),rgba(8,15,31,.98)); box-shadow:0 20px 70px rgba(0,0,0,.55),0 0 35px rgba(14,165,233,.22); text-align:center; }
+    .match-finish-box::before { content:""; position:absolute; top:0; left:12%; right:12%; height:2px; background:linear-gradient(90deg,transparent,#38bdf8,transparent); box-shadow:0 0 18px #38bdf8; }
+    .match-finish-kicker { margin-bottom:9px; color:#38bdf8; font-size:11px; font-weight:900; letter-spacing:1.8px; text-transform:uppercase; }
+    .match-finish-box h2 { margin:0; color:#f8fafc; font-size:25px; line-height:1.2; letter-spacing:-.4px; }
+    .match-finish-box p { margin:12px auto 24px; max-width:330px; color:#a8b6cc; font-size:13px; line-height:1.55; }
+    .match-finish-actions { display:grid; grid-template-columns:1fr 1fr; gap:11px; }
+    .match-finish-actions button { min-height:46px; border:1px solid transparent; border-radius:11px; padding:11px 12px; font-size:12px; font-weight:900; letter-spacing:.3px; cursor:pointer; font-family:inherit; transition:transform .2s ease,filter .2s ease,box-shadow .2s ease; }
+    .match-finish-actions button:hover { transform:translateY(-2px); filter:brightness(1.08); }
+    .match-finish-new { color:#fff; background:linear-gradient(135deg,#2563eb,#06b6d4); box-shadow:0 8px 20px rgba(14,165,233,.24); }
+    .match-finish-home { color:#dbeafe; background:rgba(51,65,85,.78); border-color:rgba(148,163,184,.24) !important; }
+    @media (max-width:560px) { .match-finish-box { padding:26px 20px 22px; } .match-finish-actions { grid-template-columns:1fr; } }
 </style>
 <script src="/music-service.js"></script>
+<link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
+<!-- ======================================================================== -->
+<!--                1. RAILWAY STYLE MAIN DASHBOARD VIEW (#/)                 -->
+<!-- ======================================================================== -->
+<div class="rw-dashboard-view" id="rw-dashboard-view">
+  <!-- TOP NAVBAR -->
+  <header class="rw-navbar">
+    <div class="rw-brand" onclick="navigateTo('#/')">
+      <div class="rw-logo-railway">🚂</div>
+      <span>HỆ THỐNG ĐẠI CHIẾN 63 TỈNH THÀNH</span>
+      <span class="rw-nav-badge">PRODUCTION</span>
+    </div>
+    <div class="rw-nav-actions">
+      <button class="rw-btn-nav" onclick="navigateTo('#/map/vietnam_63')">
+        <span>🗺️ Bản đồ chính thức</span>
+      </button>
+      <button class="rw-btn-nav" onclick="launchBattleGame()" style="background:#8b5cf6;color:#fff;border-color:#8b5cf6;">
+        <span>⚡ Vào trận chiến</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO TITLE & SYSTEM OVERVIEW -->
+  <section class="rw-hero">
+    <div class="rw-hero-info">
+      <h1>HỆ THỐNG ĐẠI CHIẾN BẢN ĐỒ VIỆT NAM</h1>
+      <p>Nền tảng mô phỏng chiến thuật quân sự Risk tương tác thời gian thực trên bản đồ 63 Tỉnh Thành Việt Nam. Chọn chiến trường bên dưới để xem tình báo và khai hỏa.</p>
+    </div>
+    <div class="rw-stats-pills">
+      <div class="rw-stat-pill">
+        <span>🗺️ TỔNG SỐ MAP:</span> <strong>6 CHIẾN TRƯỜNG</strong>
+      </div>
+      <div class="rw-stat-pill">
+        <span>🟢 TRẠNG THÁI:</span> <strong>ONLINE 100%</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAILWAY MAP CARDS GRID -->
+  <main class="rw-grid-container" id="rw-maps-grid">
+    <!-- Populated dynamically by dashboard.js -->
+  </main>
+</div>
+
+<!-- ======================================================================== -->
+<!--              2. MAP DETAIL & LEADERBOARDS VIEW (#/map/:id)               -->
+<!-- ======================================================================== -->
+<div class="rw-detail-view" id="rw-detail-view">
+  <!-- TOP NAVBAR -->
+  <header class="rw-navbar">
+    <div class="rw-brand" onclick="navigateTo('#/')">
+      <div class="rw-logo-railway">🚂</div>
+      <span>HỆ THỐNG ĐẠI CHIẾN 63 TỈNH THÀNH</span>
+      <span class="rw-nav-badge">MAP INTEL</span>
+    </div>
+    <div class="rw-nav-actions">
+      <button class="rw-btn-nav" onclick="navigateTo('#/')">
+        <span>← Quay lại Dashboard</span>
+      </button>
+      <button class="rw-btn-nav" onclick="launchBattleGame()" style="background:#dc2626;color:#fff;border-color:#ef4444;">
+        <span>⚔️ VÀO TRẬN CHIẾN</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="rw-detail-container">
+    <!-- BREADCRUMB -->
+    <div class="rw-breadcrumb">
+      <a onclick="navigateTo('#/')">Dashboard</a>
+      <span>/</span>
+      <a>Maps</a>
+      <span>/</span>
+      <strong id="rw-breadcrumb-mapname">Đại Chiến 63 Tỉnh Thành</strong>
+    </div>
+
+    <!-- DETAIL HERO & LAUNCH BAR -->
+    <div class="rw-detail-header">
+      <div class="rw-detail-title-group">
+        <h2 id="rw-detail-title">🇻🇳 Đại Chiến 63 Tỉnh Thành</h2>
+        <p id="rw-detail-desc">Toàn bộ 63 tỉnh thành Việt Nam cùng Hoàng Sa, Trường Sa và Côn Đảo.</p>
+      </div>
+      <button class="rw-battle-launch-btn" onclick="launchBattleGame()">
+        <span>⚔️ VÀO TRẬN CHIẾN</span>
+        <span style="font-size:18px;">🔥</span>
+      </button>
+    </div>
+
+    <!-- 2-COLUMNS CONTENT -->
+    <div class="rw-detail-body">
+      <!-- LEFT COLUMN: MAP PREVIEW -->
+      <div class="rw-detail-map-card">
+        <div class="rw-map-card-canvas-wrap">
+          <canvas id="rw-detail-canvas"></canvas>
+        </div>
+        <div class="rw-map-card-info">
+          <div class="rw-meta-box">
+            <div class="rw-meta-label">Quy mô lãnh thổ</div>
+            <div class="rw-meta-value" id="rw-meta-prov-count">63 Tỉnh Thành</div>
+          </div>
+          <div class="rw-meta-box">
+            <div class="rw-meta-label">Chế độ phân vùng</div>
+            <div class="rw-meta-value" id="rw-meta-region-mode">Phân vùng khi hợp nhất: 7 Quân Khu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: LEADERBOARDS & STATS -->
+      <div class="rw-detail-stats-col">
+        <!-- TOP CHAMPIONS LEADERBOARD -->
+        <div class="rw-stats-card">
+          <div class="rw-stats-card-header">
+            <div class="rw-stats-card-title">
+              <span>🏆 TỈNH VÔ ĐỊCH NHIỀU NHẤT</span>
+            </div>
+            <div class="rw-stats-tag">ALL-TIME RANKING</div>
+          </div>
+          <table class="rw-table">
+            <thead>
+              <tr>
+                <th>HẠNG</th>
+                <th>TỈNH THÀNH / BIỂN SỐ</th>
+                <th style="text-align:right;">SỐ LẦN VÔ ĐỊCH</th>
+              </tr>
+            </thead>
+            <tbody id="rw-top-winners-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 10 RECENT MATCHES -->
+        <div class="rw-stats-card">
+          <div class="rw-stats-card-header">
+            <div class="rw-stats-card-title">
+              <span>📜 10 TRẬN GẦN ĐÂY NHẤT</span>
+            </div>
+            <div class="rw-stats-tag" style="color:#38bdf8;border-color:rgba(56,189,248,0.3);background:rgba(56,189,248,0.1);">HISTORICAL FEED</div>
+          </div>
+          <div class="rw-recent-list" id="rw-recent-matches-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="app">
   <!-- -------------- 1. LIVE SCREEN (OBS STREAM) ---------------- -->
   <div id="live">
@@ -736,14 +896,13 @@
         <div class="header-stats-badge" title="Số thế lực độc lập còn lại trên bản đồ">
           <span>QUANTITY:</span> <strong id="remaining-provinces-count">63</strong> / 63 Tỉnh
         </div>
-        <span class="badge">LIVE</span>
       </div>
       <div class="hpbar">
-        <div class="faction bac"><div class="hp-name"><span>Miền Bắc</span><span id="hp-txt-bac">100%</span></div>
+        <div class="faction bac"><div class="hp-name"><span>Miền Bắc</span><span id="hp-txt-bac">25/25</span></div>
           <div class="hp-bar"><div id="hp-bar-bac" class="hp-fill fill-bac"></div></div></div>
-        <div class="faction trung"><div class="hp-name"><span>Miền Trung</span><span id="hp-txt-trung">100%</span></div>
+        <div class="faction trung"><div class="hp-name"><span>Miền Trung</span><span id="hp-txt-trung">19/19</span></div>
           <div class="hp-bar"><div id="hp-bar-trung" class="hp-fill fill-trung"></div></div></div>
-        <div class="faction nam"><div class="hp-name"><span>Miền Nam</span><span id="hp-txt-nam">100%</span></div>
+        <div class="faction nam"><div class="hp-name"><span>Miền Nam</span><span id="hp-txt-nam">19/19</span></div>
           <div class="hp-bar"><div id="hp-bar-nam" class="hp-fill fill-nam"></div></div></div>
       </div>
     </div>
@@ -756,12 +915,6 @@
     <canvas id="battle-canvas"></canvas>
     <!-- YouTube Background Music Player (Hidden) -->
     <div id="yt-bgm-player" style="position:absolute;width:1px;height:1px;pointer-events:none;opacity:0;bottom:0;left:0;"></div>
-    <!-- Floating Province Anthem Notification Bar -->
-    <div id="province-music-bar" style="display:none;position:absolute;top:54px;left:50%;transform:translateX(-50%);z-index:90;background:rgba(15,23,42,0.92);border:1.5px solid #facc15;box-shadow:0 0 20px rgba(250,204,21,0.5);border-radius:30px;padding:6px 16px;align-items:center;gap:10px;backdrop-filter:blur(10px);">
-      <span style="font-size:16px;">🎶</span>
-      <span id="province-music-title" style="font-size:12px;font-weight:800;color:#fef08a;font-family:'Chakra Petch',sans-serif;letter-spacing:0.5px;">🎵 ĐANG VINH DANH BÀI CA CHIẾN THẮNG (35s)</span>
-      <button onclick="window.MusicService && window.MusicService.stopMusic()" style="background:rgba(239,68,68,0.25);border:1px solid #ef4444;color:#fca5a5;border-radius:12px;padding:2px 8px;font-size:10px;font-weight:700;cursor:pointer;">DỪNG</button>
-    </div>
     <div class="map-controls">
       <button class="map-btn" id="btn-music-toggle" title="Bật/Tắt Nhạc Nền Chiến Ca Hào Khí Việt Nam">🎵</button>
       <button class="map-btn" id="btn-audio-toggle" title="Bật/Tắt Giọng đọc AI Bình luận viên">🔊</button>
@@ -786,26 +939,32 @@
             <div class="culture-item">
               <div class="culture-item-icon" id="culture-icon">🏛️</div>
               <div class="culture-item-content">
-                <div class="culture-item-label">🏛️ Địa danh biểu trưng</div>
+                <div class="culture-item-label">🏛️ Địa danh tiêu biểu</div>
                 <div class="culture-item-value" id="culture-landmark">Hoàng Thành Thăng Long & Hồ Gươm</div>
               </div>
             </div>
             <div class="culture-item">
               <div class="culture-item-icon">🍲</div>
               <div class="culture-item-content">
-                <div class="culture-item-label">🍲 Tinh hoa văn hóa & Đặc sản</div>
+                <div class="culture-item-label">🍲 Đặc sản & Văn hóa</div>
                 <div class="culture-item-value" id="culture-specialty">Phở Hà Nội, Cốm Làng Vòng & Trà Sen Tây Hồ</div>
               </div>
             </div>
           </div>
-          <div id="victory-music-action-box" style="width:100%;margin-bottom:12px;display:flex;justify-content:center;">
-            <button id="btn-victory-replay-music" onclick="if(victoryProvince && window.MusicService) window.MusicService.playProvinceMusic(victoryProvince.id);" style="background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%);color:#0f172a;border:none;border-radius:12px;padding:10px 20px;font-weight:900;font-size:13px;letter-spacing:0.5px;cursor:pointer;box-shadow:0 0 16px rgba(245,158,11,0.6);display:inline-flex;align-items:center;gap:8px;font-family:'Chakra Petch',sans-serif;">
-              <span>🎶</span> <span id="victory-music-btn-label">PHÁT LẠI NHẠC VINH DANH (35S)</span>
-            </button>
-          </div>
-          <button class="victory-close-btn" onclick="closeVictoryModal()">CHIÊM NGƯỠNG TOÀN CẢNH</button>
         </div>
       </div>
+
+    <div class="match-finish-overlay" id="match-finish-popup">
+      <div class="match-finish-box">
+        <div class="match-finish-kicker">KẾT THÚC CHIẾN DỊCH</div>
+        <h2>🏆 Ván đấu đã hoàn tất</h2>
+        <p>Nhạc vinh danh sắp kết thúc. Bạn muốn tiếp tục thế nào?</p>
+        <div class="match-finish-actions">
+          <button class="match-finish-new" onclick="startNewMatchFromFinish()">⚔️ Bắt đầu ván mới</button>
+          <button class="match-finish-home" onclick="returnHomeFromFinish()">⌂ Về màn hình chính</button>
+        </div>
+      </div>
+    </div>
 
     <div class="overlay">
       <div class="chat" id="chat-stream"></div>
@@ -883,6 +1042,10 @@
         <button class="btn-reset-match" id="btnResetMatch" onclick="resetNewMatch()">
           🔄 KHỞI TẠO VÁN ĐẤU MỚI (RESET 63 TỈNH)
         </button>
+      </div>
+      <div class="card" id="province-victory-test-card" style="max-height:250px;overflow:hidden;background:linear-gradient(180deg,rgba(15,23,42,.98),rgba(2,6,23,.98));border:1px solid rgba(56,189,248,.22);">
+        <div class="card-label" style="display:flex;justify-content:space-between;align-items:center;"><span>🎼 TEST THOẠI & NHẠC VINH DANH</span><span id="victory-test-count" style="color:#94a3b8;font-size:10px;">Đang tải...</span></div>
+        <div id="province-victory-test-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;max-height:192px;overflow-y:auto;padding:2px 3px 4px 0;scrollbar-width:thin;scrollbar-color:#64748b #0f172a;"></div>
       </div>
     </div>
 
@@ -1268,6 +1431,9 @@ let speechQueue = [];
 let isSpeechBusy = false;
 let globalVoiceAudio = null;
 
+function stopAllSpeech(){ speechQueue = []; isSpeechBusy = false; stopCurrentSpeech(); }
+window.stopAllSpeech = stopAllSpeech;
+
 function stopCurrentSpeech(){
   if(globalVoiceAudio){
     try {
@@ -1285,6 +1451,10 @@ function stopCurrentSpeech(){
 
 function speakText(text, priority = false){
   if(!isVoiceEnabled || !text) return;
+  const gameStarted = (typeof matchHasStarted !== 'undefined') && matchHasStarted;
+  const victoryActive = (typeof isVictoryTriggered !== 'undefined') && isVictoryTriggered;
+  if(!priority && !gameStarted) return;
+  if(victoryActive && !window._playingVictorySpeech) return;
   // Chuẩn hóa từ ngữ: Tuyệt đối không dùng từ biên giới
   text = text.replace(/đường biên giới/gi, 'khu vực giáp ranh').replace(/biên giới/gi, 'khu vực giáp ranh');
   initAudioContext();
@@ -1318,6 +1488,7 @@ function speakText(text, priority = false){
 }
 
 function processSpeechQueue(){
+  if((typeof isVictoryTriggered !== 'undefined') && isVictoryTriggered && !window._playingVictorySpeech){ speechQueue = []; isSpeechBusy = false; return; }
   if(speechQueue.length === 0){
     isSpeechBusy = false;
     return;
@@ -1386,6 +1557,72 @@ const CONQUEST_PALETTE = [
 /* ------------------------------------------------------------------ */
 /*    HỆ THỐNG THÔNG BÁO CHIẾN THẮNG & ANIMATION ĐẶC TRƯNG TỈNH THẮNG   */
 /* ------------------------------------------------------------------ */
+const PROVINCE_VICTORY_SPEECH = {
+  "lai_chau": "Đại thắng non sông! Chúc mừng hai mươi lăm Lai Châu đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Chạm tay vào mây trời Tây Bắc giữa Đỉnh Pu Si Lung và đèo Ô Quy Hồ kỳ vĩ, cảm nhận chất nồng say của Rượu ngô Sùng Phài cùng Thịt trâu gác bếp!",
+  "dien_bien": "Đại thắng non sông! Chúc mừng hai mươi bảy Điện Biên đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Vang mãi khúc tráng ca bất tử trên Đồi A Một và Chiến trường Điện Biên Phủ rực lửa, đậm đà hạt ngọc trời Gạo Điện Biên cùng Chẩm chéo cay nồng!",
+  "son_la": "Đại thắng non sông! Chúc mừng hai mươi sáu Sơn La đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Lạc bước giữa thảo nguyên xanh ngát Mộc Châu và biển mây Tà Xùa bồng bềnh, thưởng thức vị ngọt lành của Sữa chua tươi cùng Chè shan tuyết!",
+  "hoa_binh": "Đại thắng non sông! Chúc mừng hai mươi tám Hòa Bình đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Vang rền bản anh hùng ca xứ Mường bên dòng Thủy điện sông Đà và thung lũng Mai Châu, ấm nồng hương Cơm lam ngút khói cùng Rượu cần đại ngàn!",
+  "lao_cai": "Đại thắng non sông! Chúc mừng hai mươi tư Lào Cai đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Vươn tới đỉnh thiêng Đông Dương Fansipan giữa Sa Pa mù sương huyền ảo, đậm đà phong vị núi cao với chảo Thắng cố sôi sục và Mận đỏ Bắc Hà!",
+  "yen_bai": "Đại thắng non sông! Chúc mừng hai mươi mốt Yên Bái đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Chiêm ngưỡng tuyệt tác sóng vàng Ruộng bậc thang Mù Cang Chải và sóng nước Hồ Thác Bà, đượm thơm hạt Nếp dẻo Tú Lệ cùng Chè cổ Suối Giàng!",
+  "ha_giang": "Đại thắng non sông! Chúc mừng hai mươi ba Hà Giang đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Chinh phục miền đá nở hoa với Cột cờ Lũng Cú và đèo Mã Pí Lèng, thưởng thức hương vị núi rừng qua Thắng dền và Mật ong bạc hà ngọt lành!",
+  "cao_bang": "Đại thắng non sông! Chúc mừng mười một Cao Bằng đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Khám phá miền non nước hùng vĩ với Thác Bản Giốc và Khu di tích Pác Bó, cùng vị bùi thơm của Hạt dẻ Trùng Khánh và Vịt quay bảy vị!",
+  "bac_kan": "Đại thắng non sông! Chúc mừng chín mươi bảy Bắc Kạn đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Hòa mình vào bức tranh thủy mặc ngút ngàn của Vườn quốc gia Hồ Ba Bể, đậm vị thảo thơm từ Miến dong Na Rì và Tôm chua xứ núi!",
+  "tuyen_quang": "Đại thắng non sông! Chúc mừng hai mươi hai Tuyên Quang đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Trở về cái nôi cách mạng Tân Trào lịch sử và lòng hồ thủy điện Na Hang thơ mộng, ngọt lịm múi Cam sành Hàm Yên hòa cùng Rượu ngô men lá!",
+  "thai_nguyen": "Đại thắng non sông! Chúc mừng hai mươi Thái Nguyên đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Khơi dậy hương sắc xứ Đệ nhất Danh trà soi bóng huyền thoại Hồ Núi Cốc, tinh tế từng giọt Trà móc câu Tân Cương xanh thắm hồn người!",
+  "lang_son": "Đại thắng non sông! Chúc mừng mười hai Lạng Sơn đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Vững vàng nơi phên dậu Đông Bắc với Cửa khẩu Quốc tế Hữu Nghị và Động Tam Thanh cổ kính, thơm lừng miếng Khâu nhục truyền thống cùng Vịt quay xứ Lạng!",
+  "bac_giang": "Đại thắng non sông! Chúc mừng chín mươi tám Bắc Giang đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Thức giấc miền linh thiêng ngút ngàn Rừng Khe Rỗ và Chùa cổ Vĩnh Nghiêm, ngọt lịm thức quả Vải thiều Lục Ngạn vươn tầm thế giới cùng Mỳ Chũ dẻo dai!",
+  "quang_ninh": "Đại thắng non sông! Chúc mừng mười bốn Quảng Ninh đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Tỏa sáng giữa vùng di sản với Vịnh Hạ Long và non thiêng Yên Tử, thưởng thức Chả mực Hạ Long và Sá sùng trứ danh!",
+  "phu_tho": "Đại thắng non sông! Chúc mừng mười chín Phú Thọ đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Hướng trọn niềm tri ân về Đất Tổ linh thiêng cội nguồn dân tộc trên Đền Hùng, trân quý truyền thống Bánh chưng đất Tổ cùng Bưởi Đoan Hùng trĩu cành!",
+  "vinh_phuc": "Đại thắng non sông! Chúc mừng tám mươi tám Vĩnh Phúc đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Hít hà luồng khí mát lành thị trấn mờ sương Tam Đảo và danh thắng Tây Thiên, thanh mát đĩa Ngọn su su xào hòa cùng hương vị Cá thính Lập Thạch!",
+  "bac_ninh": "Đại thắng non sông! Chúc mừng chín mươi chín Bắc Ninh đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Đắm say câu Quan họ mượt mà bên dòng Đuống nghĩa tình và Đền Đô thờ Bát vị Tiên Đế, gửi gắm nghĩa phu thê qua Bánh phu thê Đình Bảng và Nem bùi Ninh Xá!",
+  "ha_noi": "Đại thắng non sông! Chúc mừng ba mươi Hà Nội đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Tự hào Thủ đô ngàn năm văn hiến, nơi Hồ Gươm và Hoàng thành Thăng Long lưu giữ dấu ấn lịch sử, cùng hương vị khó quên của Phở Hà Nội, Chả cá Lã Vọng và Cốm làng Vòng!",
+  "hai_duong": "Đại thắng non sông! Chúc mừng ba mươi tư Hải Dương đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Tìm về chốn thanh tịnh rừng phong Côn Sơn Kiếp Bạc rợp bóng thông xanh, thưởng thức thức quà trang nhã Bánh đậu xanh xứ Đông cùng đặc sản Rươi Tứ Kỳ!",
+  "hai_phong": "Đại thắng non sông! Chúc mừng mười lăm Hải Phòng đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Rực cháy ngọn lửa kiên cường miền đất Cảng hoa phượng đỏ rực và sóng biển Cát Bà, bùng nổ vị giác với tô Bánh đa cua nóng hổi cùng Bánh mì que cay xé lưỡi!",
+  "hung_yen": "Đại thắng non sông! Chúc mừng tám mươi chín Hưng Yên đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Sống lại nét phồn hoa đô hội đất Phố Hiến ngàn năm và Đền Chử Đồng Tử linh thiêng, nếm trọn vị ngọt tiến vua của Nhãn lồng cùi dày cùng Ếch om Phượng Tường!",
+  "ha_nam": "Đại thắng non sông! Chúc mừng chín mươi Hà Nam đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Tĩnh lặng giữa non nước hữu tình Quần thể tâm linh Chùa Tam Chúc hùng vĩ, ngạt ngào hương khói niêu Cá kho làng Vũ Đại hòa cùng Chuối ngự Đại Hoàng thơm lừng!",
+  "nam_dinh": "Đại thắng non sông! Chúc mừng mười tám Nam Định đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Rạng danh hào khí Đông A hiển hách chốn Đền Trần và Tháp Phổ Minh uy nghiêm, lưu giữ tinh túy đất Thành Nam qua tô Phở bò gia truyền và Kẹo sìu châu giòn tan!",
+  "thai_binh": "Đại thắng non sông! Chúc mừng mười bảy Thái Bình đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Bát ngát những cánh đồng quê lúa trĩu hạt soi bóng Chùa Keo trăm gian cổ kính, thơm bùi từng phong Bánh cáy làng Nguyễn cùng Canh cá Quỳnh Côi ngọt lịm!",
+  "ninh_binh": "Đại thắng non sông! Chúc mừng ba mươi lăm Ninh Bình đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Lạc lối giữa di sản thế giới Quần thể danh thắng Tràng An và Cố đô Hoa Lư trầm mặc, giòn rụm miếng Cơm cháy vàng ruộm chấm nước sốt Thịt dê núi đá mây!",
+  "thanh_hoa": "Đại thắng non sông! Chúc mừng ba mươi sáu Thanh Hóa đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Hiên ngang khí phách xứ Thanh bên vách đá Di sản Thành Nhà Hồ và sóng vỗ Sầm Sơn, giòn sần sật miếng Nem chua cuốn lá đinh lăng cùng Chè lam Phủ Quảng dẻo thơm!",
+  "nghe_an": "Đại thắng non sông! Chúc mừng ba mươi bảy Nghệ An đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Thành kính hướng về Làng Sen Kim Liên quê Bác rợp bóng tre ngà, cảm nhận cốt cách mộc mạc xứ Nghệ qua tô Cháo lươn cay xé lòng cùng Cam Xã Đoài ngọt mọng!",
+  "ha_tinh": "Đại thắng non sông! Chúc mừng ba mươi tám Hà Tĩnh đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Khắc ghi mười đóa hoa bất tử Ngã ba Đồng Lộc và quê hương Đại thi hào Nguyễn Du, giòn thơm miếng Kẹo cu đơ quết mật mía quyện cùng tép Bưởi Phúc Trạch thanh khiết!",
+  "quang_binh": "Đại thắng non sông! Chúc mừng bảy mươi ba Quảng Bình đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Khai phá kỳ quan đệ nhất hang động thế giới Sơn Đoòng và Phong Nha Kẻ Bàng kỳ bí, trân quý hương vị mặn mà qua lát Khoai gieo dẻo ngọt cùng Cháo canh đậm đà!",
+  "quang_tri": "Đại thắng non sông! Chúc mừng bảy mươi tư Quảng Trị đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Nghiêng mình trước khúc tráng ca Thành cổ Quảng Trị kiên cường và Cầu Hiền Lương nối trọn non sông, bùi cay phong vị quê nhà với Bánh bột lọc Mỹ Chánh và Thịt trâu lá trơng!",
+  "thua_thien_hue": "Đại thắng non sông! Chúc mừng bảy mươi lăm Thừa Thiên Huế đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Ngược dòng thời gian về cố đô mộng mơ, nơi Đại Nội và Sông Hương êm đềm lưu giữ nét vàng son, cùng hương vị đậm đà của Bún bò Huế, Cơm hến và Bánh nậm lọc thanh tao!",
+  "da_nang": "Chúc mừng 43 Đà Nẵng đã chiến thắng! Non sông liền một dải, tự hào thành phố bên bờ sông Hàn, rực rỡ Cầu Rồng, xanh mát Sơn Trà, hùng vĩ Hải Vân, cùng đặc sản mì Quảng nức tiếng.",
+  "quang_nam": "Đại thắng non sông! Chúc mừng chín mươi hai Quảng Nam đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Thả hồn theo ánh hoa đăng Phố cổ Hội An rêu phong và tháp cổ Thánh địa Mỹ Sơn, vương vấn phong vị đất Quảng qua bát Cao lầu sần sật cùng đĩa Bê thui Cầu Mống thơm lừng!",
+  "quang_ngai": "Đại thắng non sông! Chúc mừng bảy mươi sáu Quảng Ngãi đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Đón sóng biển kiên trung nơi Đảo Tiền tiêu Lý Sơn và đỉnh thiêng Núi Thiên Ấn soi bóng Trà Giang, thanh mát vị Don thơm ngọt cùng hương nồng cay của Tỏi cô đơn!",
+  "binh_dinh": "Đại thắng non sông! Chúc mừng bảy mươi bảy Bình Định đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Cuộn trào dòng máu hào kiệt miền Đất Võ Quang Trung và biển xanh Kỳ Co Eo Gió hùng tráng, cay nồng men say Rượu Bàu Đá cùng nét dịu ngọt chiếc Bánh ít lá gai!",
+  "phu_yen": "Đại thắng non sông! Chúc mừng bảy mươi tám Phú Yên đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Đón luồng gió bình minh đầu tiên trên Mũi Điện Đại Lãnh và kỳ quan bazan Gành Đá Đĩa, đậm vị biển khơi với Mắt cá ngừ đại dương tiềm thuốc bắc và Bánh hỏi lòng heo!",
+  "khanh_hoa": "Đại thắng non sông! Chúc mừng bảy mươi chín Khánh Hòa đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Tỏa sáng giữa vịnh biển thiên đường Nha Trang cát trắng mịn và Tháp Bà Ponagar trầm mặc, bồi bổ sinh khí với Đệ nhất Yến sào cùng cuốn Nem nướng Ninh Hòa thơm nức!",
+  "ninh_thuan": "Đại thắng non sông! Chúc mừng tám mươi lăm Ninh Thuận đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Vượt gió ngàn chinh phục Núi Chúa hoang sơ và Vịnh Vĩnh Hy xanh trong như ngọc bích, thưởng trọn hương vị nắng gió qua chùm Nho mọng tím cùng đĩa Cừu nướng Phan Rang!",
+  "binh_thuan": "Đại thắng non sông! Chúc mừng tám mươi sáu Bình Thuận đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Lướt trên triền cát mênh mang Đồi cát bay Mũi Né và ngọn Hải đăng Kê Gà sừng sững, đỏ rực vườn Thanh long bạt ngàn cùng vị mặn mà Nước mắm cá cơm Phan Thiết!",
+  "kon_tum": "Đại thắng non sông! Chúc mừng tám mươi hai Kon Tum đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Nghe thanh âm đại ngàn cất lên từ Nhà thờ Gỗ độc đáo và đỉnh mốc Ngã ba Đông Dương, lạ lẫm cuốn Gỏi lá rừng tươi non cùng hương nồng nàn Cà phê Đắk Hà!",
+  "gia_lai": "Đại thắng non sông! Chúc mừng tám mươi mốt Gia Lai đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Đắm mình vào đôi mắt Pleiku Biển Hồ T’nưng xanh thẳm và mùa hoa quỳ Núi lửa Chư Đăng Ya, độc đáo tô Phở khô hai tô ăn kèm Cà phê đại ngàn nồng ấm!",
+  "dak_lak": "Đại thắng non sông! Chúc mừng bốn mươi bảy Đắk Lắk đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Đánh thức tinh thần đại ngàn giữa thủ phủ cà phê Buôn Ma Thuột và Hồ Lắk huyền thoại, rộn rã cồng chiêng bên Cơm lam gà nướng Bản Đôn cùng Cà phê nồng nàn mê say!",
+  "dak_nong": "Đại thắng non sông! Chúc mừng bốn mươi tám Đắk Nông đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Khai mở bí ẩn lòng đất Công viên địa chất Núi lửa Krông Nô nguyên sơ, béo ngậy từng thìa Bơ sáp Đắk Mil dẻo quánh hòa cùng hương Tiêu đỏ Đắk Song cay nồng!",
+  "lam_dong": "Đại thắng non sông! Chúc mừng bốn mươi chín Lâm Đồng đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Chìm đắm trong khung cảnh lãng mạn Thành phố ngàn hoa Đà Lạt và đỉnh thiêng Langbiang lộng gió, nhấp ngụm Rượu vang nồng nàn bên đĩa Dâu tây chín mọng và Trà atiso!",
+  "binh_phuoc": "Đại thắng non sông! Chúc mừng chín mươi ba Bình Phước đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Băng qua những cánh rừng bạt ngàn Vườn quốc gia Bù Gia Mập và Căn cứ địa Tà Thiết oanh liệt, giòn rụm bùi béo hạt ngọc đất đỏ Hạt điều rang củi trứ danh năm châu!",
+  "tay_ninh": "Đại thắng non sông! Chúc mừng bảy mươi Tây Ninh đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Chạm mây nóc nhà Đông Nam Bộ Đỉnh Núi Bà Đen linh thiêng và Tòa Thánh rực rỡ sắc màu, đậm đà khó quên từng thớ Bánh tráng phơi sương chấm Muối tôm cay xé!",
+  "binh_duong": "Đại thắng non sông! Chúc mừng sáu mươi mốt Bình Dương đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Chuyển mình mạnh mẽ cùng nhịp thở công nghiệp hiện đại và Địa đạo Tam giác sắt kiên cường, ngọt lành quả ngọt Măng cụt Lái Thiêu cùng phong vị Nem chua truyền thống!",
+  "dong_nai": "Đại thắng non sông! Chúc mừng sáu mươi Đồng Nai đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Thả mình vào bản hòa ca thiên nhiên Vườn quốc gia Cát Tiên và Chiến khu Đ bạt ngàn, mát ngọt từng tép Bưởi da xanh Tân Triều hòa cùng hương thơm Mít tố nữ Long Khánh!",
+  "ba_ria_vung_tau": "Đại thắng non sông! Chúc mừng bảy mươi hai Bà Rịa Vũng Tàu đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Đón từng đợt sóng biển dạt dào Bãi Sau lộng gió và Côn Đảo thiêng liêng rạng ngời tấc đất, giòn rụm miếng Bánh khọt vàng óng quyện ngập Hải sản tươi sống đượm vị biển!",
+  "tp_hcm": "Đại thắng non sông! Chúc mừng năm mươi mốt Thành phố Hồ Chí Minh đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Bừng sáng nhịp sống phồn hoa rực rỡ từ Bến Nhà Rồng lịch sử đến tòa tháp Landmark vươn trời cao, đậm đà nghĩa tình Sài Gòn qua đĩa Cơm tấm sườn bì chả cùng Hủ tiếu nức tiếng!",
+  "long_an": "Đại thắng non sông! Chúc mừng sáu mươi hai Long An đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Len lỏi giữa cánh rừng tràm xanh ngắt Làng nổi Tân Lập cửa ngõ miền Tây trù phú, thơm nức bát Cơm gạo Nàng thơm Chợ Đào ngọt bùi cùng Thanh long ruột đỏ Châu Thành!",
+  "tien_giang": "Đại thắng non sông! Chúc mừng sáu mươi ba Tiền Giang đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Rộn ràng câu hò sông nước trên Chợ nổi Cái Bè nhộn nhịp và Cù lao Thới Sơn bóng dừa sum xuê, trứ danh vị ngọt thanh tô Hủ tiếu Mỹ Tho hòa cùng Xoài cát Hòa Lộc thơm lừng!",
+  "dong_thap": "Chúc mừng sáu mươi sáu Đồng Tháp đã giành chiến thắng! Tự hào đất sen hồng, Tràm Chim, Làng hoa Sa Đéc, Quýt hồng Lai Vung và Hủ tiếu Sa Đéc!",
+  "an_giang": "Đại thắng non sông! Chúc mừng sáu mươi bảy An Giang đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Khám phá vùng đất Thất Sơn huyền bí với Núi Cấm và Miếu Bà Chúa Xứ Núi Sam, cùng hương vị đặc trưng của Mắm Châu Đốc và Bò bảy món Bảy Núi!",
+  "ben_tre": "Đại thắng non sông! Chúc mừng bảy mươi mốt Bến Tre đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Tự hào khúc ca Đồng Khởi kiên cường dưới bóng dừa rợp mát bến Cồn Phụng dòng Ba Lai, ngọt bùi thỏi Kẹo dừa dẻo thơm hòa quyện hương giòn Bánh tráng Mỹ Lồng!",
+  "vinh_long": "Đại thắng non sông! Chúc mừng sáu mươi tư Vĩnh Long đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Ngắm nhịp cầu hiện đại Mỹ Thuận soi bóng dòng Cổ Chiên và miệt vườn trĩu quả Cù lao An Bình, ngọt thanh từng múi Bưởi năm roi Bình Minh cùng Khoai lang nướng thơm bùi!",
+  "can_tho": "Đại thắng non sông! Chúc mừng sáu mươi lăm Cần Thơ đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Về với Tây Đô sông nước, nơi Bến Ninh Kiều và Chợ nổi Cái Răng tấp nập thuyền bè, giòn rụm chiếc Bánh cống Cần Thơ hòa quyện Lẩu mắm cá linh thơm lừng!",
+  "tra_vinh": "Đại thắng non sông! Chúc mừng tám mươi tư Trà Vinh đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Thanh tịnh tâm hồn dưới bóng cổ thụ râm mát Danh thắng Ao Bà Om và Chùa Hang cổ kính, đậm đà nghĩa tình qua đòn Bánh tét Trà Cuôn dẻo bùi cùng tô Bún nước lèo đậm vị!",
+  "hau_giang": "Đại thắng non sông! Chúc mừng chín mươi lăm Hậu Giang đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Nghe tiếng đàn ca tài tử vang vọng trên khúc sông Ngã Bảy và miền đệm trù phú Cửu Long, ngọt lành từng múi Khóm Cầu Đúc hòa cùng miếng Chả cá thác lác dai giòn sần sật!",
+  "soc_trang": "Đại thắng non sông! Chúc mừng tám mươi ba Sóc Trăng đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Rộn rã thanh âm Lễ hội đua ghe Ngo Oóc Om Bóc trên dòng Maspero và nét độc đáo Chùa Dơi, thơm nức phong vị Bánh pía sầu riêng béo ngậy cùng tô Bún nước lèo trứ danh!",
+  "kien_giang": "Đại thắng non sông! Chúc mừng sáu mươi tám Kiên Giang đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Đắm say làn nước ngọc bích Đảo Ngọc Phú Quốc và Quần đảo Nam Du hoang sơ kỳ vĩ, đậm đà giọt Nước mắm cá cơm truyền thống sánh quyện cùng đĩa Gỏi cá trích tươi rói!",
+  "bac_lieu": "Đại thắng non sông! Chúc mừng chín mươi tư Bạc Liêu đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Thưởng thức khúc Dạ cổ hoài lang bất hủ bên Dinh thự Công tử Bạc Liêu và Cánh đồng điện gió lộng lẫy, thơm béo đĩa Bánh tằm Ngan Dừa nước cốt dừa hòa cùng vị ngọt Nhãn cổ sum xuê!",
+  "ca_mau": "Đại thắng non sông! Chúc mừng sáu mươi chín Cà Mau đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Tự hào nơi địa đầu cực Nam Tổ quốc với Mốc tọa độ Mũi Cà Mau và Rừng đước U Minh Hạ bạt ngàn, cùng vị ngọt đậm đà của Cua biển Năm Căn và Tôm khô Rạch Gốc trứ danh!"
+};
+
 const PROVINCE_CULTURE = {
   "lai_chau": {
     "landmark": "Đỉnh Pu Si Lung & Đèo Ô Quy Hồ",
@@ -1765,6 +2002,7 @@ function drawFivePointStar(ctx, cx, cy, spikes, outerRadius, innerRadius) {
 let isVictoryTriggered = false;
 let victoryProvince = null;
 let victoryAnimationStartTime = 0;
+window.isVictoryActive = function(){ return isVictoryTriggered === true; };
 
 function checkUltimateVictory(winnerProv){
   if(isVictoryTriggered) return;
@@ -1844,33 +2082,47 @@ function triggerVictory(winnerProv){
     }
   }, 2200);
 
-  // Âm thanh chiến thắng & Giọng đọc AI chúc mừng chiến thắng hào hùng tôn vinh quê hương
-  // Phát nhạc đặc trưng vinh danh tỉnh thành vô địch (35 giây)
-  const targetMusicId = (trueOriginProv ? trueOriginProv.id : null) || winnerProv.originCapitalId || winnerProv.id;
-  if(window.MusicService){
-    console.log('[VICTORY] Kích hoạt nhạc vinh danh chiến thắng cho tỉnh:', targetMusicId, winnerName);
-    window.MusicService.playProvinceMusic(targetMusicId);
-  }
-
-  // Âm thanh chiến thắng & Giọng đọc AI chúc mừng chiến thắng hào hùng tôn vinh quê hương
+  // Phát một câu thoại độc bản đã lưu cho đúng tỉnh chiến thắng.
   playSoundEffect('conquer');
-  // Câu 1: Công bố đại thắng tối cao và danh hiệu thống nhất
-  speakText("Đại thắng tối cao! Chúc mừng " + winnerName + " đã xuất sắc thống nhất toàn bộ sáu mươi ba tỉnh thành Việt Nam! Non sông thu về một mối!", true);
+  const speechProvinceId = (trueOriginProv ? trueOriginProv.id : null) || winnerProv.originCapitalId || winnerProv.id;
+  const victorySpeech = (typeof PROVINCE_VICTORY_SPEECH !== 'undefined' && PROVINCE_VICTORY_SPEECH[speechProvinceId])
+    ? PROVINCE_VICTORY_SPEECH[speechProvinceId]
+    : "Đại thắng tối cao! Chúc mừng " + winnerName + " đã xuất sắc thống nhất toàn bộ sáu mươi ba tỉnh thành Việt Nam! Non sông thu về một mối!";
+  window._playingVictorySpeech = true;
+  speakText(victorySpeech, true);
+  window._playingVictorySpeech = false;
 
-  // Câu 2: Vinh danh địa danh danh lam thắng cảnh và văn hóa đặc sản
-  // Sau khi giọng đọc hoàn tất câu văn hóa địa danh (~9 giây), TỰ ĐỘNG TĂNG ÂM LƯỢNG NHẠC LÊN 90% để thưởng thức trọn vẹn giai điệu!
-  const hasCulture = !!(culture.landmark && culture.specialty);
-  if(hasCulture){
-    setTimeout(() => {
-      speakText("Vinh danh vùng đất " + winnerName + " với " + culture.landmark + ", cùng ẩm thực trứ danh " + culture.specialty + "!", false);
-    }, 3800);
+  // Phat dung bai nhac cua tinh vo dich.
+  if(window.MusicService){
+    try {
+      if(typeof window.stopEpicBgm === 'function') window.stopEpicBgm();
+      const musicStarted = window.MusicService.playProvinceMusic(speechProvinceId);
+      console.log('[VICTORY] Nhac vinh danh ' + speechProvinceId + ': ' + (musicStarted ? 'da kich hoat' : 'khong co cau hinh'));
+      if(!musicStarted && typeof addWarLog === 'function') addWarLog('⚠️ [LOI NHAC] Khong the kich hoat nhac vinh danh cho ' + winnerName + '.', 'log-boss');
+    } catch(err){
+      console.error('[VICTORY] Loi phat nhac vinh danh:', err);
+      if(typeof addWarLog === 'function') addWarLog('⚠️ [LOI NHAC] ' + winnerName + ': ' + err.message, 'log-boss');
+    }
   }
+
+  // Tự đóng popup vinh danh sau khi giọng đọc AI kết thúc.
+  const victorySpeechStartedAt = Date.now();
+  const closeVictoryAfterSpeech = setInterval(() => {
+    if(!isSpeechBusy || Date.now() - victorySpeechStartedAt > 18000){
+      clearInterval(closeVictoryAfterSpeech);
+      closeVictoryModal();
+    }
+  }, 250);
+
+  // Bảng thoại đã bao gồm phần địa danh và đặc sản, nên không đọc thêm câu văn hóa thứ hai.
+  const hasCulture = !!victorySpeech;
 
   // Tự động đẩy âm lượng nhạc lên 90% sau khi đọc xong địa danh & văn hóa
   setTimeout(() => {
     if(window.MusicService && window.MusicService.isPlaying()){
       console.log('[VICTORY] Giọng đọc vinh danh hoàn tất. Tăng âm lượng nhạc vinh danh lên cao trào (90%)!');
-      window.MusicService.fadeVolume(90, 1500);
+      // Âm lượng nhạc local đã được điều khiển cố định theo currentTime; không ghi đè fade.
+      console.log('[VICTORY] Giữ nguyên đường cong âm lượng nhạc vinh danh.');
     }
   }, hasCulture ? 9000 : 4500);
 
@@ -1881,10 +2133,7 @@ function triggerVictory(winnerProv){
 function closeVictoryModal(){
   const modal = document.getElementById('victory-modal');
   if(modal) modal.classList.remove('active');
-  // Khi đóng modal chiến thắng, tạm dừng bài nhạc vinh danh
-  if(window.MusicService){
-    window.MusicService.stopMusic();
-  }
+  // Đóng lớp vinh danh nhưng để nhạc tiếp tục đến gần cuối bài.
 }
 
 function launchVictoryFireworks(color){
@@ -3212,28 +3461,58 @@ function spawnMarchingTroop(srcProv, tgtProv, user){
 }
 
 function handleAction(data){
-  addChat(data.user, data.comment||'');
-  const tgtProv = provinces.find(p=>p.id===data.provinceId) || provinces[0];
-  const srcProv = provinces.find(p=>p.id===data.sourceProvinceId);
+  addChat(data.user, data.comment || '');
+  const comment = String(data.comment || '').trim();
+  const targetById = data.provinceId ? provinces.find(p => p.id === data.provinceId) : null;
+  const match = comment.match(/(?:^|\s)(\d{1,3})\s*-\s*(\d{1,3})(?:\s+(MB|TC))?/i);
+  const srcProv = (data.sourceProvinceId && provinces.find(p => p.id === data.sourceProvinceId)) || (match && provinces.find(p => p.plate === match[1]));
+  const fold = value => String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
+  let tgtProv = targetById || (match && provinces.find(p => p.plate === match[2]));
+  if(!tgtProv && !match && comment){ const needle=fold(comment.replace(/^\+/,'')); tgtProv=provinces.find(p => fold(p.name) === needle || p.plate === comment.replace(/^\+/,'')); }
+  if(!tgtProv) tgtProv = provinces[0];
+  const isPreparation = window.isPreparationPhase === true || battlePhase === 'preparation';
+  const giftValue = Number(data.giftValue) || 0;
 
-  if(srcProv && srcProv.id !== tgtProv.id){
-    launchMarchTroops(srcProv, tgtProv, data.giftValue >= 50 ? 6 : 4, data.user);
-  } else {
-    if(data.type==='comment'){
-      spawnUnit(tgtProv, data.user, 'soldier');
-    }else if(data.type==='gift'){
-      totalCoins += data.giftValue;
-      if(data.giftValue>mvp.coins){
-        mvp = {name:data.user,coins:data.giftValue};
-        document.getElementById('mvp-banner').innerText = '👑 MVP: ' + mvp.name + ' (' + mvp.coins + ' xu)';
+  if(match && srcProv && tgtProv && srcProv.id !== tgtProv.id){
+    const mode = (match[3] || '').toUpperCase();
+    if(mode === 'MB' || mode === 'TC'){
+      const canAir = srcProv.id === 'ha_noi' || srcProv.id === 'tp_hcm' || (srcProv.militaryZone && completedZones.has(srcProv.militaryZone));
+      const empireProvs = getEmpireProvinces(getEmpireId(srcProv));
+      const canNavy = srcProv.id === 'tp_hcm' || empireProvs.some(p => coastalProvinces.has(p.id)) && (srcProv.id === 'tp_hcm' || (srcProv.militaryZone && completedZones.has(srcProv.militaryZone)));
+      if(mode === 'MB' && !canAir){ popupDamage(tgtProv.center[0], tgtProv.center[1], 'CHƯA CÓ QUYỀN MB!', '#ef4444', true); addWarLog(srcProv.name + ' chưa có quyền điều động máy bay.', 'log-boss'); return; }
+      if(mode === 'TC' && !canNavy){ popupDamage(tgtProv.center[0], tgtProv.center[1], 'CHƯA CÓ QUYỀN TC!', '#ef4444', true); addWarLog(srcProv.name + ' chưa có quyền điều động tàu chiến.', 'log-boss'); return; }
+      if(mode === 'MB'){
+        spawnAirMission(srcProv, tgtProv, srcProv.name, 'KHÔNG QUÂN', 350, true);
+        addWarLog('✈️ ' + srcProv.name + ' điều động máy bay oanh tạc ' + tgtProv.name + '.', 'log-airstrike');
+      } else {
+        let navalTarget = tgtProv;
+        if(!coastalProvinces.has(navalTarget.id)) navalTarget = provinces.find(p => p.ownerId === tgtProv.ownerId && coastalProvinces.has(p.id)) || navalTarget;
+        const coastalBase = empireProvs.find(p => coastalProvinces.has(p.id)) || srcProv;
+        spawnNavalMission(coastalBase, navalTarget, srcProv.name, 'HẢI QUÂN', 350, true);
+        addWarLog('⚓ ' + srcProv.name + ' điều động tàu chiến pháo kích ' + navalTarget.name + '.', 'log-navystrike');
       }
-      if(data.giftValue>=100){
-        spawnUnit(tgtProv, data.user, 'boss');
-        createShockwave(canvas.width/2, canvas.height/2, tgtProv.color);
-      }else{
-        spawnUnit(tgtProv, data.user, 'cavalry');
-      }
+      updateStats(); return;
     }
+    const neighbors = VN_ADJACENCY[srcProv.id] || [];
+    if(!neighbors.includes(tgtProv.id)){
+      popupDamage(tgtProv.center[0], tgtProv.center[1], 'NGOÀI PHẠM VI!', '#ef4444', true);
+      addWarLog(tgtProv.name + ' không nằm trong phạm vi tấn công của bộ binh ' + srcProv.name + '.', 'log-boss'); return;
+    }
+    launchMarchTroops(srcProv, tgtProv, giftValue >= 50 ? 6 : 4, data.user);
+    addWarLog(srcProv.name + ' tiến công [' + tgtProv.name + '].', 'log-atk');
+    updateStats(); return;
+  }
+
+  const p = targetById || tgtProv;
+  if(data.type === 'gift'){
+    totalCoins += giftValue;
+    if(giftValue > mvp.coins){ mvp = {name:data.user, coins:giftValue}; const m=document.getElementById('mvp-banner'); if(m)m.innerText='👑 MVP: '+mvp.name+' ('+mvp.coins+' xu)'; }
+    if(giftValue >= 2000){ p.ownerId=p.id; p.ownerName=p.name; p.hp=1000; createShockwave(p.center[0],p.center[1],p.color); createShockwave(p.center[0],p.center[1],p.color); spawnUnit(p,data.user,'boss'); }
+    else { const heal = giftValue >= 200 ? 300 : giftValue >= 50 ? 150 : 50; p.hp=Math.min(p.maxHp || 1000,p.hp+heal); spawnUnit(p,data.user,giftValue>=200?'boss':giftValue>=50?'cavalry':'soldier'); if(giftValue>=50){ const enemy=provinces.find(x=>getEmpireId(x)!==getEmpireId(p)); if(enemy) spawnAirMission(p,enemy,data.user,'CHI VIỆN',250,false); } }
+  } else {
+    if(p.hp >= (p.maxHp || 1000)){ popupDamage(p.center[0],p.center[1],'ĐẦY MÁU','#38bdf8',true); addWarLog(p.name+' đã đạt giới hạn tối đa HP.', 'log-info'); }
+    else { p.hp=Math.min(p.maxHp || 1000,p.hp+100); popupDamage(p.center[0],p.center[1],'+100 HP','#22c55e',false); }
+    spawnUnit(p,data.user,'soldier');
   }
   updateStats();
 }
@@ -3590,7 +3869,9 @@ function update(){
     const bar = document.getElementById('hp-bar-'+r);
     const txt = document.getElementById('hp-txt-'+r);
     if(bar) bar.style.width = pct+'%';
-    if(txt) txt.innerText = pct+'%';
+    const regionProvinceTotal = { bac: 25, trung: 19, nam: 19 };
+    const remainingInRegion = provinces.filter(p => p.region === r && (p.ownerId || p.id) === p.id).length;
+    if(txt) txt.innerText = remainingInRegion + '/' + (regionProvinceTotal[r] || 0) ;
   }
 }
 
@@ -5645,6 +5926,11 @@ setInterval(updateLeaderboard, 1200);
 let matchTimeRemaining = 10 * 60; // 10 phút = 600 giây
 
 let matchTimerInterval = null;
+let matchHasStarted = false;
+let battlePhase = 'idle';
+let prepSecondsRemaining = 90;
+let prepCueTimer = null;
+window.isPreparationPhase = false;
 
 
 
@@ -5654,7 +5940,7 @@ function startMatchTimer(){
 
   matchTimerInterval = setInterval(() => {
 
-    if(isVictoryTriggered) return;
+    if(isVictoryTriggered || !matchHasStarted || battlePhase !== 'battle') return;
 
     matchTimeRemaining--;
 
@@ -5675,6 +5961,10 @@ function startMatchTimer(){
 }
 
 
+
+function stopPreparationTimer(){ if(prepCueTimer){ clearInterval(prepCueTimer); prepCueTimer=null; } }
+function updatePhaseDisplay(name,className){ const b=document.getElementById('current-phase-badge'); if(b){b.textContent=name;b.className='phase-badge '+className;} const t=document.getElementById('phase-countdown'); if(t)t.textContent=battlePhase==='preparation'?'01:'+String(prepSecondsRemaining).padStart(2,'0'):'00:00'; }
+function startBattlePreparation(){ stopPreparationTimer(); matchHasStarted=true; battlePhase='preparation'; window.isPreparationPhase=true; prepSecondsRemaining=90; addWarLog('🛡️ [AUTO-WAR] Giai đoạn chuẩn bị 1 phút 30 giây bắt đầu.','log-reinforce'); speakText('Giai đoạn chuẩn bị một phút ba mươi giây bắt đầu. Các tỉnh thành củng cố lực lượng.',true); updatePhaseDisplay('🛡️ GIAI ĐOẠN: CHUẨN BỊ','phase-reinforce'); prepCueTimer=setInterval(()=>{ if(isVictoryTriggered){stopPreparationTimer();return;} prepSecondsRemaining--; updatePhaseDisplay('🛡️ GIAI ĐOẠN: CHUẨN BỊ','phase-reinforce'); if(prepSecondsRemaining===10){addWarLog('⏳ Còn 10 giây chuyển sang giai đoạn giao tranh.','log-boss'); speakText('Còn 10 giây chuyển sang giai đoạn giao tranh.',true);} else if(prepSecondsRemaining>=1&&prepSecondsRemaining<=5){speakText(String(prepSecondsRemaining),true);} if(prepSecondsRemaining<=0){stopPreparationTimer();battlePhase='battle';window.isPreparationPhase=false;addWarLog('⚔️ Giai đoạn giao tranh bắt đầu.','log-boss');speakText('Giai đoạn giao tranh bắt đầu.',true);updatePhaseDisplay('⚔️ GIAI ĐOẠN: TẤN CÔNG','phase-attack');startMatchTimer();}},1000); }
 
 function updateMatchTimerDisplay(){
 
@@ -5770,9 +6060,9 @@ function onMatchTimeExpired(){
 
 // ==================================================================
 
-function resetNewMatch(){
+function resetNewMatch(skipConfirm = false){
 
-  if(!confirm('Bạn có chắc chắn muốn khởi tạo VÁN ĐẤU MỚI?\nToàn bộ bản đồ 63 tỉnh sẽ được khôi phục về trạng thái độc lập ban đầu (1000 HP).')) return;
+  if(!skipConfirm && !confirm('Bạn có chắc chắn muốn khởi tạo VÁN ĐẤU MỚI?\nToàn bộ bản đồ 63 tỉnh sẽ được khôi phục về trạng thái độc lập ban đầu (1000 HP).')) return;
 
 
 
@@ -5886,8 +6176,7 @@ function resetNewMatch(){
   // Đặt lại thời gian 10 phút
 
   matchTimeRemaining = 10 * 60;
-
-  startMatchTimer();
+  matchHasStarted=false; battlePhase='idle'; window.isPreparationPhase=false; prepSecondsRemaining=90; stopPreparationTimer(); if(matchTimerInterval){clearInterval(matchTimerInterval);matchTimerInterval=null;}
 
   updateMatchTimerDisplay();
 
@@ -5908,16 +6197,11 @@ function resetNewMatch(){
   speakText('Ván đấu mới đã bắt đầu! 63 tỉnh thành bước vào cuộc chiến!', true);
 
 }
-
-
-
-startMatchTimer();
-
-
+updateMatchTimerDisplay();
 
 // 6. Đếm ngược giai đoạn (Turn Countdown)
 
-let phaseSeconds = 45;
+let phaseSeconds = 0;
 
 let currentPhaseIdx = 1;
 
@@ -5934,6 +6218,8 @@ const phases = [
 
 
 setInterval(() => {
+
+  if(!matchHasStarted || battlePhase !== 'battle') return;
 
   phaseSeconds--;
 
@@ -5972,6 +6258,7 @@ setInterval(() => {
 
 
 setTimeout(initProvinceDropdowns, 100);
+setTimeout(initProvinceVictoryTestPanel, 250);
 
 
 
@@ -5980,6 +6267,10 @@ setTimeout(initProvinceDropdowns, 100);
 /*                         UI – Gửi hành động                         */
 
 /* ------------------------------------------------------------------ */
+
+
+function testProvinceVictory(provinceId){ const p=provinces.find(x=>x.id===provinceId); if(!p||!window.triggerVictory)return; if(typeof closeVictoryModal==='function')closeVictoryModal(); isVictoryTriggered=false; victoryProvince=null; window.triggerVictory(p); }
+async function initProvinceVictoryTestPanel(){ const grid=document.getElementById('province-victory-test-grid');const count=document.getElementById('victory-test-count');if(!grid)return;let catalog=[];try{const r=await fetch('/province-music.json',{cache:'no-store'});catalog=await r.json();}catch(e){console.warn('[VICTORY TEST] Catalog lỗi',e);}const ids=new Set(catalog.map(x=>x.provinceId));const speechIds=new Set(['dong_thap','da_nang']);grid.innerHTML='';provinces.forEach(p=>{const hasMusic=ids.has(p.id);const hasSpeech=speechIds.has(p.id);const b=document.createElement('button');b.type='button';const plate=p.plate||'--';b.textContent=(hasMusic?'● ':'• ')+p.name+' ['+plate+'] '+(hasMusic?'♫':'');b.title=hasMusic?(hasSpeech?'Mô phỏng '+p.name+' vô địch: có thoại và nhạc':'Mô phỏng '+p.name+' vô địch: có nhạc, chưa có thoại'):'Chưa có bài nhạc cấu hình cho '+p.name;b.disabled=!hasMusic;const chipColor=hasMusic?(hasSpeech?'#10b981':'#c084fc'):'#334155';const chipBorder=hasMusic?(hasSpeech?'rgba(16,185,129,.9)':'rgba(192,132,252,.9)'):'rgba(71,85,105,.35)';const chipText=hasMusic?(hasSpeech?'#86efac':'#e9d5ff'):'#475569';const chipBackground=hasMusic?(hasSpeech?'rgba(6,78,59,.55)':'rgba(15,23,42,.55)'):'rgba(15,23,42,.55)';b.style.cssText='min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border:1px solid '+chipBorder+';background:'+chipBackground+';color:'+chipText+';border-radius:5px;padding:4px 5px;font-size:9px;font-family:Chakra Petch,sans-serif;font-weight:800;letter-spacing:.15px;text-align:left;cursor:'+(hasMusic?'pointer':'not-allowed')+';box-shadow:inset 0 0 8px '+(hasSpeech?'rgba(16,185,129,.08)':hasMusic?'rgba(192,132,252,.12)':'transparent')+';';if(hasMusic)b.onclick=()=>testProvinceVictory(p.id);grid.appendChild(b);});if(count)count.textContent=ids.size+'/'+provinces.length+' có nhạc | xanh: có thoại, tím: chưa có thoại';}
 
 function sendAction(mode){
 
@@ -6080,10 +6371,13 @@ function toggleAuto(){
       btn.style.background = '#ef4444';
     }
     addWarLog('⚡ BẮT ĐẦU AUTO-WAR! Đã kích hoạt hệ thống mô phỏng chiến trận tự động cho 63 Tỉnh Thành.', 'log-boss');
+    startBattlePreparation();
 
     // Tần suất xuất quân đã được điều chỉnh vừa phải, nhịp độ mượt mà: 480ms mỗi chu kỳ, không bị dồn dập quá nhanh
     autoTimer = setInterval(() => {
-      // Nếu trận đấu đã kết thúc (thống nhất hoặc hết giờ) -> tự động ngắt Auto
+            // Chỉ xuất quân sau giai đoạn chuẩn bị.
+      if(battlePhase !== 'battle') return;
+// Nếu trận đấu đã kết thúc (thống nhất hoặc hết giờ) -> tự động ngắt Auto
       if(isVictoryTriggered || matchTimeRemaining <= 0){
         clearInterval(autoTimer);
         autoTimer = null;
@@ -6221,8 +6515,17 @@ function updateStats(custom){
 
 </script>
 
+<script src="dashboard.js"></script><script>
+function showMatchFinishPopup(){ const el=document.getElementById('match-finish-popup'); if(el) el.classList.add('active'); }
+window.showMatchFinishPopup=showMatchFinishPopup;
+function hideMatchFinishPopup(){ const el=document.getElementById('match-finish-popup'); if(el) el.classList.remove('active'); }
+function startNewMatchFromFinish(){ hideMatchFinishPopup(); resetNewMatch(true); }
+function returnHomeFromFinish(){ hideMatchFinishPopup(); resetNewMatch(true); window.currentSelectedMapId='vietnam_63'; if(typeof navigateTo==='function') navigateTo('#/map/vietnam_63'); }
+window.startNewMatchFromFinish=startNewMatchFromFinish; window.returnHomeFromFinish=returnHomeFromFinish;
+</script>
 </body>
 
 </html>
+
 
 

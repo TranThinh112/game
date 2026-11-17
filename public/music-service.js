@@ -13,13 +13,15 @@ const MusicService = (function(){
   let isMuted = false;
   let playPendingSong = null;
 
-  // Load danh mục 30 bài hát từ file province-music.json
+  // Load danh mục nhạc của 47 tỉnh/thành hát từ file province-music.json
   async function loadCatalog(){
     try {
       const res = await fetch("/province-music.json");
       if(res.ok){
         songsCatalog = await res.json();
         console.log("[MusicService] Loaded " + songsCatalog.length + " province songs from province-music.json");
+        const invalid = songsCatalog.filter(song => song.localAudioUrl && !song.localAudioUrl.startsWith("/music/"));
+        if(invalid.length){ console.warn("[MusicService] Cấu hình đường dẫn nhạc không hợp lệ:", invalid.map(song => song.provinceId)); }
       }
     } catch(e){
       console.warn("[MusicService] Could not load province-music.json, using fallback", e);
@@ -289,6 +291,7 @@ const MusicService = (function(){
     // Preload only the selected victory track; do not load the whole catalog at startup.
     localAudioPlayer = new Audio();
     localAudioPlayer.preload = "auto";
+    localAudioPlayer.playsInline = true;
     localAudioPlayer.src = src;
     localAudioPlayer.load();
     const startSec = Number(config.startTimeSeconds) || 0;
@@ -299,13 +302,13 @@ const MusicService = (function(){
     isPlaying = true;
     const factor = Number(config.volumeFactor) || 1.0;
     // Bắt đầu từ 2% âm lượng (gần như im lặng) rồi tăng êm dịu lên mức nền
-    const startVolPct = (typeof config.initialVolume === 'number') ? config.initialVolume : 0.02;
+    const startVolPct = (typeof config.initialVolume === 'number') ? config.initialVolume : 0.18;
     localAudioPlayer.volume = startVolPct; // Bắt đầu ở mức siêu nhẹ
-    const baseTargetNum = (typeof config.targetBaseVolume === 'number') ? config.targetBaseVolume : 25;
+    const baseTargetNum = (typeof config.targetBaseVolume === 'number') ? config.targetBaseVolume : 78;
     const targetBaseVol = Math.round(baseTargetNum * factor);
     // Tăng âm lượng rõ dần mượt mà theo đường cong (mặc định 3.5s - 4.5s)
     const introFadeMs = Number(config.fadeInMs) || 3500;
-    fadeVolume(targetBaseVol, introFadeMs);
+    // Fade-in được kích hoạt sau khi audio thực sự bắt đầu phát.
 
     const btn = document.getElementById("btn-music-toggle");
     const bar = document.getElementById("province-music-bar");
@@ -324,37 +327,35 @@ const MusicService = (function(){
       window.addWarLog("🎶 [NHẠC VINH DANH] Phát file bài ca chiến thắng cục bộ cho " + config.provinceName.toUpperCase(), "log-conquer");
     }
 
-    localAudioPlayer.play().catch(e => {
-      console.warn("[MusicService] Local audio autoplay error, falling back to YouTube:", e);
-      if(ytPlayer && config.youtubeVideoId){
-        doPlaySong(config);
-      }
-    });
+    let localPlaybackStarted = false;
+    let localFadeOutStarted = false;
+    const startLocalPlayback = () => {
+      if(!localAudioPlayer || localPlaybackStarted) return;
+      localAudioPlayer.play().then(() => {
+        localPlaybackStarted = true;
+        console.log('[MusicService] Local volume controller active for ' + config.provinceName);
+        console.log("[MusicService] Local audio PLAYING: " + config.provinceName + " (giữ âm lượng nhỏ trước fade-in)");
+      }).catch(e => {
+        console.warn("[MusicService] Local audio play error:", e);
+        if(ytPlayer && config.youtubeVideoId) doPlaySong(config);
+      });
+    };
+    localAudioPlayer.addEventListener('canplay', startLocalPlayback, { once: true });
+    startLocalPlayback();
+    localAudioPlayer.addEventListener('error', () => {
+      const code = localAudioPlayer && localAudioPlayer.error ? localAudioPlayer.error.code : 'UNKNOWN';
+      console.error("[MusicService] Local audio ERROR " + code + ": " + src);
+      if(typeof window.addWarLog === 'function') window.addWarLog("⚠️ [LỖI NHẠC] Không phát được file " + config.provinceName + " (mã " + code + ")", 'log-boss');
+    }, { once: true });
 
     const configDuration = Number(config.durationSeconds) || 35;
 
-    // Tính toán thời điểm fade-out chính xác dựa trên độ dài thực tế của file âm thanh
-    function scheduleLocalFadeOut(actualDuration){
-      const effectiveDuration = Math.min(configDuration, actualDuration);
-      const fadeDurationSec = Math.min(5, effectiveDuration * 0.35); // Giảm dần trong 4-5s cuối
-      const fadeStartDelay = Math.max(0, effectiveDuration - fadeDurationSec);
-
-      if(fadeOutTimer){
-        clearTimeout(fadeOutTimer);
-        fadeOutTimer = null;
-      }
-      fadeOutTimer = setTimeout(() => {
-        console.log("[MusicService] 5s cuối: Bắt đầu giảm dần âm lượng êm ái (fade-out) cho " + config.provinceName);
-        if(typeof window.showMatchFinishPopup === "function") window.showMatchFinishPopup();
-        fadeVolume(0, fadeDurationSec * 1000);
-      }, fadeStartDelay * 1000);
-
-      if(stopTimer){
-        clearTimeout(stopTimer);
-        stopTimer = null;
-      }
+    // Chỉ hẹn giờ dừng; âm lượng được điều khiển duy nhất bởi timeupdate bên dưới.
+    function scheduleLocalStop(actualDuration){
+      const effectiveDuration = Math.min(configDuration, actualDuration || configDuration);
+      if(stopTimer){ clearTimeout(stopTimer); stopTimer = null; }
       stopTimer = setTimeout(() => {
-        console.log("[MusicService] Hết thời lượng bài hát: Dừng nhạc vinh danh cho " + config.provinceName);
+        console.log('[MusicService] Hết thời lượng bài hát: Dừng nhạc vinh danh cho ' + config.provinceName);
         stopMusic();
         if(onEnd) onEnd();
       }, (effectiveDuration * 1000) + 300);
@@ -362,12 +363,44 @@ const MusicService = (function(){
 
     localAudioPlayer.addEventListener('loadedmetadata', () => {
       if(localAudioPlayer && localAudioPlayer.duration && !isNaN(localAudioPlayer.duration)){
-        scheduleLocalFadeOut(localAudioPlayer.duration);
+        scheduleLocalStop(localAudioPlayer.duration);
       }
     }, { once: true });
 
+    let lastVolumeStage = '';
+    localAudioPlayer.addEventListener('timeupdate', () => {
+      if(!localAudioPlayer || currentSong !== config) return;
+      const current = localAudioPlayer.currentTime || 0;
+      const duration = Math.min(configDuration, localAudioPlayer.duration || configDuration);
+      const delay = Math.max(0, Number(config.fadeInDelaySeconds) || 0);
+      const fadeInSeconds = Math.max(0.1, (Number(config.fadeInMs) || 5000) / 1000);
+      const initial = Math.max(0, Math.min(1, Number(config.initialVolume) || 0.10));
+      const target = Math.max(0, Math.min(1, (Number(config.targetBaseVolume) || 78) / 100));
+      const fadeOutStart = Math.max(0, duration - 5);
+      let volume = initial;
+      let stage = 'quiet';
+      if(current >= delay && current < delay + fadeInSeconds){
+        const progress = Math.max(0, Math.min(1, (current - delay) / fadeInSeconds));
+        volume = initial + (target - initial) * (progress * (2 - progress));
+        stage = 'fade-in';
+      } else if(current >= delay + fadeInSeconds && current < fadeOutStart){
+        volume = target;
+        stage = 'full';
+      } else if(current >= fadeOutStart){
+        const progress = Math.max(0, Math.min(1, (current - fadeOutStart) / 5));
+        volume = target * (1 - progress);
+        stage = 'fade-out';
+        localFadeOutStarted = true;
+      }
+      localAudioPlayer.volume = Math.max(0, Math.min(1, volume));
+      if(stage !== lastVolumeStage){
+        lastVolumeStage = stage;
+        console.log('[MusicService] Volume stage ' + stage + ' (' + Math.round(volume * 100) + '%): ' + config.provinceName);
+      }
+    });
+
     // Fallback nếu loadedmetadata đã kích hoạt trước đó
-    scheduleLocalFadeOut(configDuration);
+    scheduleLocalStop(configDuration);
 
     localAudioPlayer.onended = () => {
       stopMusic();
@@ -386,7 +419,7 @@ const MusicService = (function(){
       (s.provinceName && s.provinceName.toLowerCase() === cleanId)
     );
 
-    // Fallback nếu tỉnh chưa có bài cấu hình riêng trong danh mục 30 bài: Dùng bài Quốc Gia Hào Khí Việt Nam (video độc lập, KHÔNG lấy ID bài An Giang)
+    // Fallback nếu tỉnh chưa có bài cấu hình riêng trong danh mục nhạc của 47 tỉnh/thành: Dùng bài Quốc Gia Hào Khí Việt Nam (video độc lập, KHÔNG lấy ID bài An Giang)
     if(!found){
       const pObj = (typeof provinces !== 'undefined') ? provinces.find(p => p.id === cleanId) : null;
       const pName = pObj ? pObj.name : provinceId.toUpperCase();
@@ -512,3 +545,4 @@ const MusicService = (function(){
 })();
 
 window.MusicService = MusicService;
+
