@@ -1,0 +1,145 @@
+<!-- ======================================================================== -->
+<!--                1. RAILWAY STYLE MAIN DASHBOARD VIEW (#/)                 -->
+<!-- ======================================================================== -->
+<div class="rw-dashboard-view" id="rw-dashboard-view">
+  <!-- TOP NAVBAR -->
+  <header class="rw-navbar">
+    <div class="rw-brand" onclick="navigateTo('#/')">
+      <div class="rw-logo-railway">🚂</div>
+      <span>HỆ THỐNG ĐẠI CHIẾN 63 TỈNH THÀNH</span>
+      <span class="rw-nav-badge">PRODUCTION</span>
+    </div>
+    <div class="rw-nav-actions">
+      <button class="rw-btn-nav" onclick="navigateTo('#/map/vietnam_63')">
+        <span>🗺️ Bản đồ chính thức</span>
+      </button>
+      <button class="rw-btn-nav" onclick="launchBattleGame()" style="background:#8b5cf6;color:#fff;border-color:#8b5cf6;">
+        <span>⚡ Vào trận chiến</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO TITLE & SYSTEM OVERVIEW -->
+  <section class="rw-hero">
+    <div class="rw-hero-info">
+      <h1>HỆ THỐNG ĐẠI CHIẾN BẢN ĐỒ VIỆT NAM</h1>
+      <p>Nền tảng mô phỏng chiến thuật quân sự Risk tương tác thời gian thực trên bản đồ 63 Tỉnh Thành Việt Nam. Chọn chiến trường bên dưới để xem tình báo và khai hỏa.</p>
+    </div>
+    <div class="rw-stats-pills">
+      <div class="rw-stat-pill">
+        <span>🗺️ TỔNG SỐ MAP:</span> <strong>6 CHIẾN TRƯỜNG</strong>
+      </div>
+      <div class="rw-stat-pill">
+        <span>🟢 TRẠNG THÁI:</span> <strong>ONLINE 100%</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAILWAY MAP CARDS GRID -->
+  <main class="rw-grid-container" id="rw-maps-grid">
+    <!-- Populated dynamically by dashboard.js -->
+  </main>
+</div>
+
+<!-- ======================================================================== -->
+<!--              2. MAP DETAIL & LEADERBOARDS VIEW (#/map/:id)               -->
+<!-- ======================================================================== -->
+<div class="rw-detail-view" id="rw-detail-view">
+  <!-- TOP NAVBAR -->
+  <header class="rw-navbar">
+    <div class="rw-brand" onclick="navigateTo('#/')">
+      <div class="rw-logo-railway">🚂</div>
+      <span>HỆ THỐNG ĐẠI CHIẾN 63 TỈNH THÀNH</span>
+      <span class="rw-nav-badge">MAP INTEL</span>
+    </div>
+    <div class="rw-nav-actions">
+      <button class="rw-btn-nav" onclick="navigateTo('#/')">
+        <span>← Quay lại Dashboard</span>
+      </button>
+      <button class="rw-btn-nav" onclick="launchBattleGame()" style="background:#dc2626;color:#fff;border-color:#ef4444;">
+        <span>⚔️ VÀO TRẬN CHIẾN</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="rw-detail-container">
+    <!-- BREADCRUMB -->
+    <div class="rw-breadcrumb">
+      <a onclick="navigateTo('#/')">Dashboard</a>
+      <span>/</span>
+      <a>Maps</a>
+      <span>/</span>
+      <strong id="rw-breadcrumb-mapname">Đại Chiến 63 Tỉnh Thành</strong>
+    </div>
+
+    <!-- DETAIL HERO & LAUNCH BAR -->
+    <div class="rw-detail-header">
+      <div class="rw-detail-title-group">
+        <h2 id="rw-detail-title">🇻🇳 Đại Chiến 63 Tỉnh Thành</h2>
+        <p id="rw-detail-desc">Toàn bộ 63 tỉnh thành Việt Nam cùng Hoàng Sa, Trường Sa và Côn Đảo.</p>
+      </div>
+      <button class="rw-battle-launch-btn" onclick="launchBattleGame()">
+        <span>⚔️ VÀO TRẬN CHIẾN</span>
+        <span style="font-size:18px;">🔥</span>
+      </button>
+    </div>
+
+    <!-- 2-COLUMNS CONTENT -->
+    <div class="rw-detail-body">
+      <!-- LEFT COLUMN: MAP PREVIEW -->
+      <div class="rw-detail-map-card">
+        <div class="rw-map-card-canvas-wrap">
+          <canvas id="rw-detail-canvas"></canvas>
+        </div>
+        <div class="rw-map-card-info">
+          <div class="rw-meta-box">
+            <div class="rw-meta-label">Quy mô lãnh thổ</div>
+            <div class="rw-meta-value" id="rw-meta-prov-count">63 Tỉnh Thành</div>
+          </div>
+          <div class="rw-meta-box">
+            <div class="rw-meta-label">Chế độ phân vùng</div>
+            <div class="rw-meta-value" id="rw-meta-region-mode">Phân vùng khi hợp nhất: 7 Quân Khu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: LEADERBOARDS & STATS -->
+      <div class="rw-detail-stats-col">
+        <!-- TOP CHAMPIONS LEADERBOARD -->
+        <div class="rw-stats-card">
+          <div class="rw-stats-card-header">
+            <div class="rw-stats-card-title">
+              <span>🏆 TỈNH VÔ ĐỊCH NHIỀU NHẤT</span>
+            </div>
+            <div class="rw-stats-tag">ALL-TIME RANKING</div>
+          </div>
+          <table class="rw-table">
+            <thead>
+              <tr>
+                <th>HẠNG</th>
+                <th>TỈNH THÀNH / BIỂN SỐ</th>
+                <th style="text-align:right;">SỐ LẦN VÔ ĐỊCH</th>
+              </tr>
+            </thead>
+            <tbody id="rw-top-winners-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 10 RECENT MATCHES -->
+        <div class="rw-stats-card">
+          <div class="rw-stats-card-header">
+            <div class="rw-stats-card-title">
+              <span>📜 10 TRẬN GẦN ĐÂY NHẤT</span>
+            </div>
+            <div class="rw-stats-tag" style="color:#38bdf8;border-color:rgba(56,189,248,0.3);background:rgba(56,189,248,0.1);">HISTORICAL FEED</div>
+          </div>
+          <div class="rw-recent-list" id="rw-recent-matches-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

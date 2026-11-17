@@ -1,0 +1,317 @@
+/* ================================================================== */
+/*        MUSIC SERVICE – YOUTUBE PROVINCE ANTHEM SYSTEM             */
+/* ================================================================== */
+const MusicService = (function(){
+  let ytPlayer = null;
+  let isApiReady = false;
+  let isApiLoading = false;
+  let currentSong = null;
+  let stopTimer = null;
+  let isPlaying = false;
+  let songsCatalog = [];
+  let isMuted = false;
+  let playPendingSong = null;
+
+  // Load danh mục 30 bài hát từ file province-music.json
+  async function loadCatalog(){
+    try {
+      const res = await fetch("/province-music.json");
+      if(res.ok){
+        songsCatalog = await res.json();
+        console.log("[MusicService] Loaded " + songsCatalog.length + " province songs from province-music.json");
+      }
+    } catch(e){
+      console.warn("[MusicService] Could not load province-music.json, using fallback", e);
+    }
+  }
+  loadCatalog();
+  // Khởi động sẵn YouTube Player ngay khi mở trang để luôn ở trạng thái sẵn sàng
+  if(document.readyState === "complete" || document.readyState === "interactive"){
+    loadYouTubeIframeApi();
+  } else {
+    window.addEventListener("DOMContentLoaded", () => loadYouTubeIframeApi());
+  }
+
+  // Lắng nghe tương tác đầu tiên của người dùng để mở khóa autoplay cho AudioContext & YouTube Player
+  window.addEventListener("pointerdown", function unlockAudioOnFirstClick(){
+    if(ytPlayer && typeof ytPlayer.unMute === "function"){
+      try { ytPlayer.unMute(); } catch(e){}
+    }
+    window.removeEventListener("pointerdown", unlockAudioOnFirstClick);
+  }, { once: true, passive: true });
+
+  // Nạp thư viện YouTube IFrame Player API
+  function loadYouTubeIframeApi(callback){
+    if(window.YT && window.YT.Player){
+      isApiReady = true;
+      if(callback) callback();
+      return;
+    }
+    if(isApiLoading){
+      if(callback){
+        const checkInterval = setInterval(() => {
+          if(isApiReady){
+            clearInterval(checkInterval);
+            callback();
+          }
+        }, 100);
+      }
+      return;
+    }
+    isApiLoading = true;
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    const oldCallback = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = function(){
+      if(typeof oldCallback === "function") oldCallback();
+      initPlayer(callback);
+    };
+  }
+
+  function initPlayer(onReadyCallback){
+    if(ytPlayer){
+      isApiReady = true;
+      if(onReadyCallback) onReadyCallback();
+      return;
+    }
+    try {
+      ytPlayer = new YT.Player("yt-bgm-player", {
+        height: "1",
+        width: "1",
+        videoId: "uIVW6wXh2xo", // Video mặc định
+        playerVars: {
+          autoplay: 0,
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          rel: 0,
+          modestbranding: 1
+        },
+        events: {
+          onReady: function(event){
+            isApiReady = true;
+            event.target.setVolume(85);
+            console.log("[MusicService] YouTube Player Ready");
+            if(playPendingSong){
+              const s = playPendingSong;
+              playPendingSong = null;
+              doPlaySong(s);
+            }
+            if(onReadyCallback) onReadyCallback();
+          },
+          onStateChange: onPlayerStateChange,
+          onError: onPlayerError
+        }
+      });
+    } catch(err){
+      console.error("[MusicService] Init player error:", err);
+    }
+  }
+
+  function onPlayerStateChange(event){
+    const btn = document.getElementById("btn-music-toggle");
+    const bar = document.getElementById("province-music-bar");
+    if(event.data === YT.PlayerState.PLAYING){
+      isPlaying = true;
+      if(btn){
+        btn.innerText = "🎶";
+        btn.style.borderColor = "#facc15";
+        btn.style.boxShadow = "0 0 12px rgba(250, 204, 21, 0.6)";
+        btn.title = currentSong ? ("Đang phát: Nhạc vinh danh " + currentSong.provinceName) : "Đang phát nhạc";
+      }
+      if(bar && currentSong){
+        bar.style.display = "flex";
+        const titleEl = document.getElementById("province-music-title");
+        if(titleEl) titleEl.innerText = "🎵 Đang vinh danh " + currentSong.provinceName.toUpperCase() + " (35s)";
+      }
+      if(typeof window.addWarLog === "function" && currentSong){
+        window.addWarLog("▶️ [ÂM THANH] YouTube đang phát thành công nhạc vinh danh " + currentSong.provinceName, "log-info");
+      }
+    } else if(event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED){
+      if(event.data === YT.PlayerState.ENDED){
+        stopMusic();
+      }
+    }
+  }
+
+  function onPlayerError(event){
+    const errCode = event ? event.data : "UNKNOWN";
+    const songName = currentSong ? currentSong.provinceName : "Không xác định";
+    const videoId = currentSong ? currentSong.youtubeVideoId : "";
+    console.warn("[MusicService] YouTube Player LỖI (Mã " + errCode + ") cho bài hát:", currentSong);
+    
+    // Ghi nhật ký vào War Log chiến trường và gửi lên server
+    if(typeof window.addWarLog === "function"){
+      window.addWarLog("⚠️ [LỖI NHẠC] Không thể phát nhạc " + songName + " (Mã lỗi YouTube: " + errCode + ", Video: " + videoId + ")", "log-boss");
+    }
+
+    const bar = document.getElementById("province-music-bar");
+    if(bar){
+      bar.style.display = "flex";
+      const titleEl = document.getElementById("province-music-title");
+      if(titleEl) titleEl.innerHTML = "⚠️ Video bản quyền YouTube hạn chế nhúng. <a href='" + (currentSong ? currentSong.youtubeUrl : "#") + "' target='_blank' style='color:#facc15;text-decoration:underline;'>Xem trên YouTube</a>";
+    }
+    stopMusic();
+  }
+
+  function doPlaySong(config){
+    if(!ytPlayer || !isApiReady){
+      playPendingSong = config;
+      loadYouTubeIframeApi();
+      return;
+    }
+
+    try {
+      currentSong = config;
+      const startSec = Number(config.startTimeSeconds) || 0;
+      const duration = Number(config.durationSeconds) || 35;
+      const endSec = startSec + duration;
+
+      console.log("[MusicService] Playing: " + config.provinceName + " [" + config.youtubeVideoId + "] from " + startSec + "s to " + endSec + "s (35s)");
+      if(typeof window.addWarLog === "function"){
+        window.addWarLog("🎶 [NHẠC VINH DANH] Bắt đầu phát bài ca chiến thắng " + config.provinceName.toUpperCase() + " (Giây " + startSec + " -> " + endSec + ")", "log-conquer");
+      }
+
+      // Tạm dừng bài cũ nếu có
+      if(stopTimer){
+        clearTimeout(stopTimer);
+        stopTimer = null;
+      }
+
+      // Đảm bảo không bị mute và đặt âm lượng nền êm ái (35%) trong khi giọng đọc chúc mừng
+      if(typeof ytPlayer.unMute === "function"){
+        try { ytPlayer.unMute(); } catch(e){}
+      }
+      setVolume(35);
+
+      // Nạp video theo startSeconds và endSeconds
+      if(typeof ytPlayer.loadVideoById === "function"){
+        ytPlayer.loadVideoById({
+          videoId: config.youtubeVideoId,
+          startSeconds: startSec,
+          endSeconds: endSec
+        });
+      } else if(typeof ytPlayer.cueVideoById === "function"){
+        ytPlayer.cueVideoById(config.youtubeVideoId, startSec, endSec);
+        ytPlayer.playVideo();
+      }
+
+      // Bộ đếm 35 giây độc lập phía ứng dụng để đảm bảo dừng đúng 35s
+      stopTimer = setTimeout(() => {
+        console.log("[MusicService] 35s completed for " + config.provinceName + ", stopping music.");
+        stopMusic();
+      }, (duration * 1000) + 400);
+
+    } catch(err){
+      console.error("[MusicService] Error in doPlaySong:", err);
+      stopMusic();
+    }
+  }
+
+  function playProvinceMusic(provinceId){
+    if(!provinceId) return false;
+    const cleanId = String(provinceId).toLowerCase().trim();
+
+    // Tìm cấu hình bài hát theo provinceId hoặc aliasProvinceId
+    const found = songsCatalog.find(s => 
+      s.provinceId === cleanId || 
+      (s.aliasProvinceId && s.aliasProvinceId === cleanId) ||
+      (s.provinceName && s.provinceName.toLowerCase() === cleanId)
+    );
+
+    if(!found){
+      console.log("[MusicService] No song configured for provinceId: " + provinceId + " (game continues normally)");
+      return false;
+    }
+
+    if(!isApiReady || !ytPlayer){
+      playPendingSong = found;
+      loadYouTubeIframeApi();
+      return true;
+    }
+
+    doPlaySong(found);
+    return true;
+  }
+
+  function setVolume(vol){
+    if(ytPlayer && typeof ytPlayer.setVolume === "function"){
+      try { ytPlayer.setVolume(Math.max(0, Math.min(100, vol))); } catch(e){}
+    }
+  }
+
+  function fadeVolume(targetVol, durationMs = 1200){
+    if(!ytPlayer || typeof ytPlayer.getVolume !== "function" || typeof ytPlayer.setVolume !== "function") return;
+    try {
+      const startVol = ytPlayer.getVolume() || 35;
+      const steps = 15;
+      const stepTime = durationMs / steps;
+      let currentStep = 0;
+      const timer = setInterval(() => {
+        currentStep++;
+        const vol = Math.round(startVol + (targetVol - startVol) * (currentStep / steps));
+        setVolume(vol);
+        if(currentStep >= steps){
+          clearInterval(timer);
+          setVolume(targetVol);
+        }
+      }, stepTime);
+    } catch(e){}
+  }
+
+  function stopMusic(){
+    if(stopTimer){
+      clearTimeout(stopTimer);
+      stopTimer = null;
+    }
+    if(ytPlayer && typeof ytPlayer.stopVideo === "function"){
+      try { ytPlayer.stopVideo(); } catch(e){}
+    }
+    isPlaying = false;
+    currentSong = null;
+
+    const btn = document.getElementById("btn-music-toggle");
+    if(btn){
+      btn.innerText = "🎵";
+      btn.style.borderColor = "rgba(56, 189, 248, 0.35)";
+      btn.style.boxShadow = "none";
+      btn.title = "Bật/Tắt Nhạc Nền";
+    }
+    const bar = document.getElementById("province-music-bar");
+    if(bar) bar.style.display = "none";
+  }
+
+  function toggleMusic(){
+    if(isPlaying){
+      stopMusic();
+    } else {
+      if(currentSong){
+        doPlaySong(currentSong);
+      } else if(songsCatalog.length > 0){
+        // Mặc định phát bài đầu tiên (An Giang)
+        doPlaySong(songsCatalog[0]);
+      } else {
+        loadYouTubeIframeApi();
+      }
+    }
+  }
+
+  return {
+    PlayProvinceMusic: playProvinceMusic,
+    playProvinceMusic: playProvinceMusic,
+    StopMusic: stopMusic,
+    stopMusic: stopMusic,
+    toggleMusic: toggleMusic,
+    init: loadYouTubeIframeApi,
+    getCatalog: () => songsCatalog,
+    getCurrentSong: () => currentSong,
+    isPlaying: () => isPlaying,
+    setVolume: setVolume,
+    fadeVolume: fadeVolume
+  };
+})();
+
+window.MusicService = MusicService;

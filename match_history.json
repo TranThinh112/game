@@ -1,0 +1,4223 @@
+[
+  {
+    "matchId": "V5283",
+    "winnerName": "Quảng Trị",
+    "winnerPlate": "74",
+    "color": "#3b82f6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794953956242,
+    "dateStr": "05:19:16 18/11/2026"
+  },
+  {
+    "matchId": "V4445",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#f59e0b",
+    "mapId": "vietnam_63",
+    "timestamp": 1794953451980,
+    "dateStr": "05:10:51 18/11/2026"
+  },
+  {
+    "matchId": "V5550",
+    "winnerName": "Lai Châu",
+    "winnerPlate": "25",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794952458909,
+    "dateStr": "04:54:18 18/11/2026"
+  },
+  {
+    "matchId": "V1719",
+    "winnerName": "Hưng Yên",
+    "winnerPlate": "89",
+    "color": "#6138dc",
+    "mapId": "vietnam_63",
+    "timestamp": 1794952129352,
+    "dateStr": "04:48:49 18/11/2026"
+  },
+  {
+    "matchId": "V6105",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794951880425,
+    "dateStr": "04:44:40 18/11/2026"
+  },
+  {
+    "matchId": "V0988",
+    "winnerName": "TP. HCM",
+    "winnerPlate": "51",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794950881089,
+    "dateStr": "04:28:01 18/11/2026"
+  },
+  {
+    "matchId": "V1526",
+    "winnerName": "Thừa Thiên Huế",
+    "winnerPlate": "75",
+    "color": "#5cc2d6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794950109118,
+    "dateStr": "04:15:09 18/11/2026"
+  },
+  {
+    "matchId": "V4073",
+    "winnerName": "Nghệ An",
+    "winnerPlate": "37",
+    "color": "#e05252",
+    "mapId": "vietnam_63",
+    "timestamp": 1794949846860,
+    "dateStr": "04:10:46 18/11/2026"
+  },
+  {
+    "matchId": "V6563",
+    "winnerName": "Thanh Hóa",
+    "winnerPlate": "36",
+    "color": "#4a72d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794949557194,
+    "dateStr": "04:05:57 18/11/2026"
+  },
+  {
+    "matchId": "V1715",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794949517682,
+    "dateStr": "04:05:17 18/11/2026"
+  },
+  {
+    "matchId": "V3395",
+    "winnerName": "Thanh Hóa",
+    "winnerPlate": "36",
+    "color": "#4a72d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794949456889,
+    "dateStr": "04:04:16 18/11/2026"
+  },
+  {
+    "matchId": "V7321",
+    "winnerName": "Thanh Hóa",
+    "winnerPlate": "36",
+    "color": "#4a72d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794949247890,
+    "dateStr": "04:00:47 18/11/2026"
+  },
+  {
+    "matchId": "V0150",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#4a72d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794948967062,
+    "dateStr": "03:56:07 18/11/2026"
+  },
+  {
+    "matchId": "V0044",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794948863243,
+    "dateStr": "03:54:23 18/11/2026"
+  },
+  {
+    "matchId": "V2754",
+    "winnerName": "Thanh Hóa",
+    "winnerPlate": "36",
+    "color": "#4a72d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794948803826,
+    "dateStr": "03:53:23 18/11/2026"
+  },
+  {
+    "matchId": "V0158",
+    "winnerName": "Thanh Hóa",
+    "winnerPlate": "36",
+    "color": "#4a72d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794948726980,
+    "dateStr": "03:52:06 18/11/2026"
+  },
+  {
+    "matchId": "V7929",
+    "winnerName": "Thái Bình",
+    "winnerPlate": "17",
+    "color": "#e35fd1",
+    "mapId": "vietnam_63",
+    "timestamp": 1794948627348,
+    "dateStr": "03:50:27 18/11/2026"
+  },
+  {
+    "matchId": "V9908",
+    "winnerName": "Thái Bình",
+    "winnerPlate": "17",
+    "color": "#e35fd1",
+    "mapId": "vietnam_63",
+    "timestamp": 1794948479804,
+    "dateStr": "03:47:59 18/11/2026"
+  },
+  {
+    "matchId": "V3889",
+    "winnerName": "Hà Nội",
+    "winnerPlate": "30",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794948237002,
+    "dateStr": "03:43:57 18/11/2026"
+  },
+  {
+    "matchId": "V2675",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794948015557,
+    "dateStr": "03:40:15 18/11/2026"
+  },
+  {
+    "matchId": "V5238",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794947861301,
+    "dateStr": "03:37:41 18/11/2026"
+  },
+  {
+    "matchId": "V7747",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794947546416,
+    "dateStr": "03:32:26 18/11/2026"
+  },
+  {
+    "matchId": "M-20261118-VI3M",
+    "winnerName": "Lai Châu",
+    "winnerPlate": "25",
+    "color": "#f97316",
+    "mapId": "vietnam_63",
+    "timestamp": 1794946202762,
+    "dateStr": "03:10:02 18/11/2026"
+  },
+  {
+    "matchId": "M-20261118-QHC1",
+    "winnerName": "Hà Tĩnh",
+    "winnerPlate": "38",
+    "color": "#3b82f6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794935489240,
+    "dateStr": "00:11:29 18/11/2026"
+  },
+  {
+    "matchId": "#M-445",
+    "winnerName": "Hà Nam",
+    "winnerPlate": "90",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794857602879,
+    "dateStr": "02:33:22 17/11/2026"
+  },
+  {
+    "matchId": "#M-444",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794857578431,
+    "dateStr": "02:32:58 17/11/2026"
+  },
+  {
+    "matchId": "#M-443",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794857556737,
+    "dateStr": "02:32:36 17/11/2026"
+  },
+  {
+    "matchId": "#M-442",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794857534720,
+    "dateStr": "02:32:14 17/11/2026"
+  },
+  {
+    "matchId": "#M-441",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794857510237,
+    "dateStr": "02:31:50 17/11/2026"
+  },
+  {
+    "matchId": "#M-440",
+    "winnerName": "Thái Bình",
+    "winnerPlate": "17",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794857488276,
+    "dateStr": "02:31:28 17/11/2026"
+  },
+  {
+    "matchId": "#M-439",
+    "winnerName": "Yên Bái",
+    "winnerPlate": "21",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794857469182,
+    "dateStr": "02:31:09 17/11/2026"
+  },
+  {
+    "matchId": "#M-438",
+    "winnerName": "TP. HCM",
+    "winnerPlate": "51",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794855261888,
+    "dateStr": "01:54:21 17/11/2026"
+  },
+  {
+    "matchId": "#M-437",
+    "winnerName": "Đà Nẵng",
+    "winnerPlate": "43",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794855219320,
+    "dateStr": "01:53:39 17/11/2026"
+  },
+  {
+    "matchId": "#M-436",
+    "winnerName": "Thừa Thiên Huế",
+    "winnerPlate": "75",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794855009695,
+    "dateStr": "01:50:09 17/11/2026"
+  },
+  {
+    "matchId": "#M-435",
+    "winnerName": "Quảng Bình",
+    "winnerPlate": "73",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794854937429,
+    "dateStr": "01:48:57 17/11/2026"
+  },
+  {
+    "matchId": "#M-434",
+    "winnerName": "Nghệ An",
+    "winnerPlate": "37",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794854916265,
+    "dateStr": "01:48:36 17/11/2026"
+  },
+  {
+    "matchId": "#M-433",
+    "winnerName": "Thanh Hóa",
+    "winnerPlate": "36",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794854883195,
+    "dateStr": "01:48:03 17/11/2026"
+  },
+  {
+    "matchId": "#M-432",
+    "winnerName": "Thái Bình",
+    "winnerPlate": "17",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794854821582,
+    "dateStr": "01:47:01 17/11/2026"
+  },
+  {
+    "matchId": "#M-431",
+    "winnerName": "Hà Nội",
+    "winnerPlate": "30",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794854798348,
+    "dateStr": "01:46:38 17/11/2026"
+  },
+  {
+    "matchId": "#M-430",
+    "winnerName": "Phú Thọ",
+    "winnerPlate": "19",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794854778546,
+    "dateStr": "01:46:18 17/11/2026"
+  },
+  {
+    "matchId": "#M-429",
+    "winnerName": "Yên Bái",
+    "winnerPlate": "21",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794854758877,
+    "dateStr": "01:45:58 17/11/2026"
+  },
+  {
+    "matchId": "#M-428",
+    "winnerName": "Yên Bái",
+    "winnerPlate": "21",
+    "color": "#de4557",
+    "mapId": "vietnam_63",
+    "timestamp": 1794852027408,
+    "dateStr": "01:00:27 17/11/2026"
+  },
+  {
+    "matchId": "#M-427",
+    "winnerName": "Hà Nội",
+    "winnerPlate": "30",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794851702748,
+    "dateStr": "00:55:02 17/11/2026"
+  },
+  {
+    "matchId": "#M-426",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813748749,
+    "dateStr": "14:22:28 16/11/2026"
+  },
+  {
+    "matchId": "#M-425",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813745713,
+    "dateStr": "14:22:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-424",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813739730,
+    "dateStr": "14:22:19 16/11/2026"
+  },
+  {
+    "matchId": "#M-423",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813707432,
+    "dateStr": "14:21:47 16/11/2026"
+  },
+  {
+    "matchId": "#M-422",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813680041,
+    "dateStr": "14:21:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-421",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813676563,
+    "dateStr": "14:21:16 16/11/2026"
+  },
+  {
+    "matchId": "#M-420",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813668909,
+    "dateStr": "14:21:08 16/11/2026"
+  },
+  {
+    "matchId": "#M-419",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813635914,
+    "dateStr": "14:20:35 16/11/2026"
+  },
+  {
+    "matchId": "#M-418",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813612318,
+    "dateStr": "14:20:12 16/11/2026"
+  },
+  {
+    "matchId": "#M-417",
+    "winnerName": "Hà Tĩnh",
+    "winnerPlate": "38",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813592383,
+    "dateStr": "14:19:52 16/11/2026"
+  },
+  {
+    "matchId": "#M-416",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813580133,
+    "dateStr": "14:19:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-415",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#9952e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813353207,
+    "dateStr": "14:15:53 16/11/2026"
+  },
+  {
+    "matchId": "#M-414",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813318563,
+    "dateStr": "14:15:18 16/11/2026"
+  },
+  {
+    "matchId": "#M-413",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813284908,
+    "dateStr": "14:14:44 16/11/2026"
+  },
+  {
+    "matchId": "#M-412",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813250834,
+    "dateStr": "14:14:10 16/11/2026"
+  },
+  {
+    "matchId": "#M-411",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813228784,
+    "dateStr": "14:13:48 16/11/2026"
+  },
+  {
+    "matchId": "#M-410",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813194939,
+    "dateStr": "14:13:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-409",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813168066,
+    "dateStr": "14:12:48 16/11/2026"
+  },
+  {
+    "matchId": "#M-408",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813145307,
+    "dateStr": "14:12:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-407",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813110753,
+    "dateStr": "14:11:50 16/11/2026"
+  },
+  {
+    "matchId": "#M-406",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813083003,
+    "dateStr": "14:11:23 16/11/2026"
+  },
+  {
+    "matchId": "#M-405",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813049285,
+    "dateStr": "14:10:49 16/11/2026"
+  },
+  {
+    "matchId": "#M-404",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794813016687,
+    "dateStr": "14:10:16 16/11/2026"
+  },
+  {
+    "matchId": "#M-403",
+    "winnerName": "Long An",
+    "winnerPlate": "62",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812972601,
+    "dateStr": "14:09:32 16/11/2026"
+  },
+  {
+    "matchId": "#M-402",
+    "winnerName": "Long An",
+    "winnerPlate": "62",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812935284,
+    "dateStr": "14:08:55 16/11/2026"
+  },
+  {
+    "matchId": "#M-401",
+    "winnerName": "Long An",
+    "winnerPlate": "62",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812736632,
+    "dateStr": "14:05:36 16/11/2026"
+  },
+  {
+    "matchId": "#M-400",
+    "winnerName": "Long An",
+    "winnerPlate": "62",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812418466,
+    "dateStr": "14:00:18 16/11/2026"
+  },
+  {
+    "matchId": "#M-399",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812396878,
+    "dateStr": "13:59:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-398",
+    "winnerName": "Long An",
+    "winnerPlate": "62",
+    "color": "#e0e052",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812236978,
+    "dateStr": "13:57:16 16/11/2026"
+  },
+  {
+    "matchId": "#M-397",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812157661,
+    "dateStr": "13:55:57 16/11/2026"
+  },
+  {
+    "matchId": "#M-396",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812138475,
+    "dateStr": "13:55:38 16/11/2026"
+  },
+  {
+    "matchId": "#M-395",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794812117818,
+    "dateStr": "13:55:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-394",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811940573,
+    "dateStr": "13:52:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-393",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811901244,
+    "dateStr": "13:51:41 16/11/2026"
+  },
+  {
+    "matchId": "#M-392",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811859648,
+    "dateStr": "13:50:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-391",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811533849,
+    "dateStr": "13:45:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-390",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811501004,
+    "dateStr": "13:45:01 16/11/2026"
+  },
+  {
+    "matchId": "#M-389",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811471697,
+    "dateStr": "13:44:31 16/11/2026"
+  },
+  {
+    "matchId": "#M-388",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811455765,
+    "dateStr": "13:44:15 16/11/2026"
+  },
+  {
+    "matchId": "#M-387",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811443136,
+    "dateStr": "13:44:03 16/11/2026"
+  },
+  {
+    "matchId": "#M-386",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811422067,
+    "dateStr": "13:43:42 16/11/2026"
+  },
+  {
+    "matchId": "#M-385",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811397306,
+    "dateStr": "13:43:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-384",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811386922,
+    "dateStr": "13:43:06 16/11/2026"
+  },
+  {
+    "matchId": "#M-383",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811366502,
+    "dateStr": "13:42:46 16/11/2026"
+  },
+  {
+    "matchId": "#M-382",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811358124,
+    "dateStr": "13:42:38 16/11/2026"
+  },
+  {
+    "matchId": "#M-381",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811334856,
+    "dateStr": "13:42:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-380",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811303959,
+    "dateStr": "13:41:43 16/11/2026"
+  },
+  {
+    "matchId": "#M-379",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811292233,
+    "dateStr": "13:41:32 16/11/2026"
+  },
+  {
+    "matchId": "#M-378",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811281876,
+    "dateStr": "13:41:21 16/11/2026"
+  },
+  {
+    "matchId": "#M-377",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811266262,
+    "dateStr": "13:41:06 16/11/2026"
+  },
+  {
+    "matchId": "#M-376",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811229092,
+    "dateStr": "13:40:29 16/11/2026"
+  },
+  {
+    "matchId": "#M-375",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811113810,
+    "dateStr": "13:38:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-374",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811018233,
+    "dateStr": "13:36:58 16/11/2026"
+  },
+  {
+    "matchId": "#M-373",
+    "winnerName": "Tiền Giang",
+    "winnerPlate": "63",
+    "color": "#68b7d9",
+    "mapId": "vietnam_63",
+    "timestamp": 1794811003630,
+    "dateStr": "13:36:43 16/11/2026"
+  },
+  {
+    "matchId": "#M-372",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810984187,
+    "dateStr": "13:36:24 16/11/2026"
+  },
+  {
+    "matchId": "#M-371",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810962084,
+    "dateStr": "13:36:02 16/11/2026"
+  },
+  {
+    "matchId": "#M-370",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810961895,
+    "dateStr": "13:36:01 16/11/2026"
+  },
+  {
+    "matchId": "#M-369",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810850912,
+    "dateStr": "13:34:10 16/11/2026"
+  },
+  {
+    "matchId": "#M-368",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810836395,
+    "dateStr": "13:33:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-367",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810805219,
+    "dateStr": "13:33:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-366",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#5f8fe3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810775570,
+    "dateStr": "13:32:55 16/11/2026"
+  },
+  {
+    "matchId": "#M-365",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#de9d63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810580660,
+    "dateStr": "13:29:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-364",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#de9d63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810560858,
+    "dateStr": "13:29:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-363",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#de9d63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810399763,
+    "dateStr": "13:26:39 16/11/2026"
+  },
+  {
+    "matchId": "#M-362",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#de9d63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810383947,
+    "dateStr": "13:26:23 16/11/2026"
+  },
+  {
+    "matchId": "#M-361",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#de9d63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794810353464,
+    "dateStr": "13:25:53 16/11/2026"
+  },
+  {
+    "matchId": "#M-360",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#de9d63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794809845301,
+    "dateStr": "13:17:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-359",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#de9d63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794809844721,
+    "dateStr": "13:17:24 16/11/2026"
+  },
+  {
+    "matchId": "#M-358",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#de9d63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794809721406,
+    "dateStr": "13:15:21 16/11/2026"
+  },
+  {
+    "matchId": "#M-357",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794809581705,
+    "dateStr": "13:13:01 16/11/2026"
+  },
+  {
+    "matchId": "#M-356",
+    "winnerName": "Vĩnh Long",
+    "winnerPlate": "64",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794809581288,
+    "dateStr": "13:13:01 16/11/2026"
+  },
+  {
+    "matchId": "#M-355",
+    "winnerName": "Trà Vinh",
+    "winnerPlate": "84",
+    "color": "#d350cd",
+    "mapId": "vietnam_63",
+    "timestamp": 1794809580576,
+    "dateStr": "13:13:00 16/11/2026"
+  },
+  {
+    "matchId": "#M-354",
+    "winnerName": "Tây Ninh",
+    "winnerPlate": "70",
+    "color": "#f59e0b",
+    "mapId": "vietnam_63",
+    "timestamp": 1794808566730,
+    "dateStr": "12:56:06 16/11/2026"
+  },
+  {
+    "matchId": "#M-353",
+    "winnerName": "TP. HCM",
+    "winnerPlate": "51",
+    "color": "#f97316",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773513293,
+    "dateStr": "03:11:53 16/11/2026"
+  },
+  {
+    "matchId": "#M-352",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773369058,
+    "dateStr": "03:09:29 16/11/2026"
+  },
+  {
+    "matchId": "#M-351",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773358316,
+    "dateStr": "03:09:18 16/11/2026"
+  },
+  {
+    "matchId": "#M-350",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773329644,
+    "dateStr": "03:08:49 16/11/2026"
+  },
+  {
+    "matchId": "#M-349",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773295525,
+    "dateStr": "03:08:15 16/11/2026"
+  },
+  {
+    "matchId": "#M-348",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773276089,
+    "dateStr": "03:07:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-347",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773256535,
+    "dateStr": "03:07:36 16/11/2026"
+  },
+  {
+    "matchId": "#M-346",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773240754,
+    "dateStr": "03:07:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-345",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773219935,
+    "dateStr": "03:06:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-344",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773187058,
+    "dateStr": "03:06:27 16/11/2026"
+  },
+  {
+    "matchId": "#M-343",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773145675,
+    "dateStr": "03:05:45 16/11/2026"
+  },
+  {
+    "matchId": "#M-342",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773119267,
+    "dateStr": "03:05:19 16/11/2026"
+  },
+  {
+    "matchId": "#M-341",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773096893,
+    "dateStr": "03:04:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-340",
+    "winnerName": "Khánh Hòa",
+    "winnerPlate": "79",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773080558,
+    "dateStr": "03:04:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-339",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773057846,
+    "dateStr": "03:04:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-338",
+    "winnerName": "Gia Lai",
+    "winnerPlate": "81",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773037426,
+    "dateStr": "03:03:57 16/11/2026"
+  },
+  {
+    "matchId": "#M-337",
+    "winnerName": "Gia Lai",
+    "winnerPlate": "81",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773022622,
+    "dateStr": "03:03:42 16/11/2026"
+  },
+  {
+    "matchId": "#M-336",
+    "winnerName": "Gia Lai",
+    "winnerPlate": "81",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794773003330,
+    "dateStr": "03:03:23 16/11/2026"
+  },
+  {
+    "matchId": "#M-335",
+    "winnerName": "Bình Định",
+    "winnerPlate": "77",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772992693,
+    "dateStr": "03:03:12 16/11/2026"
+  },
+  {
+    "matchId": "#M-334",
+    "winnerName": "Kon Tum",
+    "winnerPlate": "82",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772983869,
+    "dateStr": "03:03:03 16/11/2026"
+  },
+  {
+    "matchId": "#M-333",
+    "winnerName": "Hà Tĩnh",
+    "winnerPlate": "38",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772963365,
+    "dateStr": "03:02:43 16/11/2026"
+  },
+  {
+    "matchId": "#M-332",
+    "winnerName": "Hà Nam",
+    "winnerPlate": "90",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772948187,
+    "dateStr": "03:02:28 16/11/2026"
+  },
+  {
+    "matchId": "#M-331",
+    "winnerName": "Hưng Yên",
+    "winnerPlate": "89",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772933390,
+    "dateStr": "03:02:13 16/11/2026"
+  },
+  {
+    "matchId": "#M-330",
+    "winnerName": "Hải Phòng",
+    "winnerPlate": "15",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772924154,
+    "dateStr": "03:02:04 16/11/2026"
+  },
+  {
+    "matchId": "#M-329",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772910721,
+    "dateStr": "03:01:50 16/11/2026"
+  },
+  {
+    "matchId": "#M-328",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772891408,
+    "dateStr": "03:01:31 16/11/2026"
+  },
+  {
+    "matchId": "#M-327",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772878362,
+    "dateStr": "03:01:18 16/11/2026"
+  },
+  {
+    "matchId": "#M-326",
+    "winnerName": "Bắc Kạn",
+    "winnerPlate": "97",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772868044,
+    "dateStr": "03:01:08 16/11/2026"
+  },
+  {
+    "matchId": "#M-325",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772851254,
+    "dateStr": "03:00:51 16/11/2026"
+  },
+  {
+    "matchId": "#M-324",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772846334,
+    "dateStr": "03:00:46 16/11/2026"
+  },
+  {
+    "matchId": "#M-323",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772843274,
+    "dateStr": "03:00:43 16/11/2026"
+  },
+  {
+    "matchId": "#M-322",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772815589,
+    "dateStr": "03:00:15 16/11/2026"
+  },
+  {
+    "matchId": "#M-321",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772808825,
+    "dateStr": "03:00:08 16/11/2026"
+  },
+  {
+    "matchId": "#M-320",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772773775,
+    "dateStr": "02:59:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-319",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772746539,
+    "dateStr": "02:59:06 16/11/2026"
+  },
+  {
+    "matchId": "#M-318",
+    "winnerName": "Khánh Hòa",
+    "winnerPlate": "79",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772702141,
+    "dateStr": "02:58:22 16/11/2026"
+  },
+  {
+    "matchId": "#M-317",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772665964,
+    "dateStr": "02:57:45 16/11/2026"
+  },
+  {
+    "matchId": "#M-316",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772644309,
+    "dateStr": "02:57:24 16/11/2026"
+  },
+  {
+    "matchId": "#M-315",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772626871,
+    "dateStr": "02:57:06 16/11/2026"
+  },
+  {
+    "matchId": "#M-314",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772605156,
+    "dateStr": "02:56:45 16/11/2026"
+  },
+  {
+    "matchId": "#M-313",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772589842,
+    "dateStr": "02:56:29 16/11/2026"
+  },
+  {
+    "matchId": "#M-312",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772475550,
+    "dateStr": "02:54:35 16/11/2026"
+  },
+  {
+    "matchId": "#M-311",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772340446,
+    "dateStr": "02:52:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-310",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772303035,
+    "dateStr": "02:51:43 16/11/2026"
+  },
+  {
+    "matchId": "#M-309",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772292140,
+    "dateStr": "02:51:32 16/11/2026"
+  },
+  {
+    "matchId": "#M-308",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772277279,
+    "dateStr": "02:51:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-307",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772271953,
+    "dateStr": "02:51:11 16/11/2026"
+  },
+  {
+    "matchId": "#M-306",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772236222,
+    "dateStr": "02:50:36 16/11/2026"
+  },
+  {
+    "matchId": "#M-305",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772220331,
+    "dateStr": "02:50:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-304",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772197083,
+    "dateStr": "02:49:57 16/11/2026"
+  },
+  {
+    "matchId": "#M-303",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772180850,
+    "dateStr": "02:49:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-302",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#57de45",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772155909,
+    "dateStr": "02:49:15 16/11/2026"
+  },
+  {
+    "matchId": "#M-301",
+    "winnerName": "Hà Nội",
+    "winnerPlate": "30",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772145248,
+    "dateStr": "02:49:05 16/11/2026"
+  },
+  {
+    "matchId": "#M-300",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#9952e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772138314,
+    "dateStr": "02:48:58 16/11/2026"
+  },
+  {
+    "matchId": "#M-299",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772134960,
+    "dateStr": "02:48:54 16/11/2026"
+  },
+  {
+    "matchId": "#M-298",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#9952e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772127537,
+    "dateStr": "02:48:47 16/11/2026"
+  },
+  {
+    "matchId": "#M-297",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772080225,
+    "dateStr": "02:48:00 16/11/2026"
+  },
+  {
+    "matchId": "#M-296",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772044140,
+    "dateStr": "02:47:24 16/11/2026"
+  },
+  {
+    "matchId": "#M-295",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772042117,
+    "dateStr": "02:47:22 16/11/2026"
+  },
+  {
+    "matchId": "#M-294",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772040028,
+    "dateStr": "02:47:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-293",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772035179,
+    "dateStr": "02:47:15 16/11/2026"
+  },
+  {
+    "matchId": "#M-292",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#9952e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772023508,
+    "dateStr": "02:47:03 16/11/2026"
+  },
+  {
+    "matchId": "#M-291",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772019376,
+    "dateStr": "02:46:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-290",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794772005000,
+    "dateStr": "02:46:45 16/11/2026"
+  },
+  {
+    "matchId": "#M-289",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771998953,
+    "dateStr": "02:46:38 16/11/2026"
+  },
+  {
+    "matchId": "#M-288",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771993960,
+    "dateStr": "02:46:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-287",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771902039,
+    "dateStr": "02:45:02 16/11/2026"
+  },
+  {
+    "matchId": "#M-286",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771897078,
+    "dateStr": "02:44:57 16/11/2026"
+  },
+  {
+    "matchId": "#M-285",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771873870,
+    "dateStr": "02:44:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-284",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771856084,
+    "dateStr": "02:44:16 16/11/2026"
+  },
+  {
+    "matchId": "#M-283",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771841030,
+    "dateStr": "02:44:01 16/11/2026"
+  },
+  {
+    "matchId": "#M-282",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771839482,
+    "dateStr": "02:43:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-281",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771811306,
+    "dateStr": "02:43:31 16/11/2026"
+  },
+  {
+    "matchId": "#M-280",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771750476,
+    "dateStr": "02:42:30 16/11/2026"
+  },
+  {
+    "matchId": "#M-279",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771730778,
+    "dateStr": "02:42:10 16/11/2026"
+  },
+  {
+    "matchId": "#M-278",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771719023,
+    "dateStr": "02:41:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-277",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771718494,
+    "dateStr": "02:41:58 16/11/2026"
+  },
+  {
+    "matchId": "#M-276",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771696233,
+    "dateStr": "02:41:36 16/11/2026"
+  },
+  {
+    "matchId": "#M-275",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771679260,
+    "dateStr": "02:41:19 16/11/2026"
+  },
+  {
+    "matchId": "#M-274",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771667520,
+    "dateStr": "02:41:07 16/11/2026"
+  },
+  {
+    "matchId": "#M-273",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771659412,
+    "dateStr": "02:40:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-272",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771651127,
+    "dateStr": "02:40:51 16/11/2026"
+  },
+  {
+    "matchId": "#M-271",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771644483,
+    "dateStr": "02:40:44 16/11/2026"
+  },
+  {
+    "matchId": "#M-270",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771636290,
+    "dateStr": "02:40:36 16/11/2026"
+  },
+  {
+    "matchId": "#M-269",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771602691,
+    "dateStr": "02:40:02 16/11/2026"
+  },
+  {
+    "matchId": "#M-268",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771592550,
+    "dateStr": "02:39:52 16/11/2026"
+  },
+  {
+    "matchId": "#M-267",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771558610,
+    "dateStr": "02:39:18 16/11/2026"
+  },
+  {
+    "matchId": "#M-266",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771474515,
+    "dateStr": "02:37:54 16/11/2026"
+  },
+  {
+    "matchId": "#M-265",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771460529,
+    "dateStr": "02:37:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-264",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771444821,
+    "dateStr": "02:37:24 16/11/2026"
+  },
+  {
+    "matchId": "#M-263",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771402654,
+    "dateStr": "02:36:42 16/11/2026"
+  },
+  {
+    "matchId": "#M-262",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771381841,
+    "dateStr": "02:36:21 16/11/2026"
+  },
+  {
+    "matchId": "#M-261",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d0434f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771370189,
+    "dateStr": "02:36:10 16/11/2026"
+  },
+  {
+    "matchId": "#M-260",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771347165,
+    "dateStr": "02:35:47 16/11/2026"
+  },
+  {
+    "matchId": "#M-259",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771309446,
+    "dateStr": "02:35:09 16/11/2026"
+  },
+  {
+    "matchId": "#M-258",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771297516,
+    "dateStr": "02:34:57 16/11/2026"
+  },
+  {
+    "matchId": "#M-257",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771296610,
+    "dateStr": "02:34:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-256",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771273511,
+    "dateStr": "02:34:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-255",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771250905,
+    "dateStr": "02:34:10 16/11/2026"
+  },
+  {
+    "matchId": "#M-254",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771219405,
+    "dateStr": "02:33:39 16/11/2026"
+  },
+  {
+    "matchId": "#M-253",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771184486,
+    "dateStr": "02:33:04 16/11/2026"
+  },
+  {
+    "matchId": "#M-252",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771151360,
+    "dateStr": "02:32:31 16/11/2026"
+  },
+  {
+    "matchId": "#M-251",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#afdb57",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771124358,
+    "dateStr": "02:32:04 16/11/2026"
+  },
+  {
+    "matchId": "#M-250",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#afdb57",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771085999,
+    "dateStr": "02:31:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-249",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771033740,
+    "dateStr": "02:30:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-248",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794771013191,
+    "dateStr": "02:30:13 16/11/2026"
+  },
+  {
+    "matchId": "#M-247",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770996859,
+    "dateStr": "02:29:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-246",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770963116,
+    "dateStr": "02:29:23 16/11/2026"
+  },
+  {
+    "matchId": "#M-245",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770957954,
+    "dateStr": "02:29:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-244",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770954803,
+    "dateStr": "02:29:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-243",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770953781,
+    "dateStr": "02:29:13 16/11/2026"
+  },
+  {
+    "matchId": "#M-242",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770917976,
+    "dateStr": "02:28:37 16/11/2026"
+  },
+  {
+    "matchId": "#M-241",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770885499,
+    "dateStr": "02:28:05 16/11/2026"
+  },
+  {
+    "matchId": "#M-240",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770850595,
+    "dateStr": "02:27:30 16/11/2026"
+  },
+  {
+    "matchId": "#M-239",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770800227,
+    "dateStr": "02:26:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-238",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770779894,
+    "dateStr": "02:26:19 16/11/2026"
+  },
+  {
+    "matchId": "#M-237",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#38dcb3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770723083,
+    "dateStr": "02:25:23 16/11/2026"
+  },
+  {
+    "matchId": "#M-236",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770648804,
+    "dateStr": "02:24:08 16/11/2026"
+  },
+  {
+    "matchId": "#M-235",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770289932,
+    "dateStr": "02:18:09 16/11/2026"
+  },
+  {
+    "matchId": "#M-234",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770201078,
+    "dateStr": "02:16:41 16/11/2026"
+  },
+  {
+    "matchId": "#M-233",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#4ad969",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770193673,
+    "dateStr": "02:16:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-232",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770178732,
+    "dateStr": "02:16:18 16/11/2026"
+  },
+  {
+    "matchId": "#M-231",
+    "winnerName": "Kiên Giang",
+    "winnerPlate": "68",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770144296,
+    "dateStr": "02:15:44 16/11/2026"
+  },
+  {
+    "matchId": "#M-230",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770089840,
+    "dateStr": "02:14:49 16/11/2026"
+  },
+  {
+    "matchId": "#M-229",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#afdb57",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770075129,
+    "dateStr": "02:14:35 16/11/2026"
+  },
+  {
+    "matchId": "#M-228",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770056780,
+    "dateStr": "02:14:16 16/11/2026"
+  },
+  {
+    "matchId": "#M-227",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#705cd6",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770042274,
+    "dateStr": "02:14:02 16/11/2026"
+  },
+  {
+    "matchId": "#M-226",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770019695,
+    "dateStr": "02:13:39 16/11/2026"
+  },
+  {
+    "matchId": "#M-225",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794770001073,
+    "dateStr": "02:13:21 16/11/2026"
+  },
+  {
+    "matchId": "#M-224",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769968046,
+    "dateStr": "02:12:48 16/11/2026"
+  },
+  {
+    "matchId": "#M-223",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769934821,
+    "dateStr": "02:12:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-222",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769925679,
+    "dateStr": "02:12:05 16/11/2026"
+  },
+  {
+    "matchId": "#M-221",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769922100,
+    "dateStr": "02:12:02 16/11/2026"
+  },
+  {
+    "matchId": "#M-220",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769919731,
+    "dateStr": "02:11:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-219",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769895497,
+    "dateStr": "02:11:35 16/11/2026"
+  },
+  {
+    "matchId": "#M-218",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769875068,
+    "dateStr": "02:11:15 16/11/2026"
+  },
+  {
+    "matchId": "#M-217",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#d63d7d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769860012,
+    "dateStr": "02:11:00 16/11/2026"
+  },
+  {
+    "matchId": "#M-216",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769855846,
+    "dateStr": "02:10:55 16/11/2026"
+  },
+  {
+    "matchId": "#M-215",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769849748,
+    "dateStr": "02:10:49 16/11/2026"
+  },
+  {
+    "matchId": "#M-214",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769846580,
+    "dateStr": "02:10:46 16/11/2026"
+  },
+  {
+    "matchId": "#M-213",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769811782,
+    "dateStr": "02:10:11 16/11/2026"
+  },
+  {
+    "matchId": "#M-212",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769808814,
+    "dateStr": "02:10:08 16/11/2026"
+  },
+  {
+    "matchId": "#M-211",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769807063,
+    "dateStr": "02:10:07 16/11/2026"
+  },
+  {
+    "matchId": "#M-210",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769759800,
+    "dateStr": "02:09:19 16/11/2026"
+  },
+  {
+    "matchId": "#M-209",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769745651,
+    "dateStr": "02:09:05 16/11/2026"
+  },
+  {
+    "matchId": "#M-208",
+    "winnerName": "Hậu Giang",
+    "winnerPlate": "95",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769729711,
+    "dateStr": "02:08:49 16/11/2026"
+  },
+  {
+    "matchId": "#M-207",
+    "winnerName": "Bến Tre",
+    "winnerPlate": "71",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769713100,
+    "dateStr": "02:08:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-206",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769699326,
+    "dateStr": "02:08:19 16/11/2026"
+  },
+  {
+    "matchId": "#M-205",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769697583,
+    "dateStr": "02:08:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-204",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769611546,
+    "dateStr": "02:06:51 16/11/2026"
+  },
+  {
+    "matchId": "#M-203",
+    "winnerName": "Đồng Nai",
+    "winnerPlate": "60",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769600736,
+    "dateStr": "02:06:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-202",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769598611,
+    "dateStr": "02:06:38 16/11/2026"
+  },
+  {
+    "matchId": "#M-201",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#e3705f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769570999,
+    "dateStr": "02:06:10 16/11/2026"
+  },
+  {
+    "matchId": "#M-200",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#e3705f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769567253,
+    "dateStr": "02:06:07 16/11/2026"
+  },
+  {
+    "matchId": "#M-199",
+    "winnerName": "Đồng Nai",
+    "winnerPlate": "60",
+    "color": "#e3705f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769516371,
+    "dateStr": "02:05:16 16/11/2026"
+  },
+  {
+    "matchId": "#M-198",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769431764,
+    "dateStr": "02:03:51 16/11/2026"
+  },
+  {
+    "matchId": "#M-197",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#43d07e",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769418156,
+    "dateStr": "02:03:38 16/11/2026"
+  },
+  {
+    "matchId": "#M-196",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#e3705f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769408950,
+    "dateStr": "02:03:28 16/11/2026"
+  },
+  {
+    "matchId": "#M-195",
+    "winnerName": "Vũng Tàu",
+    "winnerPlate": "72",
+    "color": "#e3705f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769379620,
+    "dateStr": "02:02:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-194",
+    "winnerName": "Đồng Nai",
+    "winnerPlate": "60",
+    "color": "#e3705f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769360636,
+    "dateStr": "02:02:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-193",
+    "winnerName": "Bình Dương",
+    "winnerPlate": "61",
+    "color": "#576ddb",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769340178,
+    "dateStr": "02:02:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-192",
+    "winnerName": "Đồng Nai",
+    "winnerPlate": "60",
+    "color": "#576ddb",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769298965,
+    "dateStr": "02:01:38 16/11/2026"
+  },
+  {
+    "matchId": "#M-191",
+    "winnerName": "Bình Dương",
+    "winnerPlate": "61",
+    "color": "#576ddb",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769285753,
+    "dateStr": "02:01:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-190",
+    "winnerName": "Bình Dương",
+    "winnerPlate": "61",
+    "color": "#576ddb",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769226320,
+    "dateStr": "02:00:26 16/11/2026"
+  },
+  {
+    "matchId": "#M-189",
+    "winnerName": "Bình Phước",
+    "winnerPlate": "93",
+    "color": "#576ddb",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769204834,
+    "dateStr": "02:00:04 16/11/2026"
+  },
+  {
+    "matchId": "#M-188",
+    "winnerName": "Bình Dương",
+    "winnerPlate": "61",
+    "color": "#576ddb",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769191603,
+    "dateStr": "01:59:51 16/11/2026"
+  },
+  {
+    "matchId": "#M-187",
+    "winnerName": "Bình Dương",
+    "winnerPlate": "61",
+    "color": "#576ddb",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769174846,
+    "dateStr": "01:59:34 16/11/2026"
+  },
+  {
+    "matchId": "#M-186",
+    "winnerName": "Bình Dương",
+    "winnerPlate": "61",
+    "color": "#dc38b3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769154543,
+    "dateStr": "01:59:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-185",
+    "winnerName": "Bình Phước",
+    "winnerPlate": "93",
+    "color": "#dc38b3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769116422,
+    "dateStr": "01:58:36 16/11/2026"
+  },
+  {
+    "matchId": "#M-184",
+    "winnerName": "Bình Phước",
+    "winnerPlate": "93",
+    "color": "#dc38b3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769098198,
+    "dateStr": "01:58:18 16/11/2026"
+  },
+  {
+    "matchId": "#M-183",
+    "winnerName": "Bình Phước",
+    "winnerPlate": "93",
+    "color": "#dc38b3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769074586,
+    "dateStr": "01:57:54 16/11/2026"
+  },
+  {
+    "matchId": "#M-182",
+    "winnerName": "Bình Phước",
+    "winnerPlate": "93",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794769041920,
+    "dateStr": "01:57:21 16/11/2026"
+  },
+  {
+    "matchId": "#M-181",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768947626,
+    "dateStr": "01:55:47 16/11/2026"
+  },
+  {
+    "matchId": "#M-180",
+    "winnerName": "Bình Thuận",
+    "winnerPlate": "86",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768933885,
+    "dateStr": "01:55:33 16/11/2026"
+  },
+  {
+    "matchId": "#M-179",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#5299e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768908273,
+    "dateStr": "01:55:08 16/11/2026"
+  },
+  {
+    "matchId": "#M-178",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#5299e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768871526,
+    "dateStr": "01:54:31 16/11/2026"
+  },
+  {
+    "matchId": "#M-177",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#5299e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768861685,
+    "dateStr": "01:54:21 16/11/2026"
+  },
+  {
+    "matchId": "#M-176",
+    "winnerName": "Bình Thuận",
+    "winnerPlate": "86",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768839030,
+    "dateStr": "01:53:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-175",
+    "winnerName": "Bình Phước",
+    "winnerPlate": "93",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768729391,
+    "dateStr": "01:52:09 16/11/2026"
+  },
+  {
+    "matchId": "#M-174",
+    "winnerName": "Bình Thuận",
+    "winnerPlate": "86",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768710457,
+    "dateStr": "01:51:50 16/11/2026"
+  },
+  {
+    "matchId": "#M-173",
+    "winnerName": "Bình Phước",
+    "winnerPlate": "93",
+    "color": "#dc38b3",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768701498,
+    "dateStr": "01:51:41 16/11/2026"
+  },
+  {
+    "matchId": "#M-172",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768668527,
+    "dateStr": "01:51:08 16/11/2026"
+  },
+  {
+    "matchId": "#M-171",
+    "winnerName": "Bình Phước",
+    "winnerPlate": "93",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768603962,
+    "dateStr": "01:50:03 16/11/2026"
+  },
+  {
+    "matchId": "#M-170",
+    "winnerName": "Bình Thuận",
+    "winnerPlate": "86",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768584040,
+    "dateStr": "01:49:44 16/11/2026"
+  },
+  {
+    "matchId": "#M-169",
+    "winnerName": "Đắk Nông",
+    "winnerPlate": "48",
+    "color": "#3dd64a",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768488402,
+    "dateStr": "01:48:08 16/11/2026"
+  },
+  {
+    "matchId": "#M-168",
+    "winnerName": "Bình Thuận",
+    "winnerPlate": "86",
+    "color": "#3dd64a",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768483239,
+    "dateStr": "01:48:03 16/11/2026"
+  },
+  {
+    "matchId": "#M-167",
+    "winnerName": "Đắk Nông",
+    "winnerPlate": "48",
+    "color": "#3dd64a",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768447290,
+    "dateStr": "01:47:27 16/11/2026"
+  },
+  {
+    "matchId": "#M-166",
+    "winnerName": "Đắk Nông",
+    "winnerPlate": "48",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768438161,
+    "dateStr": "01:47:18 16/11/2026"
+  },
+  {
+    "matchId": "#M-165",
+    "winnerName": "Bình Thuận",
+    "winnerPlate": "86",
+    "color": "#63deda",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768423965,
+    "dateStr": "01:47:03 16/11/2026"
+  },
+  {
+    "matchId": "#M-164",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#5299e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768367979,
+    "dateStr": "01:46:07 16/11/2026"
+  },
+  {
+    "matchId": "#M-163",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#5299e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768265065,
+    "dateStr": "01:44:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-162",
+    "winnerName": "Khánh Hòa",
+    "winnerPlate": "79",
+    "color": "#5299e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768236447,
+    "dateStr": "01:43:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-161",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#5299e0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768226828,
+    "dateStr": "01:43:46 16/11/2026"
+  },
+  {
+    "matchId": "#M-160",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#d9687f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768179777,
+    "dateStr": "01:42:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-159",
+    "winnerName": "Khánh Hòa",
+    "winnerPlate": "79",
+    "color": "#d9687f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768163650,
+    "dateStr": "01:42:43 16/11/2026"
+  },
+  {
+    "matchId": "#M-158",
+    "winnerName": "Khánh Hòa",
+    "winnerPlate": "79",
+    "color": "#d9687f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768086557,
+    "dateStr": "01:41:26 16/11/2026"
+  },
+  {
+    "matchId": "#M-157",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#d9687f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768081232,
+    "dateStr": "01:41:21 16/11/2026"
+  },
+  {
+    "matchId": "#M-156",
+    "winnerName": "Khánh Hòa",
+    "winnerPlate": "79",
+    "color": "#d9687f",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768080251,
+    "dateStr": "01:41:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-155",
+    "winnerName": "Khánh Hòa",
+    "winnerPlate": "79",
+    "color": "#c443d0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768041455,
+    "dateStr": "01:40:41 16/11/2026"
+  },
+  {
+    "matchId": "#M-154",
+    "winnerName": "Đắk Lắk",
+    "winnerPlate": "47",
+    "color": "#c443d0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794768010296,
+    "dateStr": "01:40:10 16/11/2026"
+  },
+  {
+    "matchId": "#M-153",
+    "winnerName": "Gia Lai",
+    "winnerPlate": "81",
+    "color": "#c443d0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767997321,
+    "dateStr": "01:39:57 16/11/2026"
+  },
+  {
+    "matchId": "#M-152",
+    "winnerName": "Gia Lai",
+    "winnerPlate": "81",
+    "color": "#5fe3b2",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767970834,
+    "dateStr": "01:39:30 16/11/2026"
+  },
+  {
+    "matchId": "#M-151",
+    "winnerName": "Khánh Hòa",
+    "winnerPlate": "79",
+    "color": "#5fe3b2",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767969828,
+    "dateStr": "01:39:29 16/11/2026"
+  },
+  {
+    "matchId": "#M-150",
+    "winnerName": "Bình Định",
+    "winnerPlate": "77",
+    "color": "#5fe3b2",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767927577,
+    "dateStr": "01:38:47 16/11/2026"
+  },
+  {
+    "matchId": "#M-149",
+    "winnerName": "Gia Lai",
+    "winnerPlate": "81",
+    "color": "#db8357",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767893737,
+    "dateStr": "01:38:13 16/11/2026"
+  },
+  {
+    "matchId": "#M-148",
+    "winnerName": "Bình Định",
+    "winnerPlate": "77",
+    "color": "#db8357",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767848038,
+    "dateStr": "01:37:28 16/11/2026"
+  },
+  {
+    "matchId": "#M-147",
+    "winnerName": "Kon Tum",
+    "winnerPlate": "82",
+    "color": "#db8357",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767830655,
+    "dateStr": "01:37:10 16/11/2026"
+  },
+  {
+    "matchId": "#M-146",
+    "winnerName": "Bình Định",
+    "winnerPlate": "77",
+    "color": "#68d98a",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767740395,
+    "dateStr": "01:35:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-145",
+    "winnerName": "Hà Tĩnh",
+    "winnerPlate": "38",
+    "color": "#68d98a",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767715145,
+    "dateStr": "01:35:15 16/11/2026"
+  },
+  {
+    "matchId": "#M-144",
+    "winnerName": "Kon Tum",
+    "winnerPlate": "82",
+    "color": "#68d98a",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767674036,
+    "dateStr": "01:34:34 16/11/2026"
+  },
+  {
+    "matchId": "#M-143",
+    "winnerName": "Kon Tum",
+    "winnerPlate": "82",
+    "color": "#db8357",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767657750,
+    "dateStr": "01:34:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-142",
+    "winnerName": "Hà Tĩnh",
+    "winnerPlate": "38",
+    "color": "#68d98a",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767636827,
+    "dateStr": "01:33:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-141",
+    "winnerName": "Kon Tum",
+    "winnerPlate": "82",
+    "color": "#d39850",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767619494,
+    "dateStr": "01:33:39 16/11/2026"
+  },
+  {
+    "matchId": "#M-140",
+    "winnerName": "Hà Tĩnh",
+    "winnerPlate": "38",
+    "color": "#d39850",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767573598,
+    "dateStr": "01:32:53 16/11/2026"
+  },
+  {
+    "matchId": "#M-139",
+    "winnerName": "Hà Nam",
+    "winnerPlate": "90",
+    "color": "#d39850",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767544047,
+    "dateStr": "01:32:24 16/11/2026"
+  },
+  {
+    "matchId": "#M-138",
+    "winnerName": "Hà Nam",
+    "winnerPlate": "90",
+    "color": "#d39850",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767518164,
+    "dateStr": "01:31:58 16/11/2026"
+  },
+  {
+    "matchId": "#M-137",
+    "winnerName": "Hà Nam",
+    "winnerPlate": "90",
+    "color": "#d39850",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767500444,
+    "dateStr": "01:31:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-136",
+    "winnerName": "Hà Nam",
+    "winnerPlate": "90",
+    "color": "#d39850",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767497364,
+    "dateStr": "01:31:37 16/11/2026"
+  },
+  {
+    "matchId": "#M-135",
+    "winnerName": "Hà Nam",
+    "winnerPlate": "90",
+    "color": "#6138dc",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767459804,
+    "dateStr": "01:30:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-134",
+    "winnerName": "Hưng Yên",
+    "winnerPlate": "89",
+    "color": "#6138dc",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767439258,
+    "dateStr": "01:30:39 16/11/2026"
+  },
+  {
+    "matchId": "#M-133",
+    "winnerName": "Hà Nam",
+    "winnerPlate": "90",
+    "color": "#d39850",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767401562,
+    "dateStr": "01:30:01 16/11/2026"
+  },
+  {
+    "matchId": "#M-132",
+    "winnerName": "Hưng Yên",
+    "winnerPlate": "89",
+    "color": "#67de63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767339867,
+    "dateStr": "01:28:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-131",
+    "winnerName": "Hải Phòng",
+    "winnerPlate": "15",
+    "color": "#67de63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767319957,
+    "dateStr": "01:28:39 16/11/2026"
+  },
+  {
+    "matchId": "#M-130",
+    "winnerName": "Hải Phòng",
+    "winnerPlate": "15",
+    "color": "#67de63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767278100,
+    "dateStr": "01:27:58 16/11/2026"
+  },
+  {
+    "matchId": "#M-129",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#67de63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767246141,
+    "dateStr": "01:27:26 16/11/2026"
+  },
+  {
+    "matchId": "#M-128",
+    "winnerName": "Hải Phòng",
+    "winnerPlate": "15",
+    "color": "#67de63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767241564,
+    "dateStr": "01:27:21 16/11/2026"
+  },
+  {
+    "matchId": "#M-127",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767225109,
+    "dateStr": "01:27:05 16/11/2026"
+  },
+  {
+    "matchId": "#M-126",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767173519,
+    "dateStr": "01:26:13 16/11/2026"
+  },
+  {
+    "matchId": "#M-125",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767154066,
+    "dateStr": "01:25:54 16/11/2026"
+  },
+  {
+    "matchId": "#M-124",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767136294,
+    "dateStr": "01:25:36 16/11/2026"
+  },
+  {
+    "matchId": "#M-123",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794767107302,
+    "dateStr": "01:25:07 16/11/2026"
+  },
+  {
+    "matchId": "#M-122",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765864495,
+    "dateStr": "01:04:24 16/11/2026"
+  },
+  {
+    "matchId": "#M-121",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765852497,
+    "dateStr": "01:04:12 16/11/2026"
+  },
+  {
+    "matchId": "#M-120",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765832177,
+    "dateStr": "01:03:52 16/11/2026"
+  },
+  {
+    "matchId": "#M-119",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765800274,
+    "dateStr": "01:03:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-118",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d65c85",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765775111,
+    "dateStr": "01:02:55 16/11/2026"
+  },
+  {
+    "matchId": "#M-117",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#dcb338",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765729939,
+    "dateStr": "01:02:09 16/11/2026"
+  },
+  {
+    "matchId": "#M-116",
+    "winnerName": "Bắc Kạn",
+    "winnerPlate": "97",
+    "color": "#dcb338",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765694933,
+    "dateStr": "01:01:34 16/11/2026"
+  },
+  {
+    "matchId": "#M-115",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#c9d63d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765655469,
+    "dateStr": "01:00:55 16/11/2026"
+  },
+  {
+    "matchId": "#M-114",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765595066,
+    "dateStr": "00:59:55 16/11/2026"
+  },
+  {
+    "matchId": "#M-113",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765547676,
+    "dateStr": "00:59:07 16/11/2026"
+  },
+  {
+    "matchId": "#M-112",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765506794,
+    "dateStr": "00:58:26 16/11/2026"
+  },
+  {
+    "matchId": "#M-111",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#c9d63d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765506770,
+    "dateStr": "00:58:26 16/11/2026"
+  },
+  {
+    "matchId": "#M-110",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#c9d63d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765489312,
+    "dateStr": "00:58:09 16/11/2026"
+  },
+  {
+    "matchId": "#M-109",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#c9d63d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765445861,
+    "dateStr": "00:57:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-108",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765436466,
+    "dateStr": "00:57:16 16/11/2026"
+  },
+  {
+    "matchId": "#M-107",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765417224,
+    "dateStr": "00:56:57 16/11/2026"
+  },
+  {
+    "matchId": "#M-106",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765407421,
+    "dateStr": "00:56:47 16/11/2026"
+  },
+  {
+    "matchId": "#M-105",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765397663,
+    "dateStr": "00:56:37 16/11/2026"
+  },
+  {
+    "matchId": "#M-104",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#c9d63d",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765325541,
+    "dateStr": "00:55:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-103",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765292915,
+    "dateStr": "00:54:52 16/11/2026"
+  },
+  {
+    "matchId": "#M-102",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765228652,
+    "dateStr": "00:53:48 16/11/2026"
+  },
+  {
+    "matchId": "#M-101",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765196513,
+    "dateStr": "00:53:16 16/11/2026"
+  },
+  {
+    "matchId": "#M-100",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#434fd0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765145237,
+    "dateStr": "00:52:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-099",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#dcb338",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765122233,
+    "dateStr": "00:52:02 16/11/2026"
+  },
+  {
+    "matchId": "#M-098",
+    "winnerName": "Bắc Kạn",
+    "winnerPlate": "97",
+    "color": "#dcb338",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765110637,
+    "dateStr": "00:51:50 16/11/2026"
+  },
+  {
+    "matchId": "#M-097",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765077153,
+    "dateStr": "00:51:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-096",
+    "winnerName": "Bắc Kạn",
+    "winnerPlate": "97",
+    "color": "#dcb338",
+    "mapId": "vietnam_63",
+    "timestamp": 1794765058721,
+    "dateStr": "00:50:58 16/11/2026"
+  },
+  {
+    "matchId": "#M-095",
+    "winnerName": "Bắc Kạn",
+    "winnerPlate": "97",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764918756,
+    "dateStr": "00:48:38 16/11/2026"
+  },
+  {
+    "matchId": "#M-094",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764883891,
+    "dateStr": "00:48:03 16/11/2026"
+  },
+  {
+    "matchId": "#M-093",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764871765,
+    "dateStr": "00:47:51 16/11/2026"
+  },
+  {
+    "matchId": "#M-092",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764860740,
+    "dateStr": "00:47:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-091",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764849631,
+    "dateStr": "00:47:29 16/11/2026"
+  },
+  {
+    "matchId": "#M-090",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764839439,
+    "dateStr": "00:47:19 16/11/2026"
+  },
+  {
+    "matchId": "#M-089",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764825936,
+    "dateStr": "00:47:05 16/11/2026"
+  },
+  {
+    "matchId": "#M-088",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764782578,
+    "dateStr": "00:46:22 16/11/2026"
+  },
+  {
+    "matchId": "#M-087",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764717493,
+    "dateStr": "00:45:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-086",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764705901,
+    "dateStr": "00:45:05 16/11/2026"
+  },
+  {
+    "matchId": "#M-085",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764646858,
+    "dateStr": "00:44:06 16/11/2026"
+  },
+  {
+    "matchId": "#M-084",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764620008,
+    "dateStr": "00:43:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-083",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764565080,
+    "dateStr": "00:42:45 16/11/2026"
+  },
+  {
+    "matchId": "#M-082",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764518410,
+    "dateStr": "00:41:58 16/11/2026"
+  },
+  {
+    "matchId": "#M-081",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764504200,
+    "dateStr": "00:41:44 16/11/2026"
+  },
+  {
+    "matchId": "#M-080",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#9d63de",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764462965,
+    "dateStr": "00:41:02 16/11/2026"
+  },
+  {
+    "matchId": "#M-079",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764360804,
+    "dateStr": "00:39:20 16/11/2026"
+  },
+  {
+    "matchId": "#M-078",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764311881,
+    "dateStr": "00:38:31 16/11/2026"
+  },
+  {
+    "matchId": "#M-077",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764270656,
+    "dateStr": "00:37:50 16/11/2026"
+  },
+  {
+    "matchId": "#M-076",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764234717,
+    "dateStr": "00:37:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-075",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764220622,
+    "dateStr": "00:37:00 16/11/2026"
+  },
+  {
+    "matchId": "#M-074",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764200206,
+    "dateStr": "00:36:40 16/11/2026"
+  },
+  {
+    "matchId": "#M-073",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764155083,
+    "dateStr": "00:35:55 16/11/2026"
+  },
+  {
+    "matchId": "#M-072",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764137556,
+    "dateStr": "00:35:37 16/11/2026"
+  },
+  {
+    "matchId": "#M-071",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#b7d968",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764085051,
+    "dateStr": "00:34:45 16/11/2026"
+  },
+  {
+    "matchId": "#M-070",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764064450,
+    "dateStr": "00:34:24 16/11/2026"
+  },
+  {
+    "matchId": "#M-069",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#b7d968",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764036181,
+    "dateStr": "00:33:56 16/11/2026"
+  },
+  {
+    "matchId": "#M-068",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794764017206,
+    "dateStr": "00:33:37 16/11/2026"
+  },
+  {
+    "matchId": "#M-067",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763963549,
+    "dateStr": "00:32:43 16/11/2026"
+  },
+  {
+    "matchId": "#M-066",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#b7d968",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763942895,
+    "dateStr": "00:32:22 16/11/2026"
+  },
+  {
+    "matchId": "#M-065",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763877914,
+    "dateStr": "00:31:17 16/11/2026"
+  },
+  {
+    "matchId": "#M-064",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763835822,
+    "dateStr": "00:30:35 16/11/2026"
+  },
+  {
+    "matchId": "#M-063",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763803393,
+    "dateStr": "00:30:03 16/11/2026"
+  },
+  {
+    "matchId": "#M-062",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763739404,
+    "dateStr": "00:28:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-061",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763643351,
+    "dateStr": "00:27:23 16/11/2026"
+  },
+  {
+    "matchId": "#M-060",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763621924,
+    "dateStr": "00:27:01 16/11/2026"
+  },
+  {
+    "matchId": "#M-059",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763607763,
+    "dateStr": "00:26:47 16/11/2026"
+  },
+  {
+    "matchId": "#M-058",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763545544,
+    "dateStr": "00:25:45 16/11/2026"
+  },
+  {
+    "matchId": "#M-057",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763451022,
+    "dateStr": "00:24:11 16/11/2026"
+  },
+  {
+    "matchId": "#M-056",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763440404,
+    "dateStr": "00:24:00 16/11/2026"
+  },
+  {
+    "matchId": "#M-055",
+    "winnerName": "Hòa Bình",
+    "winnerPlate": "28",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763433162,
+    "dateStr": "00:23:53 16/11/2026"
+  },
+  {
+    "matchId": "#M-054",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763311876,
+    "dateStr": "00:21:51 16/11/2026"
+  },
+  {
+    "matchId": "#M-053",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763285250,
+    "dateStr": "00:21:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-052",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763262080,
+    "dateStr": "00:21:02 16/11/2026"
+  },
+  {
+    "matchId": "#M-051",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763175493,
+    "dateStr": "00:19:35 16/11/2026"
+  },
+  {
+    "matchId": "#M-050",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763155212,
+    "dateStr": "00:19:15 16/11/2026"
+  },
+  {
+    "matchId": "#M-049",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763139001,
+    "dateStr": "00:18:59 16/11/2026"
+  },
+  {
+    "matchId": "#M-048",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763119857,
+    "dateStr": "00:18:39 16/11/2026"
+  },
+  {
+    "matchId": "#M-047",
+    "winnerName": "Đà Nẵng",
+    "winnerPlate": "43",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763094492,
+    "dateStr": "00:18:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-046",
+    "winnerName": "Hải Phòng",
+    "winnerPlate": "15",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763094478,
+    "dateStr": "00:18:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-045",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763094460,
+    "dateStr": "00:18:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-044",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763094453,
+    "dateStr": "00:18:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-043",
+    "winnerName": "TP. HCM",
+    "winnerPlate": "51",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763094362,
+    "dateStr": "00:18:14 16/11/2026"
+  },
+  {
+    "matchId": "#M-042",
+    "winnerName": "Hà Nội",
+    "winnerPlate": "30",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794763085151,
+    "dateStr": "00:18:05 16/11/2026"
+  },
+  {
+    "matchId": "#M-041",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#4ad9b0",
+    "mapId": "vietnam_63",
+    "timestamp": 1794762461017,
+    "dateStr": "00:07:41 16/11/2026"
+  },
+  {
+    "matchId": "#M-040",
+    "winnerName": "Hải Phòng",
+    "winnerPlate": "15",
+    "color": "#67de63",
+    "mapId": "vietnam_63",
+    "timestamp": 1794762325020,
+    "dateStr": "00:05:25 16/11/2026"
+  },
+  {
+    "matchId": "#M-039",
+    "winnerName": "Kon Tum",
+    "winnerPlate": "82",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794759078363,
+    "dateStr": "23:11:18 15/11/2026"
+  },
+  {
+    "matchId": "#M-038",
+    "winnerName": "Bình Định",
+    "winnerPlate": "77",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794759055757,
+    "dateStr": "23:10:55 15/11/2026"
+  },
+  {
+    "matchId": "#M-037",
+    "winnerName": "Quảng Nam",
+    "winnerPlate": "92",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794759052868,
+    "dateStr": "23:10:52 15/11/2026"
+  },
+  {
+    "matchId": "#M-036",
+    "winnerName": "Cà Mau",
+    "winnerPlate": "69",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794759024569,
+    "dateStr": "23:10:24 15/11/2026"
+  },
+  {
+    "matchId": "#M-035",
+    "winnerName": "Bạc Liêu",
+    "winnerPlate": "94",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758992226,
+    "dateStr": "23:09:52 15/11/2026"
+  },
+  {
+    "matchId": "#M-034",
+    "winnerName": "Sóc Trăng",
+    "winnerPlate": "83",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758983954,
+    "dateStr": "23:09:43 15/11/2026"
+  },
+  {
+    "matchId": "#M-033",
+    "winnerName": "Cần Thơ",
+    "winnerPlate": "65",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758975457,
+    "dateStr": "23:09:35 15/11/2026"
+  },
+  {
+    "matchId": "#M-032",
+    "winnerName": "Đồng Tháp",
+    "winnerPlate": "66",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758945199,
+    "dateStr": "23:09:05 15/11/2026"
+  },
+  {
+    "matchId": "#M-031",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758913533,
+    "dateStr": "23:08:33 15/11/2026"
+  },
+  {
+    "matchId": "#M-030",
+    "winnerName": "Bình Dương",
+    "winnerPlate": "61",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758888030,
+    "dateStr": "23:08:08 15/11/2026"
+  },
+  {
+    "matchId": "#M-029",
+    "winnerName": "Gia Lai",
+    "winnerPlate": "81",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758864009,
+    "dateStr": "23:07:44 15/11/2026"
+  },
+  {
+    "matchId": "#M-028",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758847056,
+    "dateStr": "23:07:27 15/11/2026"
+  },
+  {
+    "matchId": "#M-027",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#5cd670",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758807667,
+    "dateStr": "23:06:47 15/11/2026"
+  },
+  {
+    "matchId": "#M-026",
+    "winnerName": "Ninh Bình",
+    "winnerPlate": "35",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758691869,
+    "dateStr": "23:04:51 15/11/2026"
+  },
+  {
+    "matchId": "#M-025",
+    "winnerName": "Lai Châu",
+    "winnerPlate": "25",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758684368,
+    "dateStr": "23:04:44 15/11/2026"
+  },
+  {
+    "matchId": "#M-024",
+    "winnerName": "Thái Bình",
+    "winnerPlate": "17",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758671925,
+    "dateStr": "23:04:31 15/11/2026"
+  },
+  {
+    "matchId": "#M-023",
+    "winnerName": "Lai Châu",
+    "winnerPlate": "25",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758660100,
+    "dateStr": "23:04:20 15/11/2026"
+  },
+  {
+    "matchId": "#M-022",
+    "winnerName": "Nam Định",
+    "winnerPlate": "18",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758654648,
+    "dateStr": "23:04:14 15/11/2026"
+  },
+  {
+    "matchId": "#M-021",
+    "winnerName": "Hải Dương",
+    "winnerPlate": "34",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758623189,
+    "dateStr": "23:03:43 15/11/2026"
+  },
+  {
+    "matchId": "#M-020",
+    "winnerName": "Bắc Ninh",
+    "winnerPlate": "99",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758586300,
+    "dateStr": "23:03:06 15/11/2026"
+  },
+  {
+    "matchId": "#M-019",
+    "winnerName": "Bắc Giang",
+    "winnerPlate": "98",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758553859,
+    "dateStr": "23:02:33 15/11/2026"
+  },
+  {
+    "matchId": "#M-018",
+    "winnerName": "Bắc Kạn",
+    "winnerPlate": "97",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758531211,
+    "dateStr": "23:02:11 15/11/2026"
+  },
+  {
+    "matchId": "#M-017",
+    "winnerName": "Cao Bằng",
+    "winnerPlate": "11",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758494845,
+    "dateStr": "23:01:34 15/11/2026"
+  },
+  {
+    "matchId": "#M-016",
+    "winnerName": "Hà Giang",
+    "winnerPlate": "23",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758457271,
+    "dateStr": "23:00:57 15/11/2026"
+  },
+  {
+    "matchId": "#M-015",
+    "winnerName": "Sơn La",
+    "winnerPlate": "26",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758447077,
+    "dateStr": "23:00:47 15/11/2026"
+  },
+  {
+    "matchId": "#M-014",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758398775,
+    "dateStr": "22:59:58 15/11/2026"
+  },
+  {
+    "matchId": "#M-013",
+    "winnerName": "Điện Biên",
+    "winnerPlate": "27",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758324059,
+    "dateStr": "22:58:44 15/11/2026"
+  },
+  {
+    "matchId": "#M-012",
+    "winnerName": "Lai Châu",
+    "winnerPlate": "25",
+    "color": "#d07e43",
+    "mapId": "vietnam_63",
+    "timestamp": 1794758204125,
+    "dateStr": "22:56:44 15/11/2026"
+  },
+  {
+    "matchId": "#M-011",
+    "winnerName": "TP. HCM",
+    "winnerPlate": "51",
+    "color": "#f97316",
+    "mapId": "vietnam_63",
+    "timestamp": 1794753281175,
+    "dateStr": "21:34:41 15/11/2026"
+  },
+  {
+    "matchId": "#M-010",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#57de45",
+    "mapId": "vietnam_63",
+    "timestamp": 1794753003909,
+    "dateStr": "21:30:03 15/11/2026"
+  },
+  {
+    "matchId": "#M-009",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#57de45",
+    "mapId": "vietnam_63",
+    "timestamp": 1794752898270,
+    "dateStr": "21:28:18 15/11/2026"
+  },
+  {
+    "matchId": "#M-008",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#57de45",
+    "mapId": "vietnam_63",
+    "timestamp": 1794752753113,
+    "dateStr": "21:25:53 15/11/2026"
+  },
+  {
+    "matchId": "#M-007",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#57de45",
+    "mapId": "vietnam_63",
+    "timestamp": 1794752690645,
+    "dateStr": "21:24:50 15/11/2026"
+  },
+  {
+    "matchId": "#M-006",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#57de45",
+    "mapId": "vietnam_63",
+    "timestamp": 1794752599054,
+    "dateStr": "21:23:19 15/11/2026"
+  },
+  {
+    "matchId": "#M-005",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#57de45",
+    "mapId": "vietnam_63",
+    "timestamp": 1794752400804,
+    "dateStr": "21:20:00 15/11/2026"
+  },
+  {
+    "matchId": "#M-004",
+    "winnerName": "An Giang",
+    "winnerPlate": "67",
+    "color": "#57de45",
+    "mapId": "vietnam_63",
+    "timestamp": 1794752380332,
+    "dateStr": "21:19:40 15/11/2026"
+  },
+  {
+    "matchId": "#M-003",
+    "winnerName": "Hà Nội",
+    "winnerPlate": "30",
+    "color": "#ef4444",
+    "mapId": "vietnam_63",
+    "timestamp": 1794751655004,
+    "dateStr": "21:07:35 15/11/2026"
+  },
+  {
+    "matchId": "#M-002",
+    "winnerName": "TP. HCM",
+    "winnerPlate": "51",
+    "color": "#f97316",
+    "mapId": "vietnam_63",
+    "timestamp": 1794751037521,
+    "dateStr": "20:57:17 15/11/2026"
+  },
+  {
+    "matchId": "#M-001",
+    "winnerName": "TP. HCM",
+    "winnerPlate": "51",
+    "color": "#f97316",
+    "mapId": "vietnam_63",
+    "timestamp": 1794750847178,
+    "dateStr": "20:54:07 15/11/2026"
+  }
+]

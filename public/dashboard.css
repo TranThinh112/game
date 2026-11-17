@@ -1,0 +1,1222 @@
+/* Tu dong chuyen doi che do cuon trang giua Dashboard va Battle */
+
+body.dashboard-mode {
+
+  display: block !important;
+
+  overflow-x: hidden !important;
+
+  overflow-y: auto !important;
+
+  height: auto !important;
+
+  min-height: 100vh !important;
+
+}
+
+
+
+body.battle-mode {
+
+  display: flex !important;
+
+  justify-content: center !important;
+
+  align-items: center !important;
+
+  overflow: hidden !important;
+
+  height: 100vh !important;
+
+}
+
+
+
+/* Custom scrollbar muot ma cho Dashboard */
+
+body.dashboard-mode::-webkit-scrollbar,
+
+.rw-dashboard-view::-webkit-scrollbar,
+
+.rw-detail-view::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+
+
+body.dashboard-mode::-webkit-scrollbar-track,
+
+.rw-dashboard-view::-webkit-scrollbar-track,
+
+.rw-detail-view::-webkit-scrollbar-track {
+
+  background: #090c12;
+
+}
+
+
+
+body.dashboard-mode::-webkit-scrollbar-thumb,
+
+.rw-dashboard-view::-webkit-scrollbar-thumb,
+
+.rw-detail-view::-webkit-scrollbar-thumb {
+
+  background: #1e2638;
+
+  border-radius: 4px;
+
+}
+
+
+
+body.dashboard-mode::-webkit-scrollbar-thumb:hover,
+
+.rw-dashboard-view::-webkit-scrollbar-thumb:hover,
+
+.rw-detail-view::-webkit-scrollbar-thumb:hover {
+
+  background: #2e3a54;
+
+}
+
+
+
+
+
+/* ========================================================================== */
+
+/*                   RAILWAY-STYLE DASHBOARD & MAP DETAIL CSS                  */
+
+/* ========================================================================== */
+
+:root {
+
+  --rw-bg: #0b0e14;
+
+  --rw-card: #111622;
+
+  --rw-card-hover: #171e2e;
+
+  --rw-border: #1e2638;
+
+  --rw-border-hover: #2e3a54;
+
+  --rw-primary: #8b5cf6;
+
+  --rw-accent: #38bdf8;
+
+  --rw-gold: #facc15;
+
+  --rw-green: #10b981;
+
+  --rw-text: #f1f5f9;
+
+  --rw-muted: #8492a6;
+
+}
+
+
+
+#app {
+
+  display: none; /* Controlled by router */
+
+}
+
+
+
+.rw-dashboard-view, .rw-detail-view {
+
+  display: none;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: var(--rw-bg);
+
+  color: var(--rw-text);
+
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  overflow-y: auto;
+
+  padding-bottom: 70px;
+
+}
+
+
+
+/* RAILWAY TOP NAVBAR */
+
+.rw-navbar {
+
+  height: 64px;
+
+  border-bottom: 1px solid var(--rw-border);
+
+  background: rgba(11, 14, 20, 0.88);
+
+  backdrop-filter: blur(14px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 50;
+
+}
+
+.rw-brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+
+  color: #fff;
+
+  cursor: pointer;
+
+}
+
+.rw-logo-railway {
+
+  width: 30px;
+
+  height: 30px;
+
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.4);
+
+  font-size: 16px;
+
+}
+
+.rw-nav-badge {
+
+  font-size: 11.5px;
+
+  font-weight: 600;
+
+  padding: 3px 8px;
+
+  border-radius: 6px;
+
+  background: rgba(139, 92, 246, 0.15);
+
+  border: 1px solid rgba(139, 92, 246, 0.3);
+
+  color: #c084fc;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+}
+
+.rw-nav-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+.rw-btn-nav {
+
+  background: transparent;
+
+  border: 1px solid var(--rw-border);
+
+  color: var(--rw-muted);
+
+  padding: 8px 16px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  transition: all 0.2s;
+
+}
+
+.rw-btn-nav:hover {
+
+  background: var(--rw-card);
+
+  border-color: var(--rw-border-hover);
+
+  color: #fff;
+
+}
+
+
+
+/* HERO TITLE SECTION */
+
+.rw-hero {
+
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 40px 24px 24px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+}
+
+.rw-hero-info h1 {
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+
+  background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 8px;
+
+}
+
+.rw-hero-info p {
+
+  color: var(--rw-muted);
+
+  font-size: 14.5px;
+
+  max-width: 620px;
+
+  line-height: 1.5;
+
+}
+
+.rw-stats-pills {
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+}
+
+.rw-stat-pill {
+
+  background: var(--rw-card);
+
+  border: 1px solid var(--rw-border);
+
+  padding: 8px 14px;
+
+  border-radius: 10px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: var(--rw-muted);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+}
+
+.rw-stat-pill strong {
+
+  color: #fff;
+
+  font-size: 14px;
+
+}
+
+
+
+/* RAILWAY MAP CARDS GRID */
+
+.rw-grid-container {
+
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 0 24px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+
+  gap: 24px;
+
+}
+
+
+
+.rw-card {
+
+  background: var(--rw-card);
+
+  border: 1px solid var(--rw-border);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+.rw-card:hover {
+
+  background: var(--rw-card-hover);
+
+  border-color: var(--rw-border-hover);
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(139, 92, 246, 0.15);
+
+}
+
+.rw-card:active {
+
+  transform: translateY(-1px);
+
+}
+
+
+
+/* CARD HEADER */
+
+.rw-card-header {
+
+  padding: 18px 20px 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+.rw-card-title-wrap {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.rw-card-title {
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #fff;
+
+  letter-spacing: -0.2px;
+
+}
+
+.rw-card-star {
+
+  color: #4b5563;
+
+  font-size: 17px;
+
+  transition: color 0.2s;
+
+}
+
+.rw-card:hover .rw-card-star {
+
+  color: #facc15;
+
+}
+
+
+
+/* CARD CANVAS / PREVIEW BODY (RAILWAY DOTTED CANVAS LOOK) */
+
+.rw-card-preview {
+
+  height: 200px;
+
+  background: linear-gradient(180deg, #090e1f 0%, #030611 100%);
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+
+  overflow: hidden;
+
+}
+
+.rw-card-preview canvas {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  pointer-events: none;
+
+}
+
+.rw-card-service-icons {
+
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  z-index: 2;
+
+}
+
+.rw-service-icon-box {
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 10px;
+
+  background: rgba(17, 22, 34, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(8px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 20px;
+
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+
+  transition: transform 0.2s, border-color 0.2s;
+
+}
+
+.rw-card:hover .rw-service-icon-box {
+
+  transform: scale(1.1);
+
+  border-color: rgba(139, 92, 246, 0.6);
+
+}
+
+.rw-map-tag-overlay {
+
+  position: absolute;
+
+  top: 12px;
+
+  right: 12px;
+
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  padding: 3px 9px;
+
+  border-radius: 6px;
+
+  font-size: 11.5px;
+
+  font-weight: 700;
+
+  color: #38bdf8;
+
+  z-index: 2;
+
+  letter-spacing: 0.5px;
+
+}
+
+
+
+/* CARD FOOTER */
+
+.rw-card-footer {
+
+  padding: 13px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  font-size: 12.5px;
+
+  color: var(--rw-muted);
+
+}
+
+.rw-status-indicator {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-weight: 500;
+
+}
+
+.rw-status-dot {
+
+  width: 7.5px;
+
+  height: 7.5px;
+
+  border-radius: 50%;
+
+  background: var(--rw-green);
+
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+
+}
+
+.rw-status-indicator.ready .rw-status-dot {
+
+  background: #38bdf8;
+
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+
+}
+
+.rw-card-arrow {
+
+  color: #64748b;
+
+  font-weight: 700;
+
+  transition: transform 0.2s, color 0.2s;
+
+}
+
+.rw-card:hover .rw-card-arrow {
+
+  transform: translateX(4px);
+
+  color: #fff;
+
+}
+
+
+
+/* ========================================================================== */
+
+/*                         MAP DETAIL & STATS VIEW                            */
+
+/* ========================================================================== */
+
+.rw-detail-container {
+
+  max-width: 1640px;
+
+  margin: 0 auto;
+
+  padding: 24px;
+
+}
+
+.rw-breadcrumb {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 13.5px;
+
+  color: var(--rw-muted);
+
+  margin-bottom: 22px;
+
+}
+
+.rw-breadcrumb a {
+
+  color: var(--rw-muted);
+
+  text-decoration: none;
+
+  transition: color 0.2s;
+
+  cursor: pointer;
+
+}
+
+.rw-breadcrumb a:hover {
+
+  color: #fff;
+
+}
+
+.rw-breadcrumb span {
+
+  color: #4b5563;
+
+}
+
+.rw-breadcrumb strong {
+
+  color: #fff;
+
+}
+
+
+
+.rw-detail-header {
+
+  background: var(--rw-card);
+
+  border: 1px solid var(--rw-border);
+
+  border-radius: 18px;
+
+  padding: 26px 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+}
+
+.rw-detail-title-group h2 {
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.6px;
+
+  color: #fff;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+.rw-detail-title-group p {
+
+  color: var(--rw-muted);
+
+  font-size: 14px;
+
+  margin-top: 6px;
+
+}
+
+.rw-battle-launch-btn {
+
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+
+  border: 1.5px solid #ef4444;
+
+  color: #ffffff;
+
+  padding: 14px 28px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  box-shadow: 0 4px 24px rgba(220, 38, 38, 0.45), inset 0 1px 0 rgba(255,255,255,0.2);
+
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.rw-battle-launch-btn:hover {
+
+  transform: translateY(-2px) scale(1.02);
+
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.7);
+
+  border-color: #fca5a5;
+
+}
+
+.rw-battle-launch-btn:active {
+
+  transform: translateY(0);
+
+}
+
+
+
+/* DETAIL 3-CARDS BALANCED LAYOUT */
+.rw-detail-body {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+}
+@media (max-width: 1200px) {
+  .rw-detail-body {
+    flex-direction: column;
+  }
+}
+
+/* CARD 1: MAP PREVIEW CARD */
+.rw-detail-map-card {
+  width: 380px;
+  flex-shrink: 0;
+  background: var(--rw-card);
+  border: 1px solid var(--rw-border);
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+@media (max-width: 1200px) {
+  .rw-detail-map-card {
+    width: 100%;
+  }
+}
+
+.rw-map-card-canvas-wrap {
+  width: 100%;
+  height: 520px;
+  background: linear-gradient(180deg, #090e1f 0%, #030611 100%);
+  border-radius: 16px;
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.15), inset 0 0 35px rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+.rw-map-card-canvas-wrap canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.rw-map-card-info {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.rw-meta-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--rw-border);
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+.rw-meta-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--rw-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.rw-meta-value {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.25;
+  margin-top: 3px;
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.12);
+}
+.rw-meta-box:first-child .rw-meta-value {
+  color: #67e8f9;
+  text-shadow: 0 0 10px rgba(103, 232, 249, 0.2);
+}
+.rw-meta-box:nth-child(2) .rw-meta-value {
+  color: #fcd34d;
+  text-shadow: 0 0 10px rgba(252, 211, 77, 0.18);
+}
+
+/* RIGHT COLUMN: 2 STATS CARDS */
+.rw-detail-stats-col {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: 18px;
+  align-items: stretch;
+}
+@media (max-width: 900px) {
+  .rw-detail-stats-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rw-stats-card {
+  background: var(--rw-card);
+  border: 1px solid var(--rw-border);
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.rw-recent-card {
+  align-self: stretch;
+  height: auto;
+}
+.rw-stats-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.rw-stats-card-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.rw-stats-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 2.5px 8px;
+  border-radius: 6px;
+  background: rgba(250, 204, 21, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  color: #facc15;
+  white-space: nowrap;
+}
+
+/* LEADERBOARD TABLE - EXACT 14 ROWS FIT */
+.rw-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.rw-table th {
+  text-align: left;
+  padding: 6px 10px;
+  color: var(--rw-muted);
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+}
+.rw-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  vertical-align: middle;
+}
+.rw-table tr:last-child td {
+  border-bottom: none;
+}
+.rw-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+.rw-rank-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 11.5px;
+  white-space: nowrap;
+}
+.rw-rank-1 { background: rgba(250, 204, 21, 0.2); color: #facc15; border: 1px solid rgba(250, 204, 21, 0.4); }
+.rw-rank-2 { background: rgba(148, 163, 184, 0.2); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.4); }
+.rw-rank-3 { background: rgba(217, 119, 6, 0.2); color: #f59e0b; border: 1px solid rgba(217, 119, 6, 0.4); }
+.rw-rank-normal { background: rgba(255, 255, 255, 0.04); color: var(--rw-muted); }
+
+.rw-prov-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+.rw-prov-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.rw-prov-name {
+  white-space: nowrap;
+  font-weight: 700;
+}
+.rw-plate-pill {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #67e8f9;
+  background: rgba(8, 145, 178, 0.18);
+  padding: 3px 7px;
+  border-radius: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid rgba(34, 211, 238, 0.38);
+  letter-spacing: 0.2px;
+}
+
+/* 10 RECENT MATCHES - 100% SINGLE LINE NO-WRAP */
+.rw-recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8.5px;
+}
+.rw-recent-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  padding: 11px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.rw-recent-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.rw-recent-match-id {
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #818cf8;
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-width: 50px;
+}
+.rw-recent-winner {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+}
+.rw-recent-prov-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  color: #f8fafc;
+}
+.rw-recent-badge {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #facc15;
+  background: rgba(250, 204, 21, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+  margin-right: 6px;
+}
+.rw-recent-time {
+  font-size: 13px;
+  color: var(--rw-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', Consolas, monospace;
+}
+
+@media (max-width: 900px) {
+  .rw-recent-item {
+    gap: 7px;
+    padding: 8px 9px;
+  }
+
+  .rw-recent-winner {
+    font-size: 16px;
+  }
+
+  .rw-recent-badge {
+    font-size: 11.5px;
+    padding-inline: 5px;
+    margin-right: 2px;
+  }
+
+  .rw-recent-time {
+    font-size: 13px;
+  }
+}
+
+/* IN-GAME TOP BAR NAV BUTTON */
+
+.in-game-nav-bar {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-right: 8px;
+
+}
+
+.btn-return-dashboard {
+
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1.5px solid rgba(139, 92, 246, 0.5);
+
+  color: #c084fc;
+
+  padding: 6px 14px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  transition: all 0.2s;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+}
+
+.btn-return-dashboard:hover {
+
+  background: rgba(139, 92, 246, 0.25);
+
+  border-color: #a855f7;
+
+  color: #fff;
+
+  transform: translateY(-1px);
+
+}
+

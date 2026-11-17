@@ -1,0 +1,46 @@
+  } else {
+    conquerMsg = "🚩 [" + conquerorEmpireName + "] ĐÃ ĐÁNH BẠI VÀ THÔN TÍNH THÀNH CÔNG [" + tgtProv.name + "]!";
+    addChat("HỆ THỐNG", "🚩 " + conquerorEmpireName + " đã chiếm trọn " + tgtProv.name + "!");
+  }
+  addWarLog(conquerMsg, "log-conquer");
+
+  // Nếu cựu thế lực thực sự không còn bất kỳ tỉnh nào (0 tỉnh) => Mới công bố tiêu diệt hoàn toàn
+  if(survivingLands.length === 0){
+    const wipedMsg = "💀 [" + formerEmpireName + "] ĐÃ BỊ TIÊU DIỆT HOÀN TOÀN TRÊN BẢN ĐỒ!";
+    addWarLog(wipedMsg, "log-boss");
+    addChat("HỆ THỐNG", "💀 " + formerEmpireName + " đã chính thức bị loại khỏi cuộc chiến!");
+    const activeEmpireSet = new Set(provinces.map(p => getEmpireId(p)));
+    const remainingCount = activeEmpireSet.size;
+    speakText(formerEmpireName + " đã bị loại! Còn " + remainingCount + " phe!");
+    triggerSmartAutoZoom(tgtProv, "conquer");
+  } else {
+    playSoundEffect("conquer");
+    const now = Date.now();
+    // Giãn cách thông báo thôn tính tối thiểu 2.0s để giọng đọc theo kịp tốc độ trận đấu
+    if(now - lastConquerSpeakTime >= 2000){
+      lastConquerSpeakTime = now;
+      const zoneCompletedName = checkZoneCompletion(conquerorEmpireProv);
+      if(zoneCompletedName){
+        // GỘP THÀNH 1 CÂU DUY NHẤT KHI LÊN QUÂN KHU:
+        speakText(conquerorEmpireName + " chiếm " + tgtProv.name + ", thống nhất toàn bộ " + zoneCompletedName + "!", true);
+      } else {
+        const conquerPhrases = [
+          conquerorEmpireName + " đã chiếm " + tgtProv.name + "!",
+          conquerorEmpireName + " vừa kiểm soát " + tgtProv.name + "!",
+          conquerorEmpireName + " mở rộng lãnh thổ qua " + tgtProv.name + "!"
+        ];
+        speakText(conquerPhrases[Math.floor(Math.random() * conquerPhrases.length)]);
+      }
+    } else {
+      // Vẫn kiểm tra quân khu ngầm nếu rơi vào cooldown đọc
+      checkZoneCompletion(conquerorEmpireProv);
+    }
+    triggerSmartAutoZoom(tgtProv, "conquer");
+  }
+
+  // Pháo hoa ăn mừng tại tỉnh vừa chiếm
+  if(tgtProv.center){
+    const scr = geoToScreen(tgtProv.center[0], tgtProv.center[1]);
+    for(let k = 0; k < 3; k++){
+      setTimeout(function(){
+        effects.push({ x: scr.x + (Math.random()-0.5)*20, y: scr.y + (Math.random()-0.5)*20, radius: 10, maxRadius: 55, color: tgtProv.color, alpha: 1.0 });

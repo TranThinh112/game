@@ -1,0 +1,318 @@
+
+const PROVINCE_LORE_DATA = {
+  "ha_noi": {
+    "icon": "🏛️",
+    "landmark": "Tháp Rùa - Hồ Gươm & Hoàng Thành Thăng Long",
+    "specialty": "Phở Hà Nội, Cốm Làng Vòng & Trà Sen Tây Hồ"
+  },
+  "tp_hcm": {
+    "icon": "🏙️",
+    "landmark": "Chợ Bến Thành, Landmark 81 & Dinh Độc Lập",
+    "specialty": "Cơm Tấm Sài Gòn, Hủ Tiếu Nam Vang & Bánh Mì"
+  },
+  "da_nang": {
+    "icon": "🌉",
+    "landmark": "Cầu Rồng Phun Lửa, Ngũ Hành Sơn & Bà Nà Hills",
+    "specialty": "Mì Quảng, Bánh Tráng Cuốn Thịt Heo"
+  },
+  "hai_phong": {
+    "icon": "⚓",
+    "landmark": "Thành Phố Hoa Phượng Đỏ, Cảng Biển & Quần Đảo Cát Bà",
+    "specialty": "Bánh Đa Cua, Nem Cua Bể Hải Phòng"
+  },
+  "can_tho": {
+    "icon": "🛶",
+    "landmark": "Bến Ninh Kiều, Chợ Nổi Cái Răng & Cầu Cần Thơ",
+    "specialty": "Lẩu Mắm, Bánh Cống Cần Thơ"
+  },
+  "thua_thien_hue": {
+    "icon": "🏯",
+    "landmark": "Đại Nội Kinh Thành Huế, Cầu Tràng Tiền & Chùa Thiên Mụ",
+    "specialty": "Bún Bò Huế, Cơm Hến & Chè Cung Đình"
+  },
+  "quang_ninh": {
+    "icon": "⛵",
+    "landmark": "Kỳ Quan Thiên Nhiên Thế Giới Vịnh Hạ Long",
+    "specialty": "Chả Mực Hạ Long, Rượu Mơ Yên Tử"
+  },
+  "nghe_an": {
+    "icon": "🌸",
+    "landmark": "Quê Bác Làng Sen - Nam Đàn, Đền Cuông",
+    "specialty": "Cháo Lươn Xứ Nghệ, Tương Nam Đàn, Cam Xã Đoài"
+  },
+  "thanh_hoa": {
+    "icon": "🏰",
+    "landmark": "Di Sản Thế Giới Thành Nhà Hồ, Bãi Biển Sầm Sơn",
+    "specialty": "Nem Chua Thanh Hóa, Chè Lam Phủ Quảng"
+  },
+  "ha_tinh": {
+    "icon": "🏔️",
+    "landmark": "Dãy Hoành Sơn Quan, Ngã Ba Đồng Lộc & Biển Thiên Cầm",
+    "specialty": "Kẹo Cu Đơ Hà Tĩnh, Cam Bù Hương Sơn"
+  },
+  "quang_binh": {
+    "icon": "🦇",
+    "landmark": "Vương Quốc Hang Động Phong Nha - Kẻ Bàng, Sơn Đoòng",
+    "specialty": "Khoai Deo Quảng Bình, Cháo Canh Ba Đồn"
+  },
+  "quang_tri": {
+    "icon": "🕊️",
+    "landmark": "Cầu Hiền Lương - Sông Bến Hải, Thành Cổ Quảng Trị",
+    "specialty": "Bánh Lọc Mỹ Chánh, Thịt Trâu Lá Trơng"
+  },
+  "quang_nam": {
+    "icon": "🏮",
+    "landmark": "Phố Cổ Hội An, Thánh Địa Mỹ Sơn",
+    "specialty": "Cao Lầu Phố Cổ, Bê Thui Cầu Mống"
+  },
+  "quang_ngai": {
+    "icon": "🌋",
+    "landmark": "Thiên Đường Biển Đảo Núi Lửa Lý Sơn, Núi Thiên Ấn",
+    "specialty": "Tỏi Đen Lý Sơn, Kẹo Gương, Cá Bống Sông Trà"
+  },
+  "binh_dinh": {
+    "icon": "⚔️",
+    "landmark": "Đất Võ Tây Sơn Hào Kiệt, Kỳ Co - Eo Gió",
+    "specialty": "Bánh Ít Lá Gai, Rượu Bầu Đá Tây Sơn, Nem Chợ Huyện"
+  },
+  "phu_yen": {
+    "icon": "🌅",
+    "landmark": "Mũi Điện Đại Lãnh - Nơi Đón Bình Minh Đầu Tiên, Gành Đá Đĩa",
+    "specialty": "Mắt Cá Ngừ Đại Dương, Bò Một Nắng"
+  },
+  "khanh_hoa": {
+    "icon": "🏝️",
+    "landmark": "Vịnh Nha Trang Xanh Biếc, Tháp Bà Ponagar, Đảo Yến",
+    "specialty": "Yến Sào Khánh Hòa, Nem Nướng Ninh Hòa"
+  },
+  "ninh_thuan": {
+    "icon": "🍇",
+    "landmark": "Tháp Chàm Poklong Garai, Đồi Cát Nam Cương, Vịnh Vĩnh Hy",
+    "specialty": "Nho Ninh Thuận, Cừu Nướng, Rượu Vang"
+  },
+  "binh_thuan": {
+    "icon": "🏖️",
+    "landmark": "Thủ Phủ Resort Mũi Né, Hải Đăng Kê Gà, Đồi Cát Bay",
+    "specialty": "Nước Mắm Phan Thiết, Thanh Long Ruột Đỏ"
+  },
+  "kon_tum": {
+    "icon": "🪵",
+    "landmark": "Nhà Thờ Gỗ Kon Tum, Cầu Treo Kon Klor, Ngã Ba Đông Dương",
+    "specialty": "Gỏi Lá Tây Nguyên, Rượu Cần"
+  },
+  "gia_lai": {
+    "icon": "☕",
+    "landmark": "Biển Hồ T’Nưng Đôi Mắt Pleiku, Núi Lửa Chư Đăng Ya",
+    "specialty": "Phở Khô Gia Lai (Phở Hai Tô), Bò Một Nắng Muối Kiến"
+  },
+  "dak_lak": {
+    "icon": "🐘",
+    "landmark": "Thủ Phủ Cà Phê Buôn Ma Thuột, Bản Đôn Voi Rừng",
+    "specialty": "Cà Phê Buôn Ma Thuột, Cơm Lam Gà Nướng"
+  },
+  "dak_nong": {
+    "icon": "🌊",
+    "landmark": "Hồ Tà Đùng - Vịnh Hạ Long Tây Nguyên, Thác Đray Sáp",
+    "specialty": "Cà Phê Đắk Nông, Bơ Sáp, Rượu Đoác"
+  },
+  "lam_dong": {
+    "icon": "🌲",
+    "landmark": "Thành Phố Ngàn Hoa Đà Lạt, Hồ Xuân Hương, Đỉnh Langbiang",
+    "specialty": "Atiso Đà Lạt, Hồng Treo Gió, Dâu Tây"
+  },
+  "binh_phuoc": {
+    "icon": "🌳",
+    "landmark": "Thủ Phủ Cao Su & Điều, Trảng Cỏ Bù Lạch, Núi Bà Rá",
+    "specialty": "Hạt Điều Bình Phước Rang Muối"
+  },
+  "tay_ninh": {
+    "icon": "⛰️",
+    "landmark": "Đệ Nhất Thiên Sơn Núi Bà Đen, Tòa Thánh Cao Đài",
+    "specialty": "Bánh Tráng Phơi Sương Trảng Bàng, Muối Tôm Tây Ninh"
+  },
+  "binh_duong": {
+    "icon": "🏭",
+    "landmark": "Thủ Phủ Công Nghiệp Hiện Đại, Lạc Cảnh Đại Nam Văn Hiến",
+    "specialty": "Măng Cụt Lái Thiêu, Gốm Sứ Lái Thiêu"
+  },
+  "dong_nai": {
+    "icon": "🦌",
+    "landmark": "Vườn Quốc Gia Cát Tiên, Hồ Trị An, Thác Đá Hàn",
+    "specialty": "Bưởi Tân Triều, Mít Tố Nữ Long Khánh"
+  },
+  "ba_ria_vung_tau": {
+    "icon": "🌊",
+    "landmark": "Ngọn Hải Đăng Vũng Tàu, Tượng Chúa Kito, Biển Bãi Trước Bãi Sau",
+    "specialty": "Bánh Khọt Cô Ba Vũng Tàu, Hải Sản Tươi Sống"
+  },
+  "long_an": {
+    "icon": "🌾",
+    "landmark": "Cánh Đồng Bất Tận Đồng Tháp Mười, Làng Cổ Phước Lộc Thọ",
+    "specialty": "Gạo Nàng Thơm Chợ Đào, Thanh Long Châu Thành"
+  },
+  "tien_giang": {
+    "icon": "🍊",
+    "landmark": "Cù Lao Thới Sơn, Miệt Vườn Cây Trái Sông Tiền, Chợ Gạo",
+    "specialty": "Xoài Cát Hòa Lộc, Hủ Tiếu Mỹ Tho"
+  },
+  "ben_tre": {
+    "icon": "🥥",
+    "landmark": "Xứ Sở Ngàn Dừa Bến Tre, Cồn Quy, Cồn Phụng",
+    "specialty": "Kẹo Dừa Bến Tre, Bánh Tráng Mỹ Lồng"
+  },
+  "tra_vinh": {
+    "icon": "🛕",
+    "landmark": "Chùa Hang Kh’mer Cổ Kính, Ao Bà Om, Cù Lao Long Trị",
+    "specialty": "Bánh Tét Trà Cuôn, Bún Nước Lèo Trà Vinh"
+  },
+  "vinh_long": {
+    "icon": "🚣",
+    "landmark": "Cù Lao An Bình Xanh Mướt, Cầu Mỹ Thuận",
+    "specialty": "Bưởi Năm Roi Bình Minh, Khoai Lang Bình Tân"
+  },
+  "dong_thap": {
+    "icon": "🪷",
+    "landmark": "Thủ Phủ Hoa Sen Đồng Tháp Mười, Làng Hoa Sa Đéc",
+    "specialty": "Nem Lai Vung, Hủ Tiếu Sa Đéc, Bánh Phồng Tôm Sa Giang"
+  },
+  "an_giang": {
+    "icon": "🐂",
+    "landmark": "Rừng Tràm Trà Sư, Miếu Bà Chúa Xứ Núi Sam Châu Đốc",
+    "specialty": "Mắm Châu Đốc, Bò Bảy Núi, Đường Thốt Nốt"
+  },
+  "kien_giang": {
+    "icon": "🏖️",
+    "landmark": "Đảo Ngọc Phú Quốc, Quần Đảo Nam Du, Hà Tiên Thập Cảnh",
+    "specialty": "Nước Mắm Phú Quốc, Gỏi Cá Trích, Tiêu Phú Quốc"
+  },
+  "hau_giang": {
+    "icon": "🛶",
+    "landmark": "Chợ Nổi Ngã Bảy Phụng Hiệp, Vùng Đất Khóm Cầu Đúc",
+    "specialty": "Khóm Cầu Đúc, Cá Thát Lát Hậu Giang"
+  },
+  "soc_trang": {
+    "icon": "🏮",
+    "landmark": "Lễ Hội Đua Ghe Ngo, Chùa Dơi, Chùa Chén Kiểu",
+    "specialty": "Bánh Pía Sóc Trăng, Bún Nước Lèo"
+  },
+  "bac_lieu": {
+    "icon": "🎸",
+    "landmark": "Quê Hương Bản Dạ Cổ Hoài Lang, Nhà Công Tử Bạc Liêu, Cánh Đồng Điện Gió",
+    "specialty": "Bánh Xèo Bạc Liêu, Nhãn Da Bò"
+  },
+  "ca_mau": {
+    "icon": "🧭",
+    "landmark": "Đất Mũi Cà Mau - Cực Nam Tổ Quốc, Rừng Đước U Minh Hạ",
+    "specialty": "Cua Cà Mau Danh Tiếng, Tôm Khô Rạch Gốc"
+  },
+  "lai_chau": {
+    "icon": "🏔️",
+    "landmark": "Đèo Ô Quy Hồ Đệ Nhất Đèo, Đỉnh Pu Si Lung",
+    "specialty": "Thịt Lợn Cắp Nách, Thảo Quả Lai Châu"
+  },
+  "dien_bien": {
+    "icon": "⭐",
+    "landmark": "Chiến Thắng Lịch Sử Điện Biên Phủ Lừng Lẫy Năm Châu, Hầm Đờ Cát",
+    "specialty": "Gạo Điện Biên, Thịt Trâu Gác Bếp"
+  },
+  "son_la": {
+    "icon": "🌸",
+    "landmark": "Thủy Điện Sơn La Kỳ Vĩ, Cao Nguyên Mộc Châu Xanh Ngát",
+    "specialty": "Chè Shan Tuyết Mộc Châu, Sữa Tươi Mộc Châu"
+  },
+  "hoa_binh": {
+    "icon": "⚡",
+    "landmark": "Thủy Điện Hòa Bình Tráng Lệ, Thung Lũng Mai Châu",
+    "specialty": "Cơm Lam Mai Châu, Lợn Mán Thui Luộc"
+  },
+  "lao_cai": {
+    "icon": "🚡",
+    "landmark": "Đỉnh Fansipan - Nóc Nhà Đông Dương, Sa Pa Mù Sương",
+    "specialty": "Thắng Cố Bắc Hà, Mận Hậu Sa Pa"
+  },
+  "yen_bai": {
+    "icon": "🌾",
+    "landmark": "Tuyệt Tác Ruộng Bậc Thang Mù Cang Chải, Hồ Thác Bà",
+    "specialty": "Gạo Nếp Nương Tú Lệ, Chè Suối Giàng"
+  },
+  "ha_giang": {
+    "icon": "🚩",
+    "landmark": "Cột Cờ Cực Bắc Lũng Cú, Đèo Mã Pí Lèng, Hẻm Tu Sản",
+    "specialty": "Bánh Tam Giác Mạch, Chè Shan Tuyết Cổ Thụ"
+  },
+  "cao_bang": {
+    "icon": "🌊",
+    "landmark": "Thác Bản Giốc Hùng Vĩ, Hang Pác Bó - Suối Lê Nin",
+    "specialty": "Hạt Dẻ Trùng Khánh, Bánh Cuốn Cao Bằng"
+  },
+  "bac_kan": {
+    "icon": "⛵",
+    "landmark": "Vườn Quốc Gia Hồ Ba Bể Xanh Trong Tuyệt Mỹ",
+    "specialty": "Miến Dong Na Rì, Tôm Chua Ba Bể"
+  },
+  "tuyen_quang": {
+    "icon": "🏮",
+    "landmark": "Thủ Đô Kháng Chiến Tân Trào, Lễ Hội Thành Tuyên Rực Rỡ",
+    "specialty": "Chè Bát Tiên, Rượu Ngô Na Hang"
+  },
+  "thai_nguyen": {
+    "icon": "🍵",
+    "landmark": "Thủ Phủ Đệ Nhất Danh Trà Tân Cương, Hồ Núi Cốc",
+    "specialty": "Trà Tân Cương Thái Nguyên, Bánh Chưng Bờ Đậu"
+  },
+  "lang_son": {
+    "icon": "🏯",
+    "landmark": "Ải Chi Lăng Oai Hùng, Chợ Đông Kinh, Mẫu Sơn Quanh Năm Mây Phủ",
+    "specialty": "Vịt Quay Lạng Sơn, Khâu Nhục Xứ Lạng"
+  },
+  "bac_giang": {
+    "icon": "🍒",
+    "landmark": "Vương Quốc Vải Thiều Lục Ngạn, Chùa Vĩnh Nghiêm",
+    "specialty": "Vải Thiều Lục Ngạn, Mì Chũ, Bánh Đa Kế"
+  },
+  "phu_tho": {
+    "icon": "👑",
+    "landmark": "Đền Hùng Đất Tổ Vua Hùng - Cội Nguồn Dân Tộc",
+    "specialty": "Bánh Chưng Bánh Giầy Đất Tổ, Thịt Chua Thanh Sơn"
+  },
+  "vinh_phuc": {
+    "icon": "☁️",
+    "landmark": "Thị Trấn Trên Mây Tam Đảo, Thiền Viện Trúc Lâm Tây Thiên",
+    "specialty": "Ngọn Su Su Tam Đảo, Bò Tái Kiến Đốt"
+  },
+  "bac_ninh": {
+    "icon": "🎶",
+    "landmark": "Cái Nôi Dân Ca Quan Họ Bắc Ninh, Chùa Dâu, Đền Đô",
+    "specialty": "Bánh Phu Thê Đình Bảng, Nem Bùi Ninh Xá"
+  },
+  "hai_duong": {
+    "icon": "🥮",
+    "landmark": "Khu Di Tích Quốc Gia Côn Sơn - Kiếp Bạc",
+    "specialty": "Bánh Đậu Xanh Hải Dương, Bánh Gai Ninh Giang"
+  },
+  "hung_yen": {
+    "icon": "🏮",
+    "landmark": "Thương Cảng Phố Hiến - Thứ Nhất Kinh Kỳ Thứ Nhì Phố Hiến",
+    "specialty": "Nhãn Lồng Hưng Yên, Gà Đông Tảo"
+  },
+  "ha_nam": {
+    "icon": "🛕",
+    "landmark": "Quần Thể Tâm Linh Chùa Tam Chúc Lớn Nhất Thế Giới",
+    "specialty": "Cá Kho Làng Vũ Đại, Chuối Ngự Đại Hoàng"
+  },
+  "nam_dinh": {
+    "icon": "🕍",
+    "landmark": "Đền Trần Hào Khí Đông A, Nhà Thờ Đổ Hải Hậu",
+    "specialty": "Phở Bò Nam Định, Bánh Gai Bà Thi, Kẹo Sìu Châu"
+  },
+  "thai_binh": {
+    "icon": "🌾",
+    "landmark": "Quê Lúa Thái Bình, Chùa Keo Cổ Kính Bậc Nhất",
+    "specialty": "Bánh Cáy Làng Nguyễn, Canh Cá Quỳnh Côi"
+  },
+  "ninh_binh": {
+    "icon": "🚣",
+    "landmark": "Quần Thể Di Sản Kép Thế Giới Tràng An - Bái Đính, Tam Cốc",
+    "specialty": "Cơm Cháy Ninh Bình, Dê Núi Hoa Lư"
+  }
+};
