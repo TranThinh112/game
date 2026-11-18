@@ -222,7 +222,7 @@ app.post('/api/action', (req, res) => {
     data: {
       id: Date.now() + Math.random().toString(36).substr(2, 5),
       user: user || 'Khách Ẩn Danh',
-      provinceId: provinceId || 'ha_noi',
+      provinceId: provinceId || null,
       sourceProvinceId: sourceProvinceId || null,
       type: type || 'comment',
       giftValue: Number(giftValue) || 1,
@@ -339,4 +339,5 @@ const PORT = 5050;
 server.listen(PORT, () => {
   console.log("[SERVER] Running at http://localhost:" + PORT);
 });
+
 

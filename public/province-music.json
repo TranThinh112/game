@@ -39,7 +39,7 @@
     "targetBaseVolume": 78,
     "initialVolume": 0.1,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 9
   },
   {
     "no": 4,
@@ -180,7 +180,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 8
   },
   {
     "no": 14,
@@ -223,7 +223,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 17,
@@ -279,7 +279,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 21,
@@ -307,9 +307,9 @@
     "localAudioUrl": "/music/ha_tinh.webm",
     "tiktokUrl": "https://vt.tiktok.com/ZSpseDffA/",
     "initialVolume": 0.1,
-    "targetBaseVolume": 78,
+    "targetBaseVolume": 85,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 8
   },
   {
     "no": 23,
@@ -324,9 +324,9 @@
     "sourceType": "tiktok",
     "sourceUrl": "https://www.tiktok.com/@ntmusic2k5/video/7409146518797618450",
     "initialVolume": 0.1,
-    "targetBaseVolume": 78,
+    "targetBaseVolume": 85,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 8
   },
   {
     "no": 24,
@@ -369,7 +369,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 27,
@@ -516,9 +516,9 @@
     "startTimeSeconds": 0,
     "durationSeconds": 35,
     "initialVolume": 0.1,
-    "targetBaseVolume": 78,
+    "targetBaseVolume": 85,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 8
   },
   {
     "no": 38,
@@ -531,7 +531,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 9
   },
   {
     "no": 39,
@@ -544,7 +544,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 7
   },
   {
     "no": 40,
@@ -557,7 +557,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 41,
@@ -583,7 +583,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 8
   },
   {
     "no": 43,
@@ -623,7 +623,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 46,
@@ -650,7 +650,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 7
   }
 ]
 
