@@ -3,15 +3,17 @@
     "no": 1,
     "provinceName": "An Giang",
     "provinceId": "an_giang",
+    "sourceType": "tiktok",
+    "sourceUrl": "https://www.tiktok.com/@thumuadonghocu.net.vn/video/7316747199658904833",
     "youtubeVideoId": "uIVW6wXh2xo",
     "youtubeUrl": "https://www.youtube.com/watch?v=uIVW6wXh2xo",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/an_giang.webm",
+    "localAudioUrl": "/music/an_giang.tiktok.mp3",
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 2,
@@ -25,7 +27,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 9
   },
   {
     "no": 3,
@@ -73,15 +75,17 @@
     "no": 6,
     "provinceName": "Bắc Ninh",
     "provinceId": "bac_ninh",
+    "sourceType": "tiktok",
+    "sourceUrl": "https://www.tiktok.com/@amimarie_rblx/video/7481697561468734738",
     "youtubeVideoId": "CL13X-8o4h0",
     "youtubeUrl": "https://www.youtube.com/watch?v=CL13X-8o4h0",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/bac_ninh.webm",
+    "localAudioUrl": "/music/bac_ninh.tiktok.mp3",
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 7
   },
   {
     "no": 7,
@@ -95,7 +99,7 @@
     "fadeInMs": 5000,
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 8,
@@ -166,7 +170,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 13,
@@ -195,7 +199,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 8
   },
   {
     "no": 15,
@@ -257,15 +261,17 @@
     "no": 19,
     "provinceName": "Gia Lai",
     "provinceId": "gia_lai",
+    "sourceType": "tiktok",
+    "sourceUrl": "https://www.tiktok.com/@taynguyensoundofficial/video/7182912589268290862",
     "youtubeVideoId": "DTRMgvt26Fg",
     "youtubeUrl": "https://www.youtube.com/watch?v=DTRMgvt26Fg",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
-    "localAudioUrl": "/music/gia_lai.webm",
+    "localAudioUrl": "/music/gia_lai.tiktok.m4a",
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 9
   },
   {
     "no": 20,
@@ -294,7 +300,7 @@
     "targetBaseVolume": 78,
     "initialVolume": 0.1,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 9
   },
   {
     "no": 22,
@@ -341,7 +347,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 8
   },
   {
     "no": 25,
@@ -355,7 +361,7 @@
     "fadeInMs": 5000,
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 26,
@@ -412,7 +418,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 30,
@@ -432,7 +438,9 @@
     "no": 31,
     "provinceName": "Cần Thơ",
     "provinceId": "can_tho",
-    "localAudioUrl": "/music/can_tho.webm",
+    "sourceType": "tiktok",
+    "sourceUrl": "https://www.tiktok.com/@bannhatot/video/7586231180765302024",
+    "localAudioUrl": "/music/can_tho.tiktok.mp3",
     "tiktokUrl": "https://www.tiktok.com/@ng_bao_loi/photo/7465998849576930568",
     "startTimeSeconds": 0,
     "durationSeconds": 35,
@@ -440,7 +448,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 32,
@@ -453,7 +461,7 @@
     "fadeInMs": 5000,
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 33,
@@ -466,7 +474,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 34,
@@ -479,7 +487,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 35,
@@ -492,7 +500,7 @@
     "fadeInMs": 5000,
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 36,
@@ -505,7 +513,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 37,
@@ -570,7 +578,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 42,
@@ -596,7 +604,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 10
   },
   {
     "no": 44,
@@ -609,7 +617,7 @@
     "initialVolume": 0.1,
     "targetBaseVolume": 78,
     "fadeInMs": 5000,
-    "fadeInDelaySeconds": 13
+    "fadeInDelaySeconds": 8
   },
   {
     "no": 45,
