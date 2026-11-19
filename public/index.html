@@ -285,23 +285,24 @@
     #battle-canvas { flex: 1; width: 100%; display: block; position: relative; z-index: 2; }
     
     .overlay {
-      position: absolute; bottom: 8px; right: 12px; max-width: 320px; pointer-events: none;
-      display: flex; flex-direction: column; gap: 3px; z-index: 15; align-items: flex-end;
+      position: absolute; bottom: 68px; left: 12px; right: auto; top: auto;
+      width: 320px; max-width: calc(100% - 24px); pointer-events: none;
+      display: flex; flex-direction: column; gap: 3px; z-index: 15; align-items: flex-start;
     }
     .chat {
-      max-height: 52px; overflow: hidden; display: flex; flex-direction: column;
-      gap: 3px; justify-content: flex-end;
+      max-height: 132px; overflow: hidden; display: flex; flex-direction: column;
+      gap: 4px; justify-content: flex-end;
     }
     .msg {
       background: linear-gradient(90deg, rgba(9, 14, 28, 0.88) 0%, rgba(15, 23, 42, 0.75) 100%);
       backdrop-filter: blur(8px);
       padding: 3px 8px; border-radius: 6px; font-size: 10px;
       display: inline-flex; align-items: center; gap: 5px; align-self: flex-start;
-      max-width: 96%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      max-width: 100%; width: fit-content; white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere;
       border: 1px solid rgba(56, 189, 248, 0.25);
       border-left: 2.5px solid #38bdf8;
       box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-      animation: fade .2s ease-out;
+      animation: chatPushUp .28s ease-out;
       opacity: 0.95;
     }
     .chat-name {
@@ -310,9 +311,10 @@
     }
     .chat-text {
       color: #e2e8f0; font-size: 10px; font-weight: 500;
-      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere;
     }
     @keyframes fade { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes chatPushUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 0.95; transform: translateY(0); } }
     
     .footer-mvp {
       position: relative; z-index: 10;
@@ -459,7 +461,7 @@
     .log-item { animation: fade .2s ease-out; }
     .log-atk { color: #f87171; }
     .log-reinforce { color: #60a5fa; }
-    .log-boss { color: #facc15; font-weight: bold; }
+    .log-alert { color: #facc15; font-weight: bold; }
     .log-conquer { color: #4ade80; font-weight: 800; text-shadow: 0 0 8px rgba(74, 222, 128, 0.4); }
 
     /* COMPACT COMMAND CENTER: keep music test controls reachable without
@@ -1622,9 +1624,9 @@ const PROVINCE_VICTORY_SPEECH = {
   "hai_duong": "Chúc mừng ba mươi tư Hải Dương đã giành chiến thắng. Địa linh nhân kiệt, trầm mặc Côn Sơn Kiếp Bạc. Thơm ngon bánh đậu xanh, rươi Tứ Kỳ.",
   "hai_phong": "Chúc mừng mười lăm Hải Phòng đã giành chiến thắng. Rực rỡ hoa phượng đỏ, lộng gió Cát Bà. Đậm đà bánh đa cua, nem cua bể.",
   "hung_yen": "Đại thắng non sông! Chúc mừng tám mươi chín Hưng Yên đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Sống lại nét phồn hoa đô hội đất Phố Hiến ngàn năm và Đền Chử Đồng Tử linh thiêng, nếm trọn vị ngọt tiến vua của Nhãn lồng cùi dày cùng Ếch om Phượng Tường!",
-  "ha_nam": "Đại thắng non sông! Chúc mừng chín mươi Hà Nam đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Tĩnh lặng giữa non nước hữu tình Quần thể tâm linh Chùa Tam Chúc hùng vĩ, ngạt ngào hương khói niêu Cá kho làng Vũ Đại hòa cùng Chuối ngự Đại Hoàng thơm lừng!",
+  "ha_nam": "Chúc mừng chín mươi Hà Nam đã giành chiến thắng. Huyền ảo cảnh sắc chùa Tam Chúc, sừng sững bia đá ngàn năm Núi Đọi. Đậm đà cá kho làng Vũ Đại, thơm ngon món quê nhà.",
   "nam_dinh": "Đại thắng non sông! Chúc mừng mười tám Nam Định đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Rạng danh hào khí Đông A hiển hách chốn Đền Trần và Tháp Phổ Minh uy nghiêm, lưu giữ tinh túy đất Thành Nam qua tô Phở bò gia truyền và Kẹo sìu châu giòn tan!",
-  "thai_binh": "Đại thắng non sông! Chúc mừng mười bảy Thái Bình đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Bát ngát những cánh đồng quê lúa trĩu hạt soi bóng Chùa Keo trăm gian cổ kính, thơm bùi từng phong Bánh cáy làng Nguyễn cùng Canh cá Quỳnh Côi ngọt lịm!",
+  "thai_binh": "Chúc mừng mười bảy Thái Bình đã giành chiến thắng. Dập dềnh đoàn thuyền về bến Diêm Điền, ngút ngàn phù sa cửa biển Ba Lạt. Chua cay gỏi cá nhệch đậm vị, nức tiếng ổi Bo.",
   "ninh_binh": "Đại thắng non sông! Chúc mừng ba mươi lăm Ninh Bình đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Lạc lối giữa di sản thế giới Quần thể danh thắng Tràng An và Cố đô Hoa Lư trầm mặc, giòn rụm miếng Cơm cháy vàng ruộm chấm nước sốt Thịt dê núi đá mây!",
   "thanh_hoa": "Chúc mừng ba mươi sáu Thanh Hóa đã giành chiến thắng. Hào khí Lam Sơn, uy nghiêm thành nhà Hồ. Đậm đà nem chua, chả tôm nướng.",
   "nghe_an": "Chúc mừng ba mươi bảy Nghệ An đã giành chiến thắng. Tự hào quê Bác, nơi Địa linh nhân kiệt, Đậm đà súp lươn, nhút Thanh Chương.",
@@ -1650,15 +1652,15 @@ const PROVINCE_VICTORY_SPEECH = {
   "binh_duong": "Đại thắng non sông! Chúc mừng sáu mươi mốt Bình Dương đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Chuyển mình mạnh mẽ cùng nhịp thở công nghiệp hiện đại và Địa đạo Tam giác sắt kiên cường, ngọt lành quả ngọt Măng cụt Lái Thiêu cùng phong vị Nem chua truyền thống!",
   "dong_nai": "Đại thắng non sông! Chúc mừng sáu mươi Đồng Nai đã xuất sắc thống nhất trọn vẹn Việt Nam! Non sông thu về một mối! Thả mình vào bản hòa ca thiên nhiên Vườn quốc gia Cát Tiên và Chiến khu Đ bạt ngàn, mát ngọt từng tép Bưởi da xanh Tân Triều hòa cùng hương thơm Mít tố nữ Long Khánh!",
   "ba_ria_vung_tau": "Chúc mừng bảy mươi hai Bà Rịa Vũng Tàu đã giành chiến thắng. Lộng gió Mũi Nghinh Phong, kiên trung Côn Đảo. Giòn rụm bánh khọt, tươi ngon gỏi cá mai.",
-  "tp_hcm": "Chúc mừng năm mươi Thành phố Hồ Chí Minh đã giành chiến thắng. Thành phố bên dòng sông Sài Gòn, thiêng liêng Bến Nhà Rồng. Thơm lừng cơm tấm sườn bì, giòn rụm bánh mì nóng.",
+  "tp_hcm": "Chúc mừng năm mươi Thành phố Hồ Chí Minh đã giành chiến thắng. Thành phố bên dòng sông Sài Gòn, thiêng liêng Bến Nhà Rồng. Thơm lừng cơm tấm sườn bì, giòn tan ổ bánh mì.",
   "long_an": "Chúc mừng sáu mươi hai Long An đã giành chiến thắng. Xanh mướt rừng tràm Tân Lập, rực rỡ cửa ngõ phương Nam. Say nồng rượu đế Gò Đen, giòn rụm đậu phộng Đức Hòa.",
   "tien_giang": "Chúc mừng sáu mươi ba Tiền Giang đã giành chiến thắng. Bát ngát vườn cây trái Cái Bè, lộng gió biển Gò Công. Giòn rụm chả giò Mỹ Tho, đậm đà mắm còng xứ Gò.",
   "dong_thap": "Chúc mừng sáu mươi sáu Đồng Tháp đã giành chiến thắng! Tự hào đất sen hồng, Tràm Chim, Làng hoa Sa Đéc, Quýt hồng Lai Vung và Hủ tiếu Sa Đéc!",
   "an_giang": "Chúc mừng sáu mươi bảy An Giang đã giành chiến thắng. Mây phủ Thất Sơn đại ngàn, rực rỡ văn hóa làng Chăm. Béo ngậy bò bảy món Núi Sam, thanh ngọt nước thốt nốt.",
   "ben_tre": "Chúc mừng bảy mươi mốt Bến Tre đã giành chiến thắng. Âm vang khí thế Đồng Khởi, gió lộng ba dải xứ Dừa. Đậm đà canh chua cá ngát, giòn ngọt củ hủ dừa tươi.",
-  "vinh_long": "Chúc mừng sáu mươi tư Vĩnh Long đã giành chiến thắng. Sừng sững nhịp cầu Mỹ Thuận, trĩu nặng phù sa miệt vườn. Thơm lừng ốc lác hấp lá gừng, bùi dẻo bánh tráng nem Cù lao Mây.",
+  "vinh_long": "Chúc mừng sáu mươi tư Vĩnh Long đã giành chiến thắng. Sừng sững nhịp cầu Mỹ Thuận, trĩu nặng phù sa miệt vườn. Thơm lừng ốc lác hấp lá gừng, bùi dẻo bánh tráng nem.",
   "can_tho": "Chúc mừng sáu mươi lăm Cần Thơ đã giành chiến thắng. Rạng rỡ đất Tây Đô, bến Ninh Kiều gió lộng sông thiêng. Thơm lừng nem nướng Cái Răng, bùi béo bánh tét lá cẩm.",
-  "tra_vinh": "Chúc mừng tám mươi tư Trà Vinh đã giành chiến thắng. Giao hòa ba dân tộc, cuối dòng Cửu Long hướng biển khơi. Dẻo thơm bánh tét Trà Cuôn, ngọt lành cốm dẹp Ok Om Bok.",
+  "tra_vinh": "Chúc mừng tám mươi tư Trà Vinh đã giành chiến thắng. Giao hòa ba dân tộc, cuối dòng Cửu Long hướng biển khơi. Dẻo thơm bánh tét Trà Cuôn, ngọt lành cốm dẹp Ót Om Bok.",
   "hau_giang": "Chúc mừng chín mươi lăm Hậu Giang đã giành chiến thắng. Tấp nập chợ nổi Ngã Bảy, rộn ràng sông nước phù sa. Ngọt thanh khóm Cầu Đúc, đậm đà chả cá thác lác.",
   "soc_trang": "Chúc mừng tám mươi ba Sóc Trăng đã giành chiến thắng. Oai nghiêm tháp Chùa Sà Lôn, yên ả sông nước Mỹ Xuyên. Hấp dẫn bánh pía kim sa, ngọt thanh bưởi năm roi.",
   "kien_giang": "Chúc mừng sáu mươi tám Kiên Giang đã giành chiến thắng. Bát ngát rừng tràm U Minh Thượng, xanh biếc quần đảo Nam Du. Thơm ngon bún cá Rạch Giá, ngọt dẻo bánh thốt nốt.",
@@ -2144,10 +2146,10 @@ function triggerVictory(winnerProv){
       if(typeof window.stopEpicBgm === 'function') window.stopEpicBgm();
       const musicStarted = window.MusicService.playProvinceMusic(speechProvinceId);
       console.log('[VICTORY] Nhac vinh danh ' + speechProvinceId + ': ' + (musicStarted ? 'da kich hoat' : 'khong co cau hinh'));
-      if(!musicStarted && typeof addWarLog === 'function') addWarLog('⚠️ [LOI NHAC] Khong the kich hoat nhac vinh danh cho ' + winnerName + '.', 'log-boss');
+      if(!musicStarted && typeof addWarLog === 'function') addWarLog('⚠️ [LOI NHAC] Khong the kich hoat nhac vinh danh cho ' + winnerName + '.', 'log-alert');
     } catch(err){
       console.error('[VICTORY] Loi phat nhac vinh danh:', err);
-      if(typeof addWarLog === 'function') addWarLog('⚠️ [LOI NHAC] ' + winnerName + ': ' + err.message, 'log-boss');
+      if(typeof addWarLog === 'function') addWarLog('⚠️ [LOI NHAC] ' + winnerName + ': ' + err.message, 'log-alert');
     }
   }
 
@@ -2287,7 +2289,7 @@ function onProvinceConquered(tgtProv, conquerorProv, conquerorUser){
       p.color = formerEmpireColor;
     });
 
-    addWarLog('⚡ [' + formerEmpireName + '] mất thành chính [' + tgtProv.name + '] nhưng đã dời trụ sở kèm biển số [' + formerEmpirePlate + '] về [' + newCapital.name + '], bảo toàn toàn bộ ' + survivingLands.length + ' địa bàn còn lại!', 'log-boss');
+    addWarLog('⚡ [' + formerEmpireName + '] mất thành chính [' + tgtProv.name + '] nhưng đã dời trụ sở kèm biển số [' + formerEmpirePlate + '] về [' + newCapital.name + '], bảo toàn toàn bộ ' + survivingLands.length + ' địa bàn còn lại!', 'log-alert');
     speakText(formerEmpireName + ' mất thành chính, đã chuyển trụ sở về ' + newCapital.name + '!');
   }
 
@@ -2297,7 +2299,15 @@ function onProvinceConquered(tgtProv, conquerorProv, conquerorUser){
   tgtProv.ownerId = conquerorEmpireId;
   tgtProv.ownerName = conquerorEmpireName;
   tgtProv.color = conquerorEmpireProv.color; // Đồng bộ màu của Đế chế cai trị
+  tgtProv._conqueredColor = conquerorEmpireProv.color;
+  tgtProv._conqueredAt = now;
+  tgtProv._lastConqueredTime = now;
   tgtProv.hp = tgtProv.maxHp || (tgtProv.id === "ha_noi" || tgtProv.id === "tp_hcm" ? 1500 : 1000); // Khôi phục full HP chuẩn theo tỉnh
+
+  // Hủy ngay mọi đạo quân và đòn đánh đang nhắm vào tỉnh vừa đổi chủ.
+  units = units.filter(u => u.targetProvId !== tgtProv.id);
+  airMissions = airMissions.filter(m => !m.tgtProv || m.tgtProv.id !== tgtProv.id);
+  navalMissions = navalMissions.filter(m => !m.tgtProv || m.tgtProv.id !== tgtProv.id);
   delete tgtProv.carriedPlate;
   delete tgtProv.carriedName;
   delete tgtProv.isRelocatedCapital;
@@ -2334,7 +2344,7 @@ function onProvinceConquered(tgtProv, conquerorProv, conquerorUser){
   } else if(survivingLands.length === 0){
     // Nếu cựu thế lực thực sự không còn bất kỳ tỉnh nào (0 tỉnh) => Mới công bố tiêu diệt hoàn toàn
     const wipedMsg = "💀 [" + formerEmpireName + "] ĐÃ BỊ TIÊU DIỆT HOÀN TOÀN TRÊN BẢN ĐỒ!";
-    addWarLog(wipedMsg, "log-boss");
+    addWarLog(wipedMsg, "log-alert");
     addChat("HỆ THỐNG", "💀 " + formerEmpireName + " đã chính thức bị loại khỏi cuộc chiến!");
     const activeEmpireSet = new Set(provinces.map(p => getEmpireId(p)));
     const remainingCount = activeEmpireSet.size;
@@ -3456,7 +3466,7 @@ function launchMarchTroops(srcProv, tgtProv, count = 4, userName = ''){
     created: Date.now()
   });
 
-  // Mỗi lần tiến công xuất 1 chấm tròn chủ lực tương đương 50 HP (Nếu Quà Lớn Boss thì xuất 2 chấm = 100 HP)
+  // Mỗi lần tiến công xuất 1 đơn vị chủ lực tương đương 50 HP
   const troopDots = count >= 8 ? 2 : 1;
   for(let i = 0; i < troopDots; i++){
     setTimeout(() => {
@@ -3531,8 +3541,8 @@ function handleAction(data){
       const strikeNow = Date.now();
       if(mode === 'MB' && strikeNow - lastAirStrike < 60 * 1000){ addWarLog('Không quân đang hồi chiêu, vui lòng chờ đủ 60 giây.','log-info'); return; }
       if(mode === 'TC' && strikeNow - lastNavyStrike < 60 * 1000){ addWarLog('Hải quân đang hồi chiêu, vui lòng chờ đủ 60 giây.','log-info'); return; }
-      if(mode === 'MB' && !canAir){ popupDamage(tgtProv.center[0], tgtProv.center[1], 'CHƯA CÓ QUYỀN MB!', '#ef4444', true); addWarLog(srcProv.name + ' chưa có quyền điều động máy bay.', 'log-boss'); return; }
-      if(mode === 'TC' && !canNavy){ popupDamage(tgtProv.center[0], tgtProv.center[1], 'CHƯA CÓ QUYỀN TC!', '#ef4444', true); addWarLog(srcProv.name + ' chưa có quyền điều động tàu chiến.', 'log-boss'); return; }
+      if(mode === 'MB' && !canAir){ popupDamage(tgtProv.center[0], tgtProv.center[1], 'CHƯA CÓ QUYỀN MB!', '#ef4444', true); addWarLog(srcProv.name + ' chưa có quyền điều động máy bay.', 'log-alert'); return; }
+      if(mode === 'TC' && !canNavy){ popupDamage(tgtProv.center[0], tgtProv.center[1], 'CHƯA CÓ QUYỀN TC!', '#ef4444', true); addWarLog(srcProv.name + ' chưa có quyền điều động tàu chiến.', 'log-alert'); return; }
       if(mode === 'MB'){
         spawnAirMission(srcProv, tgtProv, srcProv.name, 'KHÔNG QUÂN', 350, true);
         lastAirStrike = strikeNow;
@@ -3550,7 +3560,7 @@ function handleAction(data){
     const neighbors = VN_ADJACENCY[srcProv.id] || [];
     if(!neighbors.includes(tgtProv.id)){
       popupDamage(tgtProv.center[0], tgtProv.center[1], 'NGOÀI PHẠM VI!', '#ef4444', true);
-      addWarLog(tgtProv.name + ' không nằm trong phạm vi tấn công của bộ binh ' + srcProv.name + '.', 'log-boss'); return;
+      addWarLog(tgtProv.name + ' không nằm trong phạm vi tấn công của bộ binh ' + srcProv.name + '.', 'log-alert'); return;
     }
     launchMarchTroops(srcProv, tgtProv, giftValue >= 50 ? 6 : 4, data.user);
     addWarLog(srcProv.name + ' tiến công [' + tgtProv.name + '].', 'log-atk');
@@ -3562,8 +3572,8 @@ function handleAction(data){
   if(data.type === 'gift'){
     totalCoins += giftValue;
     if(giftValue > mvp.coins){ mvp = {name:data.user, coins:giftValue}; const m=document.getElementById('mvp-banner'); if(m)m.innerText='👑 MVP: '+mvp.name+' ('+mvp.coins+' xu)'; }
-    if(giftValue >= 2000){ p.ownerId=p.id; p.ownerName=p.name; const bossHeal=300; p.maxHp=(p.maxHp || 1000)+bossHeal; p.hp=(p.hp || 0)+bossHeal; createShockwave(p.center[0],p.center[1],p.color); createShockwave(p.center[0],p.center[1],p.color); spawnUnit(p,data.user,'boss'); popupDamage(p.center[0],p.center[1],'+' + bossHeal + ' HP','#f59e0b',false); }
-    else { const heal = giftValue >= 200 ? 300 : giftValue >= 50 ? 150 : 100; p.maxHp=(p.maxHp || 1000)+heal; p.hp=(p.hp || 0)+heal; spawnUnit(p,data.user,giftValue>=200?'boss':giftValue>=50?'cavalry':'soldier'); popupDamage(p.center[0],p.center[1],'+' + heal + ' HP','#f59e0b',false); }
+    if(giftValue >= 2000){ p.ownerId=p.id; p.ownerName=p.name; const cavalryHeal=300; p.maxHp=(p.maxHp || 1000)+cavalryHeal; p.hp=(p.hp || 0)+cavalryHeal; createShockwave(p.center[0],p.center[1],p.color); createShockwave(p.center[0],p.center[1],p.color); spawnUnit(p,data.user,'cavalry'); popupDamage(p.center[0],p.center[1],'+' + cavalryHeal + ' HP','#f59e0b',false); }
+    else { const heal = giftValue >= 200 ? 300 : giftValue >= 50 ? 150 : 100; p.maxHp=(p.maxHp || 1000)+heal; p.hp=(p.hp || 0)+heal; spawnUnit(p,data.user,giftValue>=50?'cavalry':'soldier'); popupDamage(p.center[0],p.center[1],'+' + heal + ' HP','#f59e0b',false); }
   } else {
     p.maxHp=(p.maxHp || 1000)+50; p.hp=(p.hp || 0)+50; popupDamage(p.center[0],p.center[1],'+50 HP','#22c55e',false);
 }
@@ -3578,7 +3588,6 @@ function spawnUnit(prov, user, type){
   const cfg = {
     soldier:{hp:30,spd:1.4,atk:1,r:6},
     cavalry:{hp:80,spd:2.2,atk:2,r:9},
-    boss   :{hp:300,spd:0.9,atk:4,r:14}
   }[type];
 
   // Spawn tại tọa độ địa lý của tỉnh
@@ -3616,24 +3625,13 @@ function addChat(user,msg){
   d.innerHTML = '<span class="chat-name">' + user + ':</span> <span class="chat-text">' + msg + '</span>';
   c.appendChild(d);
 
-  // Chỉ giữ tối đa 2 thông báo ngắn gọn để hoàn toàn KHÔNG che lấp bản đồ
-  while(c.children.length > 2){
-    c.removeChild(c.firstChild);
-  }
-
-  // Tự động mờ dần và giải phóng không gian sau 3.5 giây
-  setTimeout(() => {
-    if(d && d.parentNode){
-      d.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-      d.style.opacity = '0';
-      d.style.transform = 'translateY(4px)';
-      setTimeout(() => {
-        if(d && d.parentNode) d.parentNode.removeChild(d);
-      }, 400);
+  // Comment mới xuất hiện ở dưới và đẩy các comment cũ lên.
+  requestAnimationFrame(() => {
+    while(c.children.length > 6){
+      c.removeChild(c.firstElementChild);
     }
-  }, 3500);
+  });
 }
-
 /* --------------------------------------------------------------- */
 function update(){
   // CẬP NHẬT CHUYỂN ĐỘNG QUỸ ĐẠO CỦA MÁY BAY TIÊM KÍCH (AIR MISSIONS)
@@ -3800,13 +3798,13 @@ function update(){
           u.hp -= vHp;
           u.attackDmg = u.hp; // Sát thương khi tới đích bằng đúng số máu còn lại
           clashedTroop.hp = 0;
-          addWarLog('💥 Chạm trán giáp ranh: [' + (u.user || 'Quân đoàn') + '] đánh tan quân địch (' + Math.round(u.hp) + ' HP tiếp tục tiến công)!', 'log-boss');
+          addWarLog('💥 Chạm trán giáp ranh: [' + (u.user || 'Quân đoàn') + '] đánh tan quân địch (' + Math.round(u.hp) + ' HP tiếp tục tiến công)!', 'log-alert');
         } else if(vHp > uHp){
           // Quân v nhiều điểm hơn: tiêu diệt hoàn toàn u, v tiếp tục tiến vào lãnh thổ A!
           clashedTroop.hp -= uHp;
           clashedTroop.attackDmg = clashedTroop.hp;
           u.hp = 0;
-          addWarLog('💥 Chạm trán giáp ranh: [' + (clashedTroop.user || 'Quân đoàn') + '] bẻ gãy đợt công kích đối phương!', 'log-boss');
+          addWarLog('💥 Chạm trán giáp ranh: [' + (clashedTroop.user || 'Quân đoàn') + '] bẻ gãy đợt công kích đối phương!', 'log-alert');
         } else {
           // NẾU CẢ 2 BẰNG NHAU (HOẶC CẢ 2 ĐỀU BỊ TIÊU DIỆT):
           // Huề nhau! Cả 2 cùng hy sinh tại điểm giao, KHÔNG BÊN NÀO MẤT MÁU LÃNH THỔ!
@@ -3824,29 +3822,43 @@ function update(){
 
       if(dist < Math.max(0.12, u.speed * 1.5)){
         const tgt = provinces.find(p => p.id === u.targetProvId);
-        const src = provinces.find(p => p.id === u.provinceId);
-        if(tgt){
+        const src = provinces.find(p => p.id === u.originProvinceId || p.id === u.provinceId) || provinces.find(p => getEmpireId(p) === u.empireId);
+        if(tgt && src){
           const currentHp = (tgt.hp !== undefined ? tgt.hp : 1000);
-          // ĐÁNH THẲNG VÀO: TỈNH ĐÍCH MẤT ĐÚNG 50 HP (hoặc theo số máu u.attackDmg của chấm quân)!
-          const dmg = (u.attackDmg !== undefined ? u.attackDmg : 100);
+          const dmg = Math.max(1, Math.min(u.hp, u.attackDmg !== undefined ? u.attackDmg : u.hp));
           const newHp = currentHp - dmg;
-
-          if(newHp <= 0){
-            const srcEmpire = src ? (src.ownerId || src.id) : null;
-            const tgtEmpire = tgt.ownerId || tgt.id;
-            if(src && srcEmpire && srcEmpire !== tgtEmpire){
-              onProvinceConquered(tgt, src, u.user);
-            } else {
-              tgt.hp = 0;
-            }
+          const hitScreen = geoToScreen(u.lon, u.lat);
+          effects.push({ x: hitScreen.x, y: hitScreen.y, radius: 4, maxRadius: 22, color: u.color, alpha: 0.95 });
+          if(newHp <= 0 && getEmpireId(src) !== getEmpireId(tgt)){
+            tgt.hp = 0;
+            onProvinceConquered(tgt, src, u.user);
+            u.isMarching = false;
+            u.isSieging = false;
+            u.isDefending = true;
+            u.type = u.type || 'soldier';
+            u.attack = u.attack || 1;
+            u.speed = u.speed || 1.4;
+            u.radius = u.radius || 6;
+            u.maxHp = u.maxHp || u.hp;
+            u.provinceId = tgt.id;
+            u.targetProvId = null;
+            u.empireId = getEmpireId(tgt);
+            u.color = tgt.color;
+            u.lon = tgt.center[0];
+            u.lat = tgt.center[1];
+            u.attackDmg = Math.max(1, u.hp);
           } else {
-            tgt.hp = newHp;
-            reportHpStatus(tgt, newHp);
+            tgt.hp = Math.max(0, newHp);
+            reportHpStatus(tgt, tgt.hp);
+            u.isMarching = false;
+            u.isSieging = true;
+            u.provinceId = tgt.id;
+            u.targetProvId = null;
+            u.siegeCooldownAt = Date.now() + 900;
+            u.lon = tgt.center[0];
+            u.lat = tgt.center[1];
           }
         }
-        const hitScreen = geoToScreen(u.lon, u.lat);
-        effects.push({ x: hitScreen.x, y: hitScreen.y, radius: 4, maxRadius: 22, color: u.color, alpha: 0.95 });
-        u.hp = 0; // Chấm quân đã dồn trọn sát thương vào thành
       } else {
         const step = Math.min(dist, u.speed);
         u.lon += (dx / dist) * step;
@@ -3856,6 +3868,38 @@ function update(){
       const scr = geoToScreen(u.lon, u.lat);
       u.x = scr.x;
       u.y = scr.y;
+      continue;
+    }
+    if(u.isSieging){
+      const tgt = provinces.find(p => p.id === u.provinceId);
+      const src = provinces.find(p => p.id === u.originProvinceId) || provinces.find(p => getEmpireId(p) === u.empireId);
+      if(!tgt || !src || getEmpireId(tgt) === getEmpireId(src)){
+        u.isSieging = false;
+        u.isDefending = true;
+      } else if(Date.now() >= (u.siegeCooldownAt || 0)){
+        const dmg = Math.max(1, Math.min(u.hp, u.attackDmg || u.hp));
+        const newHp = Math.max(0, (tgt.hp !== undefined ? tgt.hp : 1000) - dmg);
+        tgt.hp = newHp;
+        popupDamage(tgt.center[0], tgt.center[1], '-' + Math.round(dmg) + ' HP', '#ef4444', false);
+        if(newHp <= 0){
+          onProvinceConquered(tgt, src, u.user);
+          u.isSieging = false;
+          u.isDefending = true;
+          u.type = u.type || 'soldier';
+          u.attack = u.attack || 1;
+          u.speed = u.speed || 1.4;
+          u.radius = u.radius || 6;
+          u.maxHp = u.maxHp || u.hp;
+          u.empireId = getEmpireId(tgt);
+          u.color = tgt.color;
+        } else {
+          reportHpStatus(tgt, newHp);
+          u.siegeCooldownAt = Date.now() + 900;
+        }
+      }
+      const siegePos = geoToScreen(u.lon, u.lat);
+      u.x = siegePos.x;
+      u.y = siegePos.y;
       continue;
     }
     let nearest=null, mind=1e9;
@@ -4194,7 +4238,9 @@ function draw(){
     const isHanoiControlled = (empireMaster && empireMaster.id === 'ha_noi') || p.ownerId === 'ha_noi' || ownerNameNormalized === 'ha noi' || ownerNameNormalized.includes('thu do ha noi');
     const isNationalMajor = isHcmControlled || isHanoiControlled;
     const nationalMajorColor = '#ef4444';
-    const baseColor = zoneConf ? zoneConf.color : (isNationalMajor ? nationalMajorColor : ((empireMaster && empireMaster.color) ? empireMaster.color : (p.color || '#334155')));
+    const hanoiMajorColor = '#facc15';
+    const recentConquestColor = (p._conqueredColor && p._conqueredAt && (Date.now() - p._conqueredAt < 8000)) ? p._conqueredColor : null;
+    const baseColor = recentConquestColor || (zoneConf ? zoneConf.color : (isHanoiControlled ? hanoiMajorColor : (isHcmControlled ? nationalMajorColor : ((empireMaster && empireMaster.color) ? empireMaster.color : (p.color || '#334155')))));
     const isSafe = p.isEnclaveSafe || false;
 
     const hpRatio = isSafe ? 1.0 : Math.max(0, Math.min(1, (p.hp !== undefined ? p.hp : 1000) / 1000));
@@ -4237,7 +4283,13 @@ function draw(){
 
     } else if(hpRatio <= 0.01){
 
-      fillStyle = '#0f172a';
+      // Tỉnh đã thất thủ vẫn giữ màu phe thắng; chỉ phủ tối nhẹ để báo trạng thái.
+      const defeatedGrad = ctx.createLinearGradient(0, topY, 0, bottomY);
+      defeatedGrad.addColorStop(0, 'rgba(15, 23, 42, 0.34)');
+      defeatedGrad.addColorStop(0.42, 'rgba(30, 41, 59, 0.20)');
+      defeatedGrad.addColorStop(0.72, baseColor);
+      defeatedGrad.addColorStop(1, baseColor);
+      fillStyle = defeatedGrad;
 
     } else {
 
@@ -4697,200 +4749,79 @@ function draw(){
 
 
 
-  // 6. CÁC ĐƠN VỊ CHIẾN ĐẤU (LÍNH, KỴ BINH, BOSS)
-
+  // 6. CÁC ĐƠN VỊ CHIẾN ĐẤU (LÍNH, KỴ BINH)
   for(const u of units){
-
     const prov = provinces.find(p=>p.id===u.provinceId) || provinces[0];
-
     const factionCol = provinceColor(prov);
-
-
-
     ctx.save();
-
-    ctx.shadowColor = u.type==='boss' ? '#ef4444' : factionCol;
-
-    ctx.shadowBlur = u.type==='boss' ? 16 : 8;
-
-
-
+    ctx.shadowColor = factionCol;
+    ctx.shadowBlur = u.type === 'cavalry' ? 11 : 8;
     const uRadius = u.radius * Math.min(1.4, Math.max(0.7, camera.zoom * 0.8));
 
-
-
     if(u.isMarching){
-
-      // MỖI 1 CHẤM TRÒN TƯƠNG ĐƯƠNG 50 HP
-
       const r = Math.max(4.2, u.radius * Math.min(camera.zoom, 1.5));
-
-      ctx.shadowColor = u.color;
-
+      ctx.shadowColor = u.color || factionCol;
       ctx.shadowBlur = 10;
-
-
-
-      // Hào quang bảo vệ xung quanh chấm tròn
-
       ctx.beginPath();
-
       ctx.arc(u.x, u.y, r + 1.8, 0, Math.PI * 2);
-
       ctx.fillStyle = 'rgba(255, 255, 255, 0.45)';
-
       ctx.fill();
-
-
-
-      // Thân chấm tròn mang màu cờ của phe xuất quân
-
       ctx.beginPath();
-
-      ctx.arc(u.x, u.y, r, 0, Math.PI * 2);
-
-      ctx.fillStyle = u.color;
-
+      if(u.type === 'cavalry'){
+        ctx.moveTo(u.x, u.y - r);
+        ctx.lineTo(u.x + r * 0.92, u.y + r * 0.78);
+        ctx.lineTo(u.x - r * 0.92, u.y + r * 0.78);
+        ctx.closePath();
+      } else {
+        ctx.arc(u.x, u.y, r, 0, Math.PI * 2);
+      }
+      ctx.fillStyle = u.color || factionCol;
       ctx.fill();
-
       ctx.strokeStyle = '#ffffff';
-
       ctx.lineWidth = 1.4;
-
       ctx.stroke();
-
-
-
-      // Hiển thị số điểm 50 (hoặc số máu còn lại) phía trên chấm tròn
-
-      ctx.save();
-
       ctx.fillStyle = '#fef08a';
-
       ctx.font = '800 8.5px "Plus Jakarta Sans", sans-serif';
-
       ctx.textAlign = 'center';
-
       ctx.shadowColor = 'rgba(0,0,0,0.9)';
-
       ctx.shadowBlur = 3;
-
       ctx.fillText(Math.round(u.hp), u.x, u.y - r - 2.5);
-
       ctx.restore();
-
-
-
-      ctx.restore();
-
       continue;
-
     }
-
-
 
     ctx.beginPath();
-
-    ctx.arc(u.x, u.y, uRadius, 0, Math.PI*2);
-
-    const unitGrad = ctx.createRadialGradient(u.x - uRadius*0.3, u.y - uRadius*0.3, 1, u.x, u.y, uRadius);
-
-    if(u.type==='boss'){
-
-      unitGrad.addColorStop(0, '#fef08a');
-
-      unitGrad.addColorStop(0.5, '#ef4444');
-
-      unitGrad.addColorStop(1, '#7f1d1d');
-
-    } else if(u.type==='cavalry'){
-
-      unitGrad.addColorStop(0, '#ffffff');
-
-      unitGrad.addColorStop(0.6, factionCol);
-
-      unitGrad.addColorStop(1, '#0f172a');
-
+    if(u.type === 'cavalry'){
+      ctx.moveTo(u.x, u.y - uRadius);
+      ctx.lineTo(u.x + uRadius * 0.92, u.y + uRadius * 0.78);
+      ctx.lineTo(u.x - uRadius * 0.92, u.y + uRadius * 0.78);
+      ctx.closePath();
     } else {
-
-      unitGrad.addColorStop(0, '#ffffff');
-
-      unitGrad.addColorStop(0.7, factionCol);
-
-      unitGrad.addColorStop(1, '#1e293b');
-
+      ctx.arc(u.x, u.y, uRadius, 0, Math.PI * 2);
     }
-
+    const unitGrad = ctx.createRadialGradient(u.x - uRadius*0.3, u.y - uRadius*0.3, 1, u.x, u.y, uRadius);
+    unitGrad.addColorStop(0, '#ffffff');
+    unitGrad.addColorStop(u.type === 'cavalry' ? 0.6 : 0.7, factionCol);
+    unitGrad.addColorStop(1, '#1e293b');
     ctx.fillStyle = unitGrad;
-
     ctx.fill();
-
-
-
-    ctx.strokeStyle = u.type==='boss' ? '#fbbf24' : '#ffffff';
-
-    ctx.lineWidth = u.type==='boss' ? 2.5 : 1.5;
-
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = u.type === 'cavalry' ? 1.8 : 1.5;
     ctx.stroke();
-
     ctx.restore();
 
-
-
-    // Mini thanh máu tinh gọn (chỉ hiển thị cho Boss hoặc khi zoom gần để tránh rối mắt)
-
-    if(u.type === 'boss' || camera.zoom >= 1.6){
-
+    if(camera.zoom >= 1.6){
       const hpPct = Math.max(0, u.hp / (u.maxHp || 1));
-
       const hpBarW = Math.max(16, uRadius * 2.0);
-
       const hpBarH = 2.5;
-
       const hpBarX = u.x - hpBarW / 2;
-
       const hpBarY = u.y - uRadius - 5;
-
-
-
       ctx.fillStyle = 'rgba(15,23,42,0.8)';
-
       ctx.fillRect(hpBarX, hpBarY, hpBarW, hpBarH);
-
       ctx.fillStyle = hpPct > 0.5 ? '#10b981' : (hpPct > 0.25 ? '#f59e0b' : '#ef4444');
-
       ctx.fillRect(hpBarX, hpBarY, hpBarW * hpPct, hpBarH);
-
-
-
-      if(u.type === 'boss'){
-
-        ctx.fillStyle = '#fef08a';
-
-        ctx.font = '800 9px "Plus Jakarta Sans", sans-serif';
-
-        ctx.textAlign = 'center';
-
-        ctx.shadowColor = 'rgba(0,0,0,0.9)';
-
-        ctx.shadowBlur = 3;
-
-        ctx.fillText('👑 ' + (u.user || 'BOSS'), u.x, hpBarY - 3);
-
-      }
-
     }
-
   }
-
-
-
-  
-
-
-
-
-
   // 6.5. VẼ MÁY BAY TIÊM KÍCH & VỆT KHÓI PHẢN LỰC BAY THEO QUỸ ĐẠO PARABOL
   for(const m of airMissions){
     // Vẽ vệt khói phản lực phía sau máy bay
@@ -5883,7 +5814,7 @@ function updateLeaderboard(){
 
       if(sdEl) sdEl.classList.add('active');
 
-      addWarLog('🔥 TỬ CHIẾN SONG HÙNG KÍCH HOẠT! Tốc độ x2.4 và Sát thương chấm quân x2 (200 HP - 400 HP)!', 'log-boss');
+      addWarLog('🔥 TỬ CHIẾN SONG HÙNG KÍCH HOẠT! Tốc độ x2.4 và Sát thương chấm quân x2 (200 HP - 400 HP)!', 'log-alert');
 
       playSoundEffect('conquer');
 
@@ -6040,7 +5971,7 @@ function startMatchTimer(){
 
 function stopPreparationTimer(){ if(prepCueTimer){ clearInterval(prepCueTimer); prepCueTimer=null; } }
 function updatePhaseDisplay(name,className){ const b=document.getElementById('current-phase-badge'); if(b){b.textContent=name;b.className='phase-badge '+className;} const t=document.getElementById('phase-countdown'); if(t){const total=(battlePhase==='preparation'||name.indexOf('CHUẨN BỊ')>=0)?Math.max(0,Number(prepSecondsRemaining)||0):Math.max(0,Number(matchTimeRemaining)||0);const minutes=Math.floor(total/60);const seconds=total%60;t.textContent=String(minutes).padStart(2,'0')+':'+String(seconds).padStart(2,'0');} }
-function startBattlePreparation(){ stopPreparationTimer(); matchHasStarted=true; battlePhase='preparation'; window.isPreparationPhase=true; prepSecondsRemaining=90; addWarLog('🛡️ [AUTO-WAR] Giai đoạn chuẩn bị 1 phút 30 giây bắt đầu.','log-reinforce'); speakText('Giai đoạn chuẩn bị một phút ba mươi giây bắt đầu. Các tỉnh thành củng cố lực lượng.',true); updatePhaseDisplay('🛡️ GIAI ĐOẠN: CHUẨN BỊ (1P30S)','phase-reinforce'); prepCueTimer=setInterval(()=>{ if(isVictoryTriggered){stopPreparationTimer();return;} prepSecondsRemaining--; updatePhaseDisplay('🛡️ GIAI ĐOẠN: CHUẨN BỊ (1P30S)','phase-reinforce'); if(prepSecondsRemaining===10){addWarLog('⏳ Còn 10 giây chuyển sang giai đoạn giao tranh.','log-boss'); speakText('Còn 10 giây chuyển sang giai đoạn giao tranh.',true);} else if(prepSecondsRemaining>=1&&prepSecondsRemaining<=5){speakText(String(prepSecondsRemaining),true);} if(prepSecondsRemaining<=0){stopPreparationTimer();battlePhase='battle';window.isPreparationPhase=false;addWarLog('⚔️ Giai đoạn giao tranh bắt đầu.','log-boss');speakText('Hết một phút ba mươi giây chuẩn bị! Giai đoạn tấn công chính thức bắt đầu!',true);updatePhaseDisplay('⚔️ GIAI ĐOẠN: TỔNG TẤN CÔNG','phase-attack');startMatchTimer();}},1000); }
+function startBattlePreparation(){ stopPreparationTimer(); matchHasStarted=true; battlePhase='preparation'; window.isPreparationPhase=true; prepSecondsRemaining=90; addWarLog('🛡️ [AUTO-WAR] Giai đoạn chuẩn bị 1 phút 30 giây bắt đầu.','log-reinforce'); speakText('Giai đoạn chuẩn bị một phút ba mươi giây bắt đầu. Các tỉnh thành củng cố lực lượng.',true); updatePhaseDisplay('🛡️ GIAI ĐOẠN: CHUẨN BỊ (1P30S)','phase-reinforce'); prepCueTimer=setInterval(()=>{ if(isVictoryTriggered){stopPreparationTimer();return;} prepSecondsRemaining--; updatePhaseDisplay('🛡️ GIAI ĐOẠN: CHUẨN BỊ (1P30S)','phase-reinforce'); if(prepSecondsRemaining===10){addWarLog('⏳ Còn 10 giây chuyển sang giai đoạn giao tranh.','log-alert'); speakText('Còn 10 giây chuyển sang giai đoạn giao tranh.',true);} else if(prepSecondsRemaining>=1&&prepSecondsRemaining<=5){speakText(String(prepSecondsRemaining),true);} if(prepSecondsRemaining<=0){stopPreparationTimer();battlePhase='battle';window.isPreparationPhase=false;addWarLog('⚔️ Giai đoạn giao tranh bắt đầu.','log-alert');speakText('Hết một phút ba mươi giây chuẩn bị! Giai đoạn tấn công chính thức bắt đầu!',true);updatePhaseDisplay('⚔️ GIAI ĐOẠN: TỔNG TẤN CÔNG','phase-attack');startMatchTimer();}},1000); }
 
 function updateMatchTimerDisplay(){
 
@@ -6076,7 +6007,7 @@ function updateMatchTimerDisplay(){
 
 function onMatchTimeExpired(){
 
-  addWarLog('⏱️ HẾT GIỜ 10 PHÚT! Trọng tài chiến trường tổng kết điểm số tối cao...', 'log-boss');
+  addWarLog('⏱️ HẾT GIỜ 10 PHÚT! Trọng tài chiến trường tổng kết điểm số tối cao...', 'log-alert');
 
   speakText('Hết giờ chiến dịch 10 phút! Trọng tài đang tính điểm tổng lực để chọn ra Đế chế vô địch!', true);
 
@@ -6268,7 +6199,7 @@ function resetNewMatch(skipConfirm = false){
 
 
 
-  addWarLog('🔄 ĐÃ KHỞI TẠO VÁN ĐẤU MỚI! 63 Tỉnh Thành sẵn sàng xuất kích!', 'log-boss');
+  addWarLog('🔄 ĐÃ KHỞI TẠO VÁN ĐẤU MỚI! 63 Tỉnh Thành sẵn sàng xuất kích!', 'log-alert');
 
   speakText('Ván đấu mới đã bắt đầu! 63 tỉnh thành bước vào cuộc chiến!', true);
 
@@ -6316,7 +6247,7 @@ setInterval(() => {
 
       badge.className = 'phase-badge ' + phases[currentPhaseIdx].class;
 
-      addWarLog('🔄 Chuyển sang ' + phases[currentPhaseIdx].name, 'log-boss');
+      addWarLog('🔄 Chuyển sang ' + phases[currentPhaseIdx].name, 'log-alert');
 
     }
 
@@ -6351,7 +6282,7 @@ window.addEventListener('hashchange', () => setTimeout(initProvinceVictoryTestPa
 
 
 function testProvinceVictory(provinceId){ const p=provinces.find(x=>x.id===provinceId); if(!p||!window.triggerVictory)return; if(typeof closeVictoryModal==='function')closeVictoryModal(); isVictoryTriggered=false; victoryProvince=null; window.triggerVictory(p); }
-async function initProvinceVictoryTestPanel(){ const grid=document.getElementById('province-victory-test-grid');const count=document.getElementById('victory-test-count');if(!grid)return;let catalog=[];try{const r=await fetch('/province-music.json',{cache:'no-store'});catalog=await r.json();}catch(e){console.warn('[VICTORY TEST] Catalog lỗi',e);}const ids=new Set(catalog.map(x=>x.provinceId));const speechIds=new Set(['da_nang','dong_thap']);const greenIds=new Set(['lai_chau','dien_bien','hoa_binh','ha_giang','cao_bang','bac_giang','ha_noi','quang_binh','yen_bai','phu_tho','hai_duong','thanh_hoa','nghe_an','ha_tinh']);const orangeIds=new Set(['ha_giang','lai_chau','ha_noi','hai_phong','hai_duong','bac_ninh','bac_giang','nghe_an','thua_thien_hue','binh_dinh','thanh_hoa','ha_tinh','khanh_hoa','binh_thuan','cao_bang','hoa_binh','ba_ria_vung_tau','tp_hcm','long_an','tien_giang','kien_giang','an_giang','hau_giang','can_tho','tra_vinh','soc_trang','ca_mau','vinh_long','ben_tre','dien_bien','kon_tum','gia_lai','dak_lak','dak_nong']);grid.innerHTML='';provinces.forEach(p=>{const hasMusic=ids.has(p.id);const hasSpeech=speechIds.has(p.id);const hasNewSpeech=orangeIds.has(p.id);const hasGreen=greenIds.has(p.id);const b=document.createElement('button');b.type='button';const plate=p.plate||'--';b.textContent=(hasMusic?'● ':'• ')+p.name+' ['+plate+'] '+(hasMusic?'♫':'');b.title=hasMusic?(hasSpeech?'Mô phỏng '+p.name+' vô địch: có thoại và nhạc':'Mô phỏng '+p.name+' vô địch: có nhạc, chưa có thoại'):'Chưa có bài nhạc cấu hình cho '+p.name;b.disabled=!hasMusic;const chipBorder=hasMusic?(hasSpeech?'rgba(16,185,129,.9)':hasGreen?'rgba(34,197,94,.95)':hasNewSpeech?'rgba(249,115,22,.9)':'rgba(192,132,252,.9)'):'rgba(71,85,105,.35)';const chipText=hasMusic?(hasSpeech?'#86efac':hasGreen?'#86efac':hasNewSpeech?'#fdba74':'#e9d5ff'):'#475569';const chipBackground=hasMusic?(hasSpeech?'rgba(6,78,59,.55)':hasGreen?'rgba(20,83,45,.6)':hasNewSpeech?'rgba(124,45,18,.45)':'rgba(15,23,42,.55)'):'rgba(15,23,42,.55)';b.style.cssText='min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border:1px solid '+chipBorder+';background:'+chipBackground+';color:'+chipText+';border-radius:5px;padding:4px 5px;font-size:9px;font-family:Chakra Petch,sans-serif;font-weight:800;letter-spacing:.15px;text-align:left;cursor:'+(hasMusic?'pointer':'not-allowed')+';box-shadow:inset 0 0 8px '+(hasSpeech||hasGreen?'rgba(34,197,94,.2)':hasNewSpeech?'rgba(249,115,22,.15)':hasMusic?'rgba(192,132,252,.12)':'transparent')+';';if(hasMusic)b.onclick=()=>testProvinceVictory(p.id);grid.appendChild(b);});if(count)count.textContent=ids.size+'/'+provinces.length+' có nhạc | xanh lá: đã chỉnh nhạc, cam: thoại mới, tím: chưa cập nhật';}
+async function initProvinceVictoryTestPanel(){ const grid=document.getElementById('province-victory-test-grid');const count=document.getElementById('victory-test-count');if(!grid)return;let catalog=[];try{const r=await fetch('/province-music.json',{cache:'no-store'});catalog=await r.json();}catch(e){console.warn('[VICTORY TEST] Catalog lỗi',e);}const ids=new Set(catalog.map(x=>x.provinceId));const speechIds=new Set(['da_nang','dong_thap']);const greenIds=new Set(['lai_chau','dien_bien','hoa_binh','ha_giang','cao_bang','bac_giang','ha_noi','quang_binh','yen_bai','phu_tho','hai_duong','thanh_hoa','nghe_an','ha_tinh','thua_thien_hue','ha_nam','bac_ninh','gia_lai','hai_phong','dak_lak','thai_binh','ba_ria_vung_tau','tp_hcm','long_an','tien_giang','an_giang','ben_tre','vinh_long','can_tho','tra_vinh','hau_giang','soc_trang','kien_giang','ca_mau']);const orangeIds=new Set(['ha_giang','lai_chau','ha_noi','hai_phong','hai_duong','bac_ninh','bac_giang','nghe_an','thua_thien_hue','binh_dinh','thanh_hoa','ha_tinh','khanh_hoa','binh_thuan','cao_bang','hoa_binh','ba_ria_vung_tau','tp_hcm','long_an','tien_giang','kien_giang','an_giang','hau_giang','can_tho','tra_vinh','soc_trang','ca_mau','vinh_long','ben_tre','dien_bien','kon_tum','gia_lai','dak_lak','dak_nong']);grid.innerHTML='';provinces.forEach(p=>{const hasMusic=ids.has(p.id);const hasSpeech=speechIds.has(p.id);const hasNewSpeech=orangeIds.has(p.id);const hasGreen=greenIds.has(p.id);const b=document.createElement('button');b.type='button';const plate=p.plate||'--';b.textContent=(hasMusic?'● ':'• ')+p.name+' ['+plate+'] '+(hasMusic?'♫':'');b.title=hasMusic?(hasSpeech?'Mô phỏng '+p.name+' vô địch: có thoại và nhạc':'Mô phỏng '+p.name+' vô địch: có nhạc, chưa có thoại'):'Chưa có bài nhạc cấu hình cho '+p.name;b.disabled=!hasMusic;const chipBorder=hasMusic?(hasSpeech?'rgba(16,185,129,.9)':hasGreen?'rgba(34,197,94,.95)':hasNewSpeech?'rgba(249,115,22,.9)':'rgba(192,132,252,.9)'):'rgba(71,85,105,.35)';const chipText=hasMusic?(hasSpeech?'#86efac':hasGreen?'#86efac':hasNewSpeech?'#fdba74':'#e9d5ff'):'#475569';const chipBackground=hasMusic?(hasSpeech?'rgba(6,78,59,.55)':hasGreen?'rgba(20,83,45,.6)':hasNewSpeech?'rgba(124,45,18,.45)':'rgba(15,23,42,.55)'):'rgba(15,23,42,.55)';b.style.cssText='min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border:1px solid '+chipBorder+';background:'+chipBackground+';color:'+chipText+';border-radius:5px;padding:4px 5px;font-size:9px;font-family:Chakra Petch,sans-serif;font-weight:800;letter-spacing:.15px;text-align:left;cursor:'+(hasMusic?'pointer':'not-allowed')+';box-shadow:inset 0 0 8px '+(hasSpeech||hasGreen?'rgba(34,197,94,.2)':hasNewSpeech?'rgba(249,115,22,.15)':hasMusic?'rgba(192,132,252,.12)':'transparent')+';';if(hasMusic)b.onclick=()=>testProvinceVictory(p.id);grid.appendChild(b);});if(count)count.textContent=ids.size+'/'+provinces.length+' có nhạc | xanh lá: đã chỉnh nhạc, cam: thoại mới, tím: chưa cập nhật';}
 
 function setSimComment(value,sendNow){ const input=document.getElementById('sim-comment'); if(input){input.value=value;input.focus();} if(sendNow) sendAction('comment'); }
 
@@ -6405,7 +6336,7 @@ function sendAction(mode){
 
     payload.comment='🚀 Đại Tướng oanh kích ' + tgt.name + '!';
 
-    addWarLog('🚀 [' + (src.ownerName || src.name) + '] tung BOSS oanh tạc thẳng vào [' + tgt.name + ']!', 'log-boss');
+    addWarLog('🚀 [' + (src.ownerName || src.name) + '] tung đợt oanh tạc thẳng vào [' + tgt.name + ']!', 'log-alert');
 
   }
 
@@ -6455,7 +6386,7 @@ function toggleAuto(){
       btn.innerText = '🛑 DỪNG AUTO-WAR';
       btn.style.background = '#ef4444';
     }
-    addWarLog('⚡ BẮT ĐẦU AUTO-WAR! Đã kích hoạt hệ thống mô phỏng chiến trận tự động cho 63 Tỉnh Thành.', 'log-boss');
+    addWarLog('⚡ BẮT ĐẦU AUTO-WAR! Đã kích hoạt hệ thống mô phỏng chiến trận tự động cho 63 Tỉnh Thành.', 'log-alert');
     startBattlePreparation();
 
     // Tần suất xuất quân đã được điều chỉnh vừa phải, nhịp độ mượt mà: 480ms mỗi chu kỳ, không bị dồn dập quá nhanh
@@ -6598,6 +6529,25 @@ window.startNewMatchFromFinish=startNewMatchFromFinish; window.returnHomeFromFin
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
