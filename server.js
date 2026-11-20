@@ -216,7 +216,7 @@ app.post('/api/logs/reset', (req, res) => {
 });
 
 app.post('/api/action', (req, res) => {
-  const { user, provinceId, sourceProvinceId, type, giftValue, comment, attackType } = req.body;
+  const { user, provinceId, sourceProvinceId, type, giftValue, comment, attackType, sessionId } = req.body;
   broadcast({
     event: 'action',
     data: {
@@ -228,6 +228,7 @@ app.post('/api/action', (req, res) => {
       giftValue: Number(giftValue) || 1,
       comment: comment || '',
       attackType: attackType || null,
+      sessionId: sessionId === 'pentest' ? 'pentest' : 'main-battle',
       timestamp: Date.now()
     }
   });

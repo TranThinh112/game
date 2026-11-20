@@ -1175,7 +1175,7 @@ function handleRoute() {
 
   // Khi ở ngoài trận đấu (Dashboard / Map detail), khóa cứng toàn bộ giọng đọc và xóa sạch hàng đợi TTS
 
-  if (!hash.startsWith("#/battle")) {
+  if (!hash.startsWith("#/battle") && !hash.startsWith("#/pentest")) {
 
     const victoryModal = document.getElementById("victory-modal");
     if (victoryModal) victoryModal.classList.remove("active");
@@ -1204,14 +1204,21 @@ function handleRoute() {
 
 
 
-  if (hash.startsWith("#/battle")) {
+  if (hash.startsWith("#/battle") || hash.startsWith("#/pentest")) {
 
-    const battleMapId = hash.replace("#/battle/", "").trim() || "vietnam_63";
+    const battleMapId = hash.replace(/^#\/(?:battle|pentest)\//, "").trim() || "vietnam_63";
     window.currentSelectedMapId = battleMapId;
 
     document.body.classList.remove("dashboard-mode");
 
     document.body.classList.add("battle-mode");
+    document.body.classList.toggle('pentest-mode', hash.startsWith('#/pentest/'));
+    if(hash.startsWith('#/pentest/') && window._pentestRouteActive !== true){
+      window._pentestRouteActive = true;
+      setTimeout(() => { if(typeof window.resetNewMatch === 'function') window.resetNewMatch(true, true); }, 0);
+    } else if(!hash.startsWith('#/pentest/')) {
+      window._pentestRouteActive = false;
+    }
 
     dashboardEl.style.display = "none";
 
